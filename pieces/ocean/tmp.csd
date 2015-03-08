@@ -194,18 +194,18 @@ endin
 instr 63
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
      event "i", 62, 13.090909090909092, -1.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -214,8 +214,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 62
@@ -294,24 +294,24 @@ endin
 instr 59
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-    ir10 filelen "samples/Yaquona 01.wav"
-    kr0 = (ir10 - 10.0)
+    ir11 filelen "samples/Yaquona 01.wav"
+    kr0 = (ir11 - 10.0)
     kr1 random 0.0, 1.0
     kr2 = (kr0 * kr1)
     kr0 = (kr2 + 10.0)
     kr1 = (kr0 - kr2)
      event "i", 58, 0.0, kr1, ir3
 endif
-S20 sprintf "p1_%d", ir3
-ar0 chnget S20
-S23 sprintf "p2_%d", ir3
-ar1 chnget S23
- chnclear S20
- chnclear S23
+S21 sprintf "p1_%d", ir3
+ar0 chnget S21
+S24 sprintf "p2_%d", ir3
+ar1 chnget S24
+ chnclear S21
+ chnclear S24
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -320,8 +320,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S46 sprintf "alive_%d", ir3
- chnset kr0, S46
+S47 sprintf "alive_%d", ir3
+ chnset kr0, S47
 endin
 
 instr 58
@@ -402,18 +402,18 @@ endin
 instr 55
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
      event "i", 54, 0.0, 4.090909090909091, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -422,8 +422,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 54
@@ -507,18 +507,18 @@ endin
 instr 51
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
      event "i", 50, 0.0, 2.727272727272727, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -527,8 +527,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 50
@@ -702,19 +702,19 @@ endin
 instr 43
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-    ir10 filelen "samples/Heavenly Plateau.wav"
-     event "i", 42, 0.0, ir10, ir3
+    ir11 filelen "samples/Heavenly Plateau.wav"
+     event "i", 42, 0.0, ir11, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S16 sprintf "p1_%d", ir3
+ar0 chnget S16
+S19 sprintf "p2_%d", ir3
+ar1 chnget S19
+ chnclear S16
+ chnclear S19
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -723,8 +723,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S42 sprintf "alive_%d", ir3
+ chnset kr0, S42
 endin
 
 instr 42
@@ -751,18 +751,18 @@ endin
 instr 41
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
      event "i", 40, 2.1818181818181817, -1.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -771,8 +771,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 40
@@ -909,18 +909,18 @@ endin
 instr 35
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
      event "i", 34, 21.818181818181817, -1.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -929,8 +929,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 34
@@ -1014,18 +1014,18 @@ endin
 instr 31
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
      event "i", 30, 0.0, 6.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -1034,8 +1034,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 30
@@ -1062,18 +1062,18 @@ endin
 instr 29
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
      event "i", 28, 8.727272727272727, -1.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -1082,8 +1082,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 28
@@ -1167,18 +1167,18 @@ endin
 instr 25
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
      event "i", 24, 0.0, 6.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -1187,8 +1187,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 24
@@ -1215,18 +1215,18 @@ endin
 instr 23
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
      event "i", 22, 4.363636363636363, -1.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -1235,8 +1235,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 22
@@ -1320,18 +1320,18 @@ endin
 instr 19
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse 1.0, 0.0, 0.0
-kr0 downsamp ar0
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
      event "i", 18, 0.0, 6.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -1340,8 +1340,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 18

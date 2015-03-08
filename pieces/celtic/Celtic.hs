@@ -47,7 +47,7 @@ vs = mul 0.7 $ sum [
 
 writeToFile = writeSnd "res.wav" $ fmap (setDur $ 60 * 4) $ runSam (120 * 2) track
 
-main = run track
+main = run $ mul 3 track
 
 track = sum [ 
 	linEnv 1 (4 * 4) $ lim (t1 + t2 + t3) vs,
