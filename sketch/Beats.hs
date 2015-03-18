@@ -34,6 +34,6 @@ drone =  mul (0.3 + 0.4 * uosc 0.1) $ fmap largeHall
 
 
 solo = fmap largeHall $ pulseInstr (loopseg [440, 2, 440, 0.5, 330, 2, 330, 0.5, 330 * 17 / 16, 0.5, 330 * 17/ 16, 1, 440, 1.5, 440] (1/8))
-beatSolo = mul (repeatSnd 8 $ afterSnd 4 (1) (sqrSeq [1, 0.5, 0.3, 1, 0.5, 0.2, 0.7, 0.8] 8)) solo
+beatSolo = mul (repeatSnd 8 $ afterSnd 4 (1) (pwSeq 0.9 [1, 0.5, 0.3, 1, 0.5, 0.2, 0.7, 0.8] 8)) solo
 
-komp = (fmap fromMono $ mul (0.5 * uosc 0.25) $ at (mlp 4500 0.1) $ okComputer 16)
+komp = (fmap fromMono $ mul (0.5 * slide 0.3 (upw 0.3 0.1) * uosc 0.25) $ at (mlp 4500 0.1) $ okComputer 16)
