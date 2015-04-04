@@ -2,7 +2,7 @@
 
 <CsOptions>
 
---nodisplays
+--midi-device=a --nodisplays
 
 </CsOptions>
 
@@ -20,15 +20,93 @@ endop
 
 
 
-instr 1655
+instr 1733
 
 endin
 
-instr 1654
- event_i "i", 1653, 604800.0, 1.0e-2
+instr 1732
+ event_i "i", 1731, 604800.0, 1.0e-2
 endin
 
-instr 1653
+instr 1731
+ turnoff2 1730, 0.0, 0.0
+ turnoff2 1729, 0.0, 0.0
+ turnoff2 1728, 0.0, 0.0
+ turnoff2 1727, 0.0, 0.0
+ turnoff2 1726, 0.0, 0.0
+ turnoff2 1725, 0.0, 0.0
+ turnoff2 1724, 0.0, 0.0
+ turnoff2 1723, 0.0, 0.0
+ turnoff2 1722, 0.0, 0.0
+ turnoff2 1721, 0.0, 0.0
+ turnoff2 1720, 0.0, 0.0
+ turnoff2 1719, 0.0, 0.0
+ turnoff2 1718, 0.0, 0.0
+ turnoff2 1717, 0.0, 0.0
+ turnoff2 1716, 0.0, 0.0
+ turnoff2 1715, 0.0, 0.0
+ turnoff2 1714, 0.0, 0.0
+ turnoff2 1713, 0.0, 0.0
+ turnoff2 1712, 0.0, 0.0
+ turnoff2 1711, 0.0, 0.0
+ turnoff2 1710, 0.0, 0.0
+ turnoff2 1709, 0.0, 0.0
+ turnoff2 1708, 0.0, 0.0
+ turnoff2 1707, 0.0, 0.0
+ turnoff2 1706, 0.0, 0.0
+ turnoff2 1705, 0.0, 0.0
+ turnoff2 1704, 0.0, 0.0
+ turnoff2 1703, 0.0, 0.0
+ turnoff2 1702, 0.0, 0.0
+ turnoff2 1701, 0.0, 0.0
+ turnoff2 1700, 0.0, 0.0
+ turnoff2 1699, 0.0, 0.0
+ turnoff2 1698, 0.0, 0.0
+ turnoff2 1697, 0.0, 0.0
+ turnoff2 1696, 0.0, 0.0
+ turnoff2 1695, 0.0, 0.0
+ turnoff2 1694, 0.0, 0.0
+ turnoff2 1693, 0.0, 0.0
+ turnoff2 1692, 0.0, 0.0
+ turnoff2 1691, 0.0, 0.0
+ turnoff2 1690, 0.0, 0.0
+ turnoff2 1689, 0.0, 0.0
+ turnoff2 1688, 0.0, 0.0
+ turnoff2 1687, 0.0, 0.0
+ turnoff2 1686, 0.0, 0.0
+ turnoff2 1685, 0.0, 0.0
+ turnoff2 1684, 0.0, 0.0
+ turnoff2 1683, 0.0, 0.0
+ turnoff2 1682, 0.0, 0.0
+ turnoff2 1681, 0.0, 0.0
+ turnoff2 1680, 0.0, 0.0
+ turnoff2 1679, 0.0, 0.0
+ turnoff2 1678, 0.0, 0.0
+ turnoff2 1677, 0.0, 0.0
+ turnoff2 1676, 0.0, 0.0
+ turnoff2 1675, 0.0, 0.0
+ turnoff2 1674, 0.0, 0.0
+ turnoff2 1673, 0.0, 0.0
+ turnoff2 1672, 0.0, 0.0
+ turnoff2 1671, 0.0, 0.0
+ turnoff2 1670, 0.0, 0.0
+ turnoff2 1669, 0.0, 0.0
+ turnoff2 1668, 0.0, 0.0
+ turnoff2 1667, 0.0, 0.0
+ turnoff2 1666, 0.0, 0.0
+ turnoff2 1665, 0.0, 0.0
+ turnoff2 1664, 0.0, 0.0
+ turnoff2 1663, 0.0, 0.0
+ turnoff2 1662, 0.0, 0.0
+ turnoff2 1661, 0.0, 0.0
+ turnoff2 1660, 0.0, 0.0
+ turnoff2 1659, 0.0, 0.0
+ turnoff2 1658, 0.0, 0.0
+ turnoff2 1657, 0.0, 0.0
+ turnoff2 1656, 0.0, 0.0
+ turnoff2 1655, 0.0, 0.0
+ turnoff2 1654, 0.0, 0.0
+ turnoff2 1653, 0.0, 0.0
  turnoff2 1652, 0.0, 0.0
  turnoff2 1651, 0.0, 0.0
  turnoff2 1650, 0.0, 0.0
@@ -1667,7 +1745,7 @@ instr 1653
  exitnow 
 endin
 
-instr 1652
+instr 1730
 arl0 init 0.0
 arl1 init 0.0
 if (0.0 >= 59.75) then
@@ -1683,19 +1761,19 @@ ar1, ar4 subinstr 91
 ar5 = (ar3 + ar1)
 ar1, ar3 subinstr 97
 ar6 = (ar5 + ar1)
-ar1, ar5 subinstr 1610
+ar1, ar5 subinstr 1688
 ar7 = (ar6 + ar1)
 ar1 = (3.0 * ar7)
 ar6 clip ar1, 0.0, 0dbfs
 ar1 = (ar6 * 0.5)
 arl0 = ar1
-ar1, ar6 subinstr 1628
+ar1, ar6 subinstr 1706
 ar7 = (ar0 * ar6)
-ar0, ar6 subinstr 1647
+ar0, ar6 subinstr 1725
 ar8 = (ar7 + ar6)
-ar6, ar7 subinstr 1650
+ar6, ar7 subinstr 1728
 ar9 = (ar8 + ar7)
-ar7, ar8 subinstr 1651
+ar7, ar8 subinstr 1729
 ar10 = (ar9 + ar8)
 ar8 = (3.0 * ar10)
 ar9 clip ar8, 0.0, 0dbfs
@@ -1706,14 +1784,14 @@ ar9 = arl1
  outs ar8, ar9
 endin
 
-instr 1651
+instr 1729
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 1609, 68.0, -1.0, ir3
+     event "i", 1687, 68.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -1733,14 +1811,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1650
+instr 1728
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 96, 48.0, -1.0, ir3
+     event "i", 96, 48.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -1760,7 +1838,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1649
+instr 1727
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -1787,7 +1865,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1648
+instr 1726
 krl0 init 10.0
 ir3 FreePort 
 ir5 filelen "samples/GFlute Riff Cycle Hack 02.wav"
@@ -1815,14 +1893,14 @@ S42 sprintf "alive_%d", ir3
  chnset kr0, S42
 endin
 
-instr 1647
+instr 1725
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 90, 16.0, -1.0, ir3
+     event "i", 90, 16.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -1842,14 +1920,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1646
+instr 1724
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 88, 32.0, -1.0, ir3
+     event "i", 88, 32.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -1869,14 +1947,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1645
+instr 1723
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 86, 52.0, -1.0, ir3
+     event "i", 86, 52.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -1896,7 +1974,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1644
+instr 1722
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -1923,7 +2001,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1643
+instr 1721
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.125
@@ -1949,7 +2027,7 @@ S40 sprintf "alive_%d", ir3
  chnset kr0, S40
 endin
 
-instr 1642
+instr 1720
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -1976,14 +2054,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1641
+instr 1719
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 78, 0.5, -1.0, ir3
+     event "i", 78, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2003,7 +2081,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1640
+instr 1718
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 1.0
@@ -2029,7 +2107,7 @@ S40 sprintf "alive_%d", ir3
  chnset kr0, S40
 endin
 
-instr 1639
+instr 1717
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2056,7 +2134,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1638
+instr 1716
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.25
@@ -2086,7 +2164,7 @@ S48 sprintf "alive_%d", ir3
  chnset kr0, S48
 endin
 
-instr 1637
+instr 1715
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2113,7 +2191,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1636
+instr 1714
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2140,7 +2218,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1635
+instr 1713
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.125
@@ -2166,7 +2244,7 @@ S40 sprintf "alive_%d", ir3
  chnset kr0, S40
 endin
 
-instr 1634
+instr 1712
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2193,14 +2271,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1633
+instr 1711
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 62, 0.5, -1.0, ir3
+     event "i", 62, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2220,7 +2298,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1632
+instr 1710
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 1.0
@@ -2246,7 +2324,7 @@ S40 sprintf "alive_%d", ir3
  chnset kr0, S40
 endin
 
-instr 1631
+instr 1709
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2273,7 +2351,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1630
+instr 1708
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.25
@@ -2303,7 +2381,7 @@ S48 sprintf "alive_%d", ir3
  chnset kr0, S48
 endin
 
-instr 1629
+instr 1707
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2330,7 +2408,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1628
+instr 1706
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2357,7 +2435,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1627
+instr 1705
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.3333333333333333
@@ -2383,7 +2461,7 @@ S40 sprintf "alive_%d", ir3
  chnset kr0, S40
 endin
 
-instr 1626
+instr 1704
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2410,14 +2488,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1625
+instr 1703
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 46, 2.0, -1.0, ir3
+     event "i", 46, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2437,7 +2515,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1624
+instr 1702
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.4
@@ -2464,7 +2542,7 @@ S42 sprintf "alive_%d", ir3
  chnset kr0, S42
 endin
 
-instr 1623
+instr 1701
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2491,14 +2569,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1622
+instr 1700
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 40, 2.5, -1.0, ir3
+     event "i", 40, 2.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2518,7 +2596,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1621
+instr 1699
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 1.0
@@ -2544,7 +2622,7 @@ S40 sprintf "alive_%d", ir3
  chnset kr0, S40
 endin
 
-instr 1620
+instr 1698
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2571,7 +2649,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1619
+instr 1697
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.5
@@ -2599,7 +2677,7 @@ S44 sprintf "alive_%d", ir3
  chnset kr0, S44
 endin
 
-instr 1618
+instr 1696
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -2626,14 +2704,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1617
+instr 1695
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 30, 4.0, -1.0, ir3
+     event "i", 30, 4.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2653,14 +2731,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1616
+instr 1694
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 28, 4.0, -1.0, ir3
+     event "i", 28, 4.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2680,7 +2758,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1615
+instr 1693
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.23529411764705882
@@ -2707,14 +2785,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1614
+instr 1692
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 24, 8.0, -1.0, ir3
+     event "i", 24, 8.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2734,7 +2812,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1613
+instr 1691
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.19047619047619047
@@ -2761,14 +2839,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1612
+instr 1690
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 20, 0.0, -1.0, ir3
+     event "i", 20, 0.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2788,7 +2866,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 1611
+instr 1689
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.25
@@ -2815,6 +2893,2175 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
+instr 1688
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 1687, 68.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1687
+arl0 init 0.0
+if (0.0 >= 87.75) then
+    ir3 = 0.0
+else
+    ir3 = 87.75
+endif
+kr0 linseg 0.0, 0.25, 1.0, ir3, 1.0, 12.0, 0.0, 1.0, 0.0
+ar0 upsamp kr0
+ar1, ar2 subinstr 1660
+ar3 = (ar0 * ar1)
+arl0 = ar3
+ar1 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar1, S12
+arl1 init 0.0
+ar1, ar3 subinstr 1686
+ar4 = (ar0 * ar3)
+arl1 = ar4
+ar0 = arl1
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
+endin
+
+instr 1686
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 1659, 0.0, 100.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1685
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 178, 16.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1684
+krl0 init 10.0
+ir3 FreePort 
+kr0 metro 0.125
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 144, 0.0, 8.0, ir3
+endif
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
+endin
+
+instr 1683
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 142, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1682
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 140, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1681
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 138, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1680
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 136, 0.5, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1679
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 134, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1678
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 132, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1677
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 130, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1676
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 128, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1675
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 126, 0.5, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1674
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 124, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1673
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 122, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1672
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 120, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1671
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 118, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1670
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 116, 0.5, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1669
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 114, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1668
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 112, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1667
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 110, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1666
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 108, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1665
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 106, 0.5, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1664
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 104, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1663
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 102, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1662
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 100, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1661
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 98, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1660
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 1659, 0.0, 100.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1659
+arl0 init 0.0
+ar0, ar1 subinstr 145
+ar2, ar3 subinstr 179
+ar4 = (ar0 + ar2)
+ar0, ar2 subinstr 263
+ar5 = (ar4 + ar0)
+ar0, ar4 subinstr 353
+ar6 = (ar5 + ar0)
+ar0, ar5 subinstr 493
+ar7 = (ar6 + ar0)
+ar0 = (ar7 * 0.2)
+ar6 moogladder ar0, 5000.0, 0.5
+ar0, ar7 subinstr 517
+ar8, ar9 subinstr 549
+ar10 = (ar0 + ar8)
+ar0, ar8 subinstr 580
+ar11 = (ar10 + ar0)
+ar0, ar10 subinstr 669
+ar12 = (ar11 + ar0)
+ar0, ar11 subinstr 755
+ar13 = (ar12 + ar0)
+ar0 = (ar13 * 0.2)
+ar12 moogladder ar0, 5000.0, 0.5
+ar0, ar13 subinstr 802
+ar14, ar15 subinstr 819
+ar16 = (ar13 + ar15)
+ar13, ar15 subinstr 880
+ar17 = (ar16 + ar15)
+ar15, ar16 subinstr 948
+ar18 = (ar17 + ar16)
+ar17 = (ar18 + ar5)
+ar5 = (ar17 * 0.2)
+ar17 moogladder ar5, 5000.0, 0.5
+ar5, ar18 reverbsc ar12, ar17, 0.9, 12000.0
+ar12 = (ar6 + ar5)
+ar5 = (0.6 * ar12)
+arl0 = ar5
+ar5 = arl0
+S58 sprintf "p1_%d", p4
+ chnmix ar5, S58
+arl1 init 0.0
+ar5, ar6 subinstr 983
+ar12, ar17 subinstr 1000
+ar19 = (ar6 + ar17)
+ar6, ar17 subinstr 1044
+ar20 = (ar19 + ar17)
+ar17 = (ar20 + ar16)
+ar16, ar19 subinstr 1099
+ar20 = (ar17 + ar19)
+ar17 = (ar20 * 0.2)
+ar19 moogladder ar17, 5000.0, 0.5
+ar17, ar20 subinstr 1111
+ar21, ar22 subinstr 1128
+ar23 = (ar17 + ar21)
+ar17, ar21 subinstr 1155
+ar24 = (ar23 + ar17)
+ar17, ar23 subinstr 1356
+ar25 = (ar24 + ar17)
+ar17, ar24 subinstr 1528
+ar26 = (ar25 + ar17)
+ar17 = (ar26 * 0.2)
+ar25 moogladder ar17, 5000.0, 0.5
+ar17, ar26 subinstr 1564
+ar27 = (ar20 + ar26)
+ar20 = (ar27 + ar8)
+ar8, ar26 subinstr 1609
+ar27 = (ar20 + ar26)
+ar20, ar26 subinstr 1658
+ar28 = (ar27 + ar26)
+ar26 = (ar28 * 0.2)
+ar27 moogladder ar26, 5000.0, 0.5
+ar26, ar28 reverbsc ar25, ar27, 0.9, 12000.0
+ar25 = (ar19 + ar28)
+ar19 = (0.6 * ar25)
+arl1 = ar19
+ar19 = arl1
+S115 sprintf "p2_%d", p4
+ chnmix ar19, S115
+S118 sprintf "alive_%d", p4
+kr0 chnget S118
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S118
+endin
+
+instr 1658
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 492, 64.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1657
+krl0 init 10.0
+ir3 FreePort 
+kr0 metro 6.25e-2
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 489, 0.0, 16.0, ir3
+endif
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
+endin
+
+instr 1656
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 481, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1655
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 473, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1654
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 465, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1653
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 457, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1652
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 449, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1651
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 441, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1650
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 434, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1649
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 432, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1648
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 430, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1647
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 428, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1646
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 426, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1645
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 424, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1644
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 422, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1643
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 420, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1642
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 418, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1641
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 416, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1640
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 414, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1639
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 412, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1638
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 410, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1637
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 408, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1636
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 406, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1635
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 404, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1634
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 402, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1633
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 400, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1632
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 398, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1631
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 396, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1630
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 394, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1629
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 392, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1628
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 390, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1627
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 388, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1626
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 386, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1625
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 384, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1624
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 382, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1623
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 380, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1622
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 378, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1621
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 376, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1620
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 374, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1619
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 372, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1618
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 370, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1617
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 368, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1616
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 366, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1615
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 364, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1614
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 362, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1613
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 360, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1612
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 358, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 1611
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 356, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
 instr 1610
 krl0 init 10.0
 ir3 FreePort 
@@ -2822,7 +5069,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 1609, 68.0, -1.0, ir3
+     event "i", 354, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2843,44 +5090,13 @@ S41 sprintf "alive_%d", ir3
 endin
 
 instr 1609
-arl0 init 0.0
-if (0.0 >= 87.75) then
-    ir3 = 0.0
-else
-    ir3 = 87.75
-endif
-kr0 linseg 0.0, 0.25, 1.0, ir3, 1.0, 12.0, 0.0, 1.0, 0.0
-ar0 upsamp kr0
-ar1, ar2 subinstr 1607
-ar3 = (ar0 * ar1)
-arl0 = ar3
-ar1 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar1, S12
-arl1 init 0.0
-ar1, ar3 subinstr 1608
-ar4 = (ar0 * ar3)
-arl1 = ar4
-ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S27
-endin
-
-instr 1608
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 1606, 0.0, 100.0, ir3
+     event "i", 352, 48.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2900,6 +5116,32 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
+instr 1608
+krl0 init 10.0
+ir3 FreePort 
+kr0 metro 0.125
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 350, 0.0, 8.0, ir3
+endif
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
+endin
+
 instr 1607
 krl0 init 10.0
 ir3 FreePort 
@@ -2907,7 +5149,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 1606, 0.0, 100.0, ir3
+     event "i", 348, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -2928,91 +5170,30 @@ S41 sprintf "alive_%d", ir3
 endin
 
 instr 1606
-arl0 init 0.0
-ar0, ar1 subinstr 145
-ar2, ar3 subinstr 179
-ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 251
-ar5 = (ar4 + ar0)
-ar0, ar4 subinstr 341
-ar6 = (ar5 + ar0)
-ar0, ar5 subinstr 480
-ar7 = (ar6 + ar0)
-ar0 = (ar7 * 0.2)
-ar6 moogladder ar0, 5000.0, 0.5
-ar0, ar7 subinstr 504
-ar8, ar9 subinstr 537
-ar10 = (ar0 + ar8)
-ar0, ar8 subinstr 568
-ar11 = (ar10 + ar0)
-ar0, ar10 subinstr 657
-ar12 = (ar11 + ar0)
-ar0, ar11 subinstr 731
-ar13 = (ar12 + ar0)
-ar0 = (ar13 * 0.2)
-ar12 moogladder ar0, 5000.0, 0.5
-ar0, ar13 subinstr 778
-ar14, ar15 subinstr 795
-ar16 = (ar13 + ar15)
-ar13, ar15 subinstr 856
-ar17 = (ar16 + ar15)
-ar15, ar16 subinstr 915
-ar18 = (ar17 + ar16)
-ar17 = (ar18 + ar5)
-ar5 = (ar17 * 0.2)
-ar17 moogladder ar5, 5000.0, 0.5
-ar5, ar18 reverbsc ar12, ar17, 0.9, 12000.0
-ar12 = (ar6 + ar5)
-ar5 = (0.6 * ar12)
-arl0 = ar5
-ar5 = arl0
-S58 sprintf "p1_%d", p4
- chnmix ar5, S58
-arl1 init 0.0
-ar5, ar6 subinstr 956
-ar12, ar17 subinstr 973
-ar19 = (ar6 + ar17)
-ar6, ar17 subinstr 1018
-ar20 = (ar19 + ar17)
-ar17 = (ar20 + ar16)
-ar16, ar19 subinstr 1155
-ar20 = (ar17 + ar19)
-ar17 = (ar20 * 0.2)
-ar19 moogladder ar17, 5000.0, 0.5
-ar17, ar20 subinstr 1161
-ar21 = (ar17 + ar12)
-ar12, ar17 subinstr 1186
-ar22 = (ar21 + ar12)
-ar12, ar21 subinstr 1519
-ar23 = (ar22 + ar12)
-ar12, ar22 subinstr 1532
-ar24 = (ar23 + ar12)
-ar12 = (ar24 * 0.2)
-ar23 moogladder ar12, 5000.0, 0.5
-ar12, ar24 subinstr 1556
-ar25, ar26 subinstr 1573
-ar27 = (ar24 + ar26)
-ar24, ar26 subinstr 1604
-ar28 = (ar27 + ar26)
-ar26, ar27 subinstr 1605
-ar29 = (ar28 + ar27)
-ar27 = (ar29 + ar22)
-ar22 = (ar27 * 0.2)
-ar27 moogladder ar22, 5000.0, 0.5
-ar22, ar28 reverbsc ar23, ar27, 0.9, 12000.0
-ar23 = (ar19 + ar28)
-ar19 = (0.6 * ar23)
-arl1 = ar19
-ar19 = arl1
-S115 sprintf "p2_%d", p4
- chnmix ar19, S115
-S118 sprintf "alive_%d", p4
-kr0 chnget S118
-if (kr0 < 0.0) then
-     turnoff 
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 346, 2.0, 604800.0, ir3
 endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S118
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1605
@@ -3022,7 +5203,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 340, 48.0, -1.0, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3049,7 +5230,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 250, 32.0, -1.0, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3072,17 +5253,18 @@ endin
 instr 1603
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 247, 0.0, 8.0, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -3091,8 +5273,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1602
@@ -3102,7 +5284,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 243, 4.0, -1.0, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3129,7 +5311,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 241, 0.25, -1.0, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3156,7 +5338,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 239, 0.25, -1.0, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3183,7 +5365,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 237, 0.25, -1.0, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3210,7 +5392,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 235, 0.25, -1.0, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3237,7 +5419,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 233, 0.25, -1.0, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3264,7 +5446,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 231, 0.25, -1.0, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3291,7 +5473,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 229, 0.25, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3318,7 +5500,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 227, 0.0, 0.25, ir3
+     event "i", 322, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3345,7 +5527,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 225, 0.0, 0.25, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3372,7 +5554,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 223, 0.0, 0.25, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3399,7 +5581,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 221, 0.0, 0.25, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3426,7 +5608,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 219, 0.0, 0.25, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3453,7 +5635,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 217, 0.0, 0.25, ir3
+     event "i", 312, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3480,7 +5662,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 215, 0.0, 0.25, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3507,7 +5689,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 213, 0.25, -1.0, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3534,7 +5716,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 209, 0.25, -1.0, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3561,7 +5743,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 205, 0.25, -1.0, ir3
+     event "i", 304, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3588,7 +5770,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 201, 0.25, -1.0, ir3
+     event "i", 302, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3615,7 +5797,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 198, 0.25, -1.0, ir3
+     event "i", 300, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3642,7 +5824,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 196, 0.25, -1.0, ir3
+     event "i", 298, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3669,7 +5851,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 194, 0.25, -1.0, ir3
+     event "i", 296, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3696,7 +5878,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 192, 0.0, 0.25, ir3
+     event "i", 294, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3723,7 +5905,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 190, 0.0, 0.25, ir3
+     event "i", 292, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3750,7 +5932,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 188, 0.0, 0.25, ir3
+     event "i", 290, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3777,7 +5959,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 186, 0.0, 0.25, ir3
+     event "i", 288, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3804,7 +5986,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 184, 0.0, 0.25, ir3
+     event "i", 286, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3831,7 +6013,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 182, 0.0, 0.25, ir3
+     event "i", 284, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3858,7 +6040,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 180, 0.0, 0.25, ir3
+     event "i", 282, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3885,7 +6067,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 178, 16.0, -1.0, ir3
+     event "i", 280, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3908,17 +6090,18 @@ endin
 instr 1572
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 176, 0.0, 8.0, ir3
+     event "i", 278, 0.25, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -3927,8 +6110,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1571
@@ -3938,7 +6121,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 174, 2.0, -1.0, ir3
+     event "i", 276, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3965,7 +6148,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 172, 2.0, -1.0, ir3
+     event "i", 274, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -3992,7 +6175,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 170, 2.0, -1.0, ir3
+     event "i", 272, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4019,7 +6202,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 168, 1.5, -1.0, ir3
+     event "i", 270, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4046,7 +6229,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 166, 0.25, -1.0, ir3
+     event "i", 268, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4073,7 +6256,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 164, 0.0, 0.25, ir3
+     event "i", 266, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4100,7 +6283,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 162, 1.5, -1.0, ir3
+     event "i", 264, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4127,7 +6310,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 160, 0.25, -1.0, ir3
+     event "i", 178, 16.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4150,18 +6333,17 @@ endin
 instr 1563
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 158, 0.0, 0.25, ir3
+     event "i", 176, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -4170,25 +6352,24 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1562
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 156, 1.5, -1.0, ir3
+     event "i", 176, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -4197,8 +6378,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1561
@@ -4208,7 +6389,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 154, 0.25, -1.0, ir3
+     event "i", 174, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4235,7 +6416,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 152, 0.0, 0.25, ir3
+     event "i", 150, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4262,7 +6443,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 150, 1.5, -1.0, ir3
+     event "i", 148, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4289,7 +6470,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 148, 0.25, -1.0, ir3
+     event "i", 146, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4316,7 +6497,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 146, 0.0, 0.25, ir3
+     event "i", 174, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4339,17 +6520,18 @@ endin
 instr 1556
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 144, 0.0, 8.0, ir3
+     event "i", 172, 2.0, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -4358,8 +6540,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1555
@@ -4369,7 +6551,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 142, 2.0, -1.0, ir3
+     event "i", 170, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4396,7 +6578,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 140, 2.0, -1.0, ir3
+     event "i", 168, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4423,7 +6605,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 138, 2.0, -1.0, ir3
+     event "i", 166, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4450,7 +6632,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 136, 0.5, -1.0, ir3
+     event "i", 164, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4477,7 +6659,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 134, 0.25, -1.0, ir3
+     event "i", 162, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4504,7 +6686,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 132, 0.25, -1.0, ir3
+     event "i", 160, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4531,7 +6713,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 130, 0.0, 0.25, ir3
+     event "i", 158, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4558,7 +6740,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 128, 0.0, 0.25, ir3
+     event "i", 156, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4585,7 +6767,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 126, 0.5, -1.0, ir3
+     event "i", 154, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4612,7 +6794,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 124, 0.25, -1.0, ir3
+     event "i", 152, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4639,7 +6821,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 122, 0.25, -1.0, ir3
+     event "i", 172, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4666,7 +6848,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 120, 0.0, 0.25, ir3
+     event "i", 162, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4693,7 +6875,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 118, 0.0, 0.25, ir3
+     event "i", 170, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4720,7 +6902,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 116, 0.5, -1.0, ir3
+     event "i", 168, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4747,7 +6929,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 114, 0.25, -1.0, ir3
+     event "i", 166, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4774,7 +6956,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 112, 0.25, -1.0, ir3
+     event "i", 164, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4801,7 +6983,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 110, 0.0, 0.25, ir3
+     event "i", 162, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4828,7 +7010,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 108, 0.0, 0.25, ir3
+     event "i", 160, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4855,7 +7037,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 106, 0.5, -1.0, ir3
+     event "i", 158, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4882,7 +7064,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 104, 0.25, -1.0, ir3
+     event "i", 160, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4909,7 +7091,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 102, 0.25, -1.0, ir3
+     event "i", 158, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4936,7 +7118,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 100, 0.0, 0.25, ir3
+     event "i", 156, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4963,7 +7145,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 98, 0.0, 0.25, ir3
+     event "i", 154, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -4990,7 +7172,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 479, 64.0, -1.0, ir3
+     event "i", 152, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5013,17 +7195,18 @@ endin
 instr 1531
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 6.25e-2
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 476, 0.0, 16.0, ir3
+     event "i", 150, 1.5, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -5032,8 +7215,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1530
@@ -5043,7 +7226,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 468, 2.0, -1.0, ir3
+     event "i", 148, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5070,7 +7253,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 460, 2.0, -1.0, ir3
+     event "i", 146, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5097,7 +7280,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 360, 0.25, -1.0, ir3
+     event "i", 492, 64.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5120,18 +7303,17 @@ endin
 instr 1527
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 6.25e-2
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 358, 1.25, -1.0, ir3
+     event "i", 489, 0.0, 16.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -5140,8 +7322,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1526
@@ -5151,7 +7333,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 354, 0.0, 0.25, ir3
+     event "i", 362, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5178,7 +7360,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 352, 0.0, 0.25, ir3
+     event "i", 354, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5201,18 +7383,17 @@ endin
 instr 1524
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 6.25e-2
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 350, 0.25, -1.0, ir3
+     event "i", 489, 0.0, 16.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -5221,8 +7402,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1523
@@ -5232,7 +7413,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 348, 1.25, -1.0, ir3
+     event "i", 362, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5259,7 +7440,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 346, 0.25, -1.0, ir3
+     event "i", 360, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5286,7 +7467,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 344, 0.0, 0.25, ir3
+     event "i", 358, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5313,7 +7494,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 342, 0.0, 0.25, ir3
+     event "i", 360, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5340,7 +7521,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 340, 48.0, -1.0, ir3
+     event "i", 358, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5363,17 +7544,18 @@ endin
 instr 1518
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 338, 0.0, 8.0, ir3
+     event "i", 356, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -5382,8 +7564,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1517
@@ -5393,7 +7575,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 354, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5420,7 +7602,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
+     event "i", 481, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5443,17 +7625,18 @@ endin
 instr 1515
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 338, 0.0, 8.0, ir3
+     event "i", 473, 2.0, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -5462,8 +7645,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1514
@@ -5473,7 +7656,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 336, 2.0, -1.0, ir3
+     event "i", 473, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5500,7 +7683,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 382, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5527,7 +7710,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 380, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5554,7 +7737,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 378, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5581,7 +7764,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
+     event "i", 376, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5608,7 +7791,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 374, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5635,7 +7818,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 465, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5662,7 +7845,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 457, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5689,7 +7872,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 449, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5716,7 +7899,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
+     event "i", 449, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5743,7 +7926,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
+     event "i", 412, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5770,7 +7953,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
+     event "i", 404, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5797,7 +7980,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
+     event "i", 441, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5824,7 +8007,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
+     event "i", 434, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5851,7 +8034,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 336, 2.0, -1.0, ir3
+     event "i", 422, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5878,7 +8061,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 420, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5905,7 +8088,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 418, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5932,7 +8115,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 416, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5959,7 +8142,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 328, 0.25, -1.0, ir3
+     event "i", 414, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -5986,7 +8169,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 326, 0.25, -1.0, ir3
+     event "i", 434, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6013,7 +8196,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 324, 0.25, -1.0, ir3
+     event "i", 432, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6040,7 +8223,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 322, 0.5, -1.0, ir3
+     event "i", 430, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6067,7 +8250,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 320, 0.25, -1.0, ir3
+     event "i", 428, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6094,7 +8277,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 318, 0.0, 0.25, ir3
+     event "i", 426, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6121,7 +8304,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 316, 0.0, 0.25, ir3
+     event "i", 424, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6148,7 +8331,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 422, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6175,7 +8358,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 420, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6202,7 +8385,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 418, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6229,7 +8412,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 416, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6256,7 +8439,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 414, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6283,7 +8466,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 412, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6310,7 +8493,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 410, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6337,7 +8520,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 408, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6364,7 +8547,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 406, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6391,7 +8574,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 404, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6418,7 +8601,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 402, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6445,7 +8628,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 400, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6472,7 +8655,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 398, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6499,7 +8682,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 396, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6526,7 +8709,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 400, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6553,7 +8736,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 328, 0.25, -1.0, ir3
+     event "i", 398, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6580,7 +8763,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 326, 0.25, -1.0, ir3
+     event "i", 396, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6607,7 +8790,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 324, 0.25, -1.0, ir3
+     event "i", 394, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6634,7 +8817,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 322, 0.5, -1.0, ir3
+     event "i", 392, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6661,7 +8844,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 320, 0.25, -1.0, ir3
+     event "i", 390, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6688,7 +8871,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 318, 0.0, 0.25, ir3
+     event "i", 388, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6715,7 +8898,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 316, 0.0, 0.25, ir3
+     event "i", 386, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6742,7 +8925,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 384, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6769,7 +8952,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 457, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6796,7 +8979,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 449, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6823,7 +9006,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 328, 0.25, -1.0, ir3
+     event "i", 441, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6850,7 +9033,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 422, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6877,7 +9060,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 326, 0.25, -1.0, ir3
+     event "i", 420, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6904,7 +9087,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 324, 0.25, -1.0, ir3
+     event "i", 418, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6931,7 +9114,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 322, 0.5, -1.0, ir3
+     event "i", 416, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6958,7 +9141,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 320, 0.25, -1.0, ir3
+     event "i", 412, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -6985,7 +9168,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 318, 0.0, 0.25, ir3
+     event "i", 410, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7012,7 +9195,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 316, 0.0, 0.25, ir3
+     event "i", 408, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7039,7 +9222,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 406, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7066,7 +9249,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 441, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7093,7 +9276,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 434, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7120,7 +9303,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 432, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7147,7 +9330,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 430, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7174,7 +9357,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 428, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7201,7 +9384,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 426, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7228,7 +9411,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 430, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7255,7 +9438,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 428, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7282,7 +9465,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 426, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7309,7 +9492,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 424, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7336,7 +9519,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 422, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7363,7 +9546,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 420, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7390,7 +9573,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 418, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7417,7 +9600,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 416, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7444,7 +9627,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 414, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7471,7 +9654,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 434, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7498,7 +9681,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 432, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7525,7 +9708,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 430, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7552,7 +9735,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 428, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7579,7 +9762,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 426, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7606,7 +9789,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 424, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7633,7 +9816,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 412, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7660,7 +9843,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 410, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7687,7 +9870,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 406, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7714,7 +9897,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 404, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7741,7 +9924,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 402, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7768,7 +9951,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 400, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7795,7 +9978,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 398, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7822,7 +10005,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 394, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7849,7 +10032,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 449, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7876,7 +10059,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
+     event "i", 412, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7903,7 +10086,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 410, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7930,7 +10113,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 410, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7957,7 +10140,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
+     event "i", 408, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -7984,7 +10167,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
+     event "i", 406, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8011,7 +10194,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 404, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8038,7 +10221,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
+     event "i", 441, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8065,7 +10248,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
+     event "i", 434, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8092,7 +10275,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
+     event "i", 432, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8119,7 +10302,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
+     event "i", 430, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8146,7 +10329,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
+     event "i", 428, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8169,17 +10352,18 @@ endin
 instr 1414
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 338, 0.0, 8.0, ir3
+     event "i", 426, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -8188,8 +10372,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1413
@@ -8199,7 +10383,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 336, 2.0, -1.0, ir3
+     event "i", 424, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8226,7 +10410,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 422, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8253,7 +10437,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 420, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8280,7 +10464,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 418, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8307,7 +10491,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 416, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8334,7 +10518,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 414, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8361,7 +10545,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 434, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8388,7 +10572,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 432, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8415,7 +10599,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 424, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8442,7 +10626,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 432, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8469,7 +10653,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 430, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8496,7 +10680,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 430, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8523,7 +10707,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 428, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8550,7 +10734,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 426, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8577,7 +10761,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 428, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8604,7 +10788,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 426, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8631,7 +10815,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 424, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8658,7 +10842,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 422, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8685,7 +10869,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 420, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8712,7 +10896,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 418, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8739,7 +10923,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 416, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8766,7 +10950,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 414, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8793,7 +10977,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 412, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8820,7 +11004,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 410, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8847,7 +11031,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 408, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8874,7 +11058,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 406, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8901,7 +11085,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 410, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8928,7 +11112,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 408, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8955,7 +11139,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 406, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -8982,7 +11166,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 404, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9009,7 +11193,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 402, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9036,7 +11220,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 400, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9063,7 +11247,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 398, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9090,7 +11274,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 396, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9117,7 +11301,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 394, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9144,7 +11328,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 392, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9171,7 +11355,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 390, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9198,7 +11382,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 388, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9225,7 +11409,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 386, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9252,7 +11436,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 384, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9279,7 +11463,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 382, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9306,7 +11490,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 380, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9333,7 +11517,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 378, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9360,7 +11544,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 376, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9387,7 +11571,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 374, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9414,7 +11598,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 372, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9441,7 +11625,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 370, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9468,7 +11652,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 368, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9495,7 +11679,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 366, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9522,7 +11706,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 364, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9549,7 +11733,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 362, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9576,7 +11760,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 360, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9603,7 +11787,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 360, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9630,7 +11814,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 356, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9657,7 +11841,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 358, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9684,7 +11868,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 356, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9711,7 +11895,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 354, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9738,7 +11922,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 352, 48.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9761,18 +11945,17 @@ endin
 instr 1355
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 350, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -9781,25 +11964,24 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1354
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 350, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -9808,8 +11990,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1353
@@ -9819,7 +12001,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 282, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9846,7 +12028,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 264, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9873,7 +12055,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 282, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9900,7 +12082,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 280, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9927,7 +12109,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 278, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9954,7 +12136,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 268, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -9981,7 +12163,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 276, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10008,7 +12190,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 274, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10035,7 +12217,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 272, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10062,7 +12244,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 270, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10089,7 +12271,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 268, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10116,7 +12298,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 266, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10143,7 +12325,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
+     event "i", 264, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10166,18 +12348,17 @@ endin
 instr 1340
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
+     event "i", 350, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -10186,8 +12367,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1339
@@ -10197,7 +12378,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
+     event "i", 348, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10224,7 +12405,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
+     event "i", 346, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10251,7 +12432,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10278,7 +12459,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 336, 2.0, -1.0, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10305,7 +12486,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10332,7 +12513,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10359,7 +12540,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10386,7 +12567,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10413,7 +12594,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10440,7 +12621,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10467,7 +12648,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10494,7 +12675,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10521,7 +12702,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10548,7 +12729,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10575,7 +12756,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10602,7 +12783,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10629,7 +12810,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10656,7 +12837,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10683,7 +12864,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10710,7 +12891,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10737,7 +12918,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10764,7 +12945,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10791,7 +12972,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10818,7 +12999,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10845,7 +13026,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 322, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10872,7 +13053,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10899,7 +13080,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10926,7 +13107,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10953,7 +13134,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -10980,7 +13161,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 312, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11007,7 +13188,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11034,7 +13215,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11061,7 +13242,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11088,7 +13269,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 304, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11115,7 +13296,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 346, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11142,7 +13323,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11169,7 +13350,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11196,7 +13377,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11223,7 +13404,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11250,7 +13431,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11277,7 +13458,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11304,7 +13485,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11331,7 +13512,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11358,7 +13539,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11385,7 +13566,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11412,7 +13593,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11439,7 +13620,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 322, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11466,7 +13647,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11493,7 +13674,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 328, 0.25, -1.0, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11520,7 +13701,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 326, 0.25, -1.0, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11547,7 +13728,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11574,7 +13755,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 328, 0.25, -1.0, ir3
+     event "i", 312, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11601,7 +13782,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 326, 0.25, -1.0, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11628,7 +13809,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 324, 0.25, -1.0, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11655,7 +13836,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 322, 0.5, -1.0, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11682,7 +13863,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 320, 0.25, -1.0, ir3
+     event "i", 304, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11709,7 +13890,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 318, 0.0, 0.25, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11736,7 +13917,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 316, 0.0, 0.25, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11763,7 +13944,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11790,7 +13971,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11817,7 +13998,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11844,7 +14025,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11871,7 +14052,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11898,7 +14079,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11925,7 +14106,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11952,7 +14133,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -11979,7 +14160,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12006,7 +14187,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 322, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12033,7 +14214,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12060,7 +14241,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12087,7 +14268,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12114,7 +14295,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12141,7 +14322,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12168,7 +14349,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12195,7 +14376,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12222,7 +14403,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12249,7 +14430,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12276,7 +14457,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12303,7 +14484,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12330,7 +14511,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 312, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12357,7 +14538,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12384,7 +14565,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12411,7 +14592,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12438,7 +14619,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 304, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12465,7 +14646,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 302, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12492,7 +14673,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 300, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12519,7 +14700,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 298, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12546,7 +14727,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
+     event "i", 296, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12573,7 +14754,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
+     event "i", 294, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12600,7 +14781,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
+     event "i", 292, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12627,7 +14808,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
+     event "i", 290, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12654,7 +14835,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
+     event "i", 288, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12677,17 +14858,18 @@ endin
 instr 1247
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 338, 0.0, 8.0, ir3
+     event "i", 286, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -12696,8 +14878,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1246
@@ -12707,7 +14889,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 336, 2.0, -1.0, ir3
+     event "i", 284, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12734,7 +14916,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 282, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12761,7 +14943,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 280, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12788,7 +14970,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 280, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12815,7 +14997,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 278, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12842,7 +15024,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 266, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12869,7 +15051,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
+     event "i", 278, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12896,7 +15078,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
+     event "i", 276, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12923,7 +15105,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
+     event "i", 268, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12950,7 +15132,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
+     event "i", 276, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -12977,7 +15159,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
+     event "i", 274, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13004,7 +15186,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 336, 2.0, -1.0, ir3
+     event "i", 274, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13031,7 +15213,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 270, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13058,7 +15240,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 272, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13085,7 +15267,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 270, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13112,7 +15294,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 268, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13139,7 +15321,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 328, 0.25, -1.0, ir3
+     event "i", 266, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13166,7 +15348,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 326, 0.25, -1.0, ir3
+     event "i", 264, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13193,7 +15375,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 324, 0.25, -1.0, ir3
+     event "i", 348, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13220,7 +15402,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 322, 0.5, -1.0, ir3
+     event "i", 346, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13247,7 +15429,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 320, 0.25, -1.0, ir3
+     event "i", 302, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13274,7 +15456,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 318, 0.0, 0.25, ir3
+     event "i", 300, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13301,7 +15483,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 322, 0.5, -1.0, ir3
+     event "i", 298, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13328,7 +15510,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 320, 0.25, -1.0, ir3
+     event "i", 296, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13355,7 +15537,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 318, 0.0, 0.25, ir3
+     event "i", 294, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13382,7 +15564,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 316, 0.0, 0.25, ir3
+     event "i", 292, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13409,7 +15591,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 290, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13436,7 +15618,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 288, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13463,7 +15645,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 286, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13490,7 +15672,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 284, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13517,7 +15699,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 346, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13544,7 +15726,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13571,7 +15753,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13598,7 +15780,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13625,7 +15807,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13652,7 +15834,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13679,7 +15861,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13706,7 +15888,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13733,7 +15915,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13760,7 +15942,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13787,7 +15969,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13814,7 +15996,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13841,7 +16023,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13868,7 +16050,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13895,7 +16077,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13922,7 +16104,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13949,7 +16131,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -13976,7 +16158,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14003,7 +16185,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14030,7 +16212,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14057,7 +16239,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14084,7 +16266,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14111,7 +16293,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14138,7 +16320,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 322, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14165,7 +16347,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14192,7 +16374,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14219,7 +16401,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14246,7 +16428,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14273,7 +16455,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
+     event "i", 312, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14300,7 +16482,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14327,7 +16509,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 250, 32.0, -1.0, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14350,17 +16532,18 @@ endin
 instr 1185
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 247, 0.0, 8.0, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -14369,24 +16552,25 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1184
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 247, 0.0, 8.0, ir3
+     event "i", 304, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -14395,8 +16579,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1183
@@ -14406,7 +16590,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 213, 0.25, -1.0, ir3
+     event "i", 302, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14433,7 +16617,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 180, 0.0, 0.25, ir3
+     event "i", 300, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14460,7 +16644,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 213, 0.25, -1.0, ir3
+     event "i", 300, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14487,7 +16671,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 209, 0.25, -1.0, ir3
+     event "i", 298, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14514,7 +16698,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 205, 0.25, -1.0, ir3
+     event "i", 286, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14541,7 +16725,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 201, 0.25, -1.0, ir3
+     event "i", 298, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14568,7 +16752,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 198, 0.25, -1.0, ir3
+     event "i", 296, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14595,7 +16779,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 190, 0.0, 0.25, ir3
+     event "i", 288, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14622,7 +16806,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 188, 0.0, 0.25, ir3
+     event "i", 296, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14649,7 +16833,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 198, 0.25, -1.0, ir3
+     event "i", 294, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14676,7 +16860,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 196, 0.25, -1.0, ir3
+     event "i", 294, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14703,7 +16887,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 194, 0.25, -1.0, ir3
+     event "i", 292, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14730,7 +16914,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 192, 0.0, 0.25, ir3
+     event "i", 290, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14757,7 +16941,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 196, 0.25, -1.0, ir3
+     event "i", 292, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14784,7 +16968,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 194, 0.25, -1.0, ir3
+     event "i", 290, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14811,7 +16995,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 192, 0.0, 0.25, ir3
+     event "i", 288, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14838,7 +17022,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 190, 0.0, 0.25, ir3
+     event "i", 286, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14865,7 +17049,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 188, 0.0, 0.25, ir3
+     event "i", 284, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14892,7 +17076,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 186, 0.0, 0.25, ir3
+     event "i", 282, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14919,7 +17103,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 184, 0.0, 0.25, ir3
+     event "i", 280, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14946,7 +17130,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 182, 0.0, 0.25, ir3
+     event "i", 278, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14973,7 +17157,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 180, 0.0, 0.25, ir3
+     event "i", 276, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -14996,17 +17180,18 @@ endin
 instr 1161
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 144, 0.0, 8.0, ir3
+     event "i", 274, 0.5, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -15015,8 +17200,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1160
@@ -15026,7 +17211,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 106, 0.5, -1.0, ir3
+     event "i", 272, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15053,7 +17238,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 104, 0.25, -1.0, ir3
+     event "i", 270, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15080,7 +17265,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 102, 0.25, -1.0, ir3
+     event "i", 268, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15107,7 +17292,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 100, 0.0, 0.25, ir3
+     event "i", 266, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15134,7 +17319,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 98, 0.0, 0.25, ir3
+     event "i", 264, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15161,7 +17346,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 479, 64.0, -1.0, ir3
+     event "i", 262, 32.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15184,10 +17369,10 @@ endin
 instr 1154
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 6.25e-2
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 476, 0.0, 16.0, ir3
+     event "i", 259, 0.0, 8.0, ir3
 endif
 S14 sprintf "p1_%d", ir3
 ar0 chnget S14
@@ -15210,18 +17395,17 @@ endin
 instr 1153
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 468, 2.0, -1.0, ir3
+     event "i", 259, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -15230,8 +17414,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1152
@@ -15241,7 +17425,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 360, 0.25, -1.0, ir3
+     event "i", 206, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15268,7 +17452,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 352, 0.0, 0.25, ir3
+     event "i", 180, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15295,7 +17479,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 350, 0.25, -1.0, ir3
+     event "i", 206, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15322,7 +17506,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 348, 1.25, -1.0, ir3
+     event "i", 204, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15349,7 +17533,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 346, 0.25, -1.0, ir3
+     event "i", 202, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15376,7 +17560,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 344, 0.0, 0.25, ir3
+     event "i", 184, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15403,7 +17587,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 342, 0.0, 0.25, ir3
+     event "i", 202, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15430,7 +17614,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 468, 2.0, -1.0, ir3
+     event "i", 200, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15457,7 +17641,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 360, 0.25, -1.0, ir3
+     event "i", 186, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15484,7 +17668,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 358, 1.25, -1.0, ir3
+     event "i", 200, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15511,7 +17695,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 358, 1.25, -1.0, ir3
+     event "i", 198, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15538,7 +17722,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 356, 0.25, -1.0, ir3
+     event "i", 196, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15565,7 +17749,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 354, 0.0, 0.25, ir3
+     event "i", 190, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15592,7 +17776,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 352, 0.0, 0.25, ir3
+     event "i", 196, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15619,7 +17803,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 460, 2.0, -1.0, ir3
+     event "i", 194, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15646,7 +17830,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 452, 2.0, -1.0, ir3
+     event "i", 192, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15673,7 +17857,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 452, 2.0, -1.0, ir3
+     event "i", 194, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15700,7 +17884,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 380, 0.25, -1.0, ir3
+     event "i", 192, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15727,7 +17911,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 378, 1.25, -1.0, ir3
+     event "i", 190, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15754,7 +17938,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 376, 0.25, -1.0, ir3
+     event "i", 188, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15781,7 +17965,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 374, 0.0, 0.25, ir3
+     event "i", 186, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15808,7 +17992,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 372, 0.0, 0.25, ir3
+     event "i", 184, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15835,7 +18019,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 444, 2.0, -1.0, ir3
+     event "i", 182, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15862,7 +18046,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 436, 2.0, -1.0, ir3
+     event "i", 180, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15889,7 +18073,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 390, 0.25, -1.0, ir3
+     event "i", 178, 16.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15912,18 +18096,17 @@ endin
 instr 1127
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 388, 1.25, -1.0, ir3
+     event "i", 176, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -15932,8 +18115,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1126
@@ -15943,7 +18126,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 386, 0.25, -1.0, ir3
+     event "i", 174, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15970,7 +18153,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 384, 0.0, 0.25, ir3
+     event "i", 172, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -15997,7 +18180,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 382, 0.0, 0.25, ir3
+     event "i", 170, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16024,7 +18207,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 436, 2.0, -1.0, ir3
+     event "i", 168, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16051,7 +18234,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 428, 2.0, -1.0, ir3
+     event "i", 166, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16078,7 +18261,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 428, 2.0, -1.0, ir3
+     event "i", 164, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16105,7 +18288,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 424, 2.0, -1.0, ir3
+     event "i", 162, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16132,7 +18315,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 412, 0.25, -1.0, ir3
+     event "i", 160, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16159,7 +18342,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 408, 1.25, -1.0, ir3
+     event "i", 158, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16186,7 +18369,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 406, 0.25, -1.0, ir3
+     event "i", 156, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16213,7 +18396,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 404, 0.0, 0.25, ir3
+     event "i", 154, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16240,7 +18423,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 402, 0.0, 0.25, ir3
+     event "i", 152, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16267,7 +18450,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 424, 2.0, -1.0, ir3
+     event "i", 150, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16294,7 +18477,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 422, 0.25, -1.0, ir3
+     event "i", 148, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16321,7 +18504,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 414, 0.0, 0.25, ir3
+     event "i", 146, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16344,18 +18527,17 @@ endin
 instr 1111
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 422, 0.25, -1.0, ir3
+     event "i", 144, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -16364,8 +18546,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1110
@@ -16375,7 +18557,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 420, 1.25, -1.0, ir3
+     event "i", 142, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16402,7 +18584,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 420, 1.25, -1.0, ir3
+     event "i", 116, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16429,7 +18611,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 418, 0.25, -1.0, ir3
+     event "i", 114, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16456,7 +18638,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 416, 0.0, 0.25, ir3
+     event "i", 112, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16483,7 +18665,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 418, 0.25, -1.0, ir3
+     event "i", 110, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16510,7 +18692,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 416, 0.0, 0.25, ir3
+     event "i", 108, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16537,7 +18719,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 414, 0.0, 0.25, ir3
+     event "i", 106, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16564,7 +18746,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 412, 0.25, -1.0, ir3
+     event "i", 104, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16591,7 +18773,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 408, 1.25, -1.0, ir3
+     event "i", 102, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16618,7 +18800,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 406, 0.25, -1.0, ir3
+     event "i", 100, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16645,7 +18827,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 404, 0.0, 0.25, ir3
+     event "i", 98, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16672,7 +18854,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 402, 0.0, 0.25, ir3
+     event "i", 492, 64.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16695,18 +18877,17 @@ endin
 instr 1098
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 6.25e-2
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 400, 0.25, -1.0, ir3
+     event "i", 489, 0.0, 16.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -16715,25 +18896,24 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1097
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 6.25e-2
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 398, 1.25, -1.0, ir3
+     event "i", 489, 0.0, 16.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -16742,8 +18922,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1096
@@ -16753,7 +18933,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 396, 0.25, -1.0, ir3
+     event "i", 481, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16780,7 +18960,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 394, 0.0, 0.25, ir3
+     event "i", 481, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16807,7 +18987,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 392, 0.0, 0.25, ir3
+     event "i", 473, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16834,7 +19014,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 390, 0.25, -1.0, ir3
+     event "i", 382, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16861,7 +19041,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 388, 1.25, -1.0, ir3
+     event "i", 374, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16888,7 +19068,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 386, 0.25, -1.0, ir3
+     event "i", 465, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16915,7 +19095,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 384, 0.0, 0.25, ir3
+     event "i", 457, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16942,7 +19122,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 382, 0.0, 0.25, ir3
+     event "i", 449, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16969,7 +19149,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 380, 0.25, -1.0, ir3
+     event "i", 441, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -16996,7 +19176,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 378, 1.25, -1.0, ir3
+     event "i", 434, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17023,7 +19203,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 376, 0.25, -1.0, ir3
+     event "i", 432, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17050,7 +19230,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 374, 0.0, 0.25, ir3
+     event "i", 430, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17077,7 +19257,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 372, 0.0, 0.25, ir3
+     event "i", 428, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17104,7 +19284,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 370, 0.25, -1.0, ir3
+     event "i", 426, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17131,7 +19311,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 368, 1.25, -1.0, ir3
+     event "i", 424, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17158,7 +19338,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 366, 0.25, -1.0, ir3
+     event "i", 422, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17185,7 +19365,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 364, 0.0, 0.25, ir3
+     event "i", 420, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17212,7 +19392,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 362, 0.0, 0.25, ir3
+     event "i", 418, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17239,7 +19419,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 360, 0.25, -1.0, ir3
+     event "i", 416, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17266,7 +19446,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 358, 1.25, -1.0, ir3
+     event "i", 414, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17293,7 +19473,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 356, 0.25, -1.0, ir3
+     event "i", 412, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17320,7 +19500,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 354, 0.0, 0.25, ir3
+     event "i", 410, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17347,7 +19527,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 352, 0.0, 0.25, ir3
+     event "i", 408, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17374,7 +19554,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 350, 0.25, -1.0, ir3
+     event "i", 406, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17401,7 +19581,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 348, 1.25, -1.0, ir3
+     event "i", 404, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17428,7 +19608,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 346, 0.25, -1.0, ir3
+     event "i", 402, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17455,7 +19635,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 344, 0.0, 0.25, ir3
+     event "i", 400, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17482,7 +19662,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 342, 0.0, 0.25, ir3
+     event "i", 398, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17505,17 +19685,18 @@ endin
 instr 1068
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 6.25e-2
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 476, 0.0, 16.0, ir3
+     event "i", 396, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -17524,8 +19705,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1067
@@ -17535,7 +19716,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 468, 2.0, -1.0, ir3
+     event "i", 392, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17562,7 +19743,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 460, 2.0, -1.0, ir3
+     event "i", 390, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17589,7 +19770,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 452, 2.0, -1.0, ir3
+     event "i", 388, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17616,7 +19797,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 444, 2.0, -1.0, ir3
+     event "i", 386, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17643,7 +19824,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 436, 2.0, -1.0, ir3
+     event "i", 384, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17670,7 +19851,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 428, 2.0, -1.0, ir3
+     event "i", 382, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17697,7 +19878,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 424, 2.0, -1.0, ir3
+     event "i", 380, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17724,7 +19905,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 422, 0.25, -1.0, ir3
+     event "i", 380, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17751,7 +19932,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 420, 1.25, -1.0, ir3
+     event "i", 378, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17778,7 +19959,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 418, 0.25, -1.0, ir3
+     event "i", 376, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17805,7 +19986,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 416, 0.0, 0.25, ir3
+     event "i", 378, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17832,7 +20013,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 414, 0.0, 0.25, ir3
+     event "i", 376, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17859,7 +20040,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 412, 0.25, -1.0, ir3
+     event "i", 374, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17886,7 +20067,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 408, 1.25, -1.0, ir3
+     event "i", 372, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17913,7 +20094,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 406, 0.25, -1.0, ir3
+     event "i", 370, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17940,7 +20121,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 404, 0.0, 0.25, ir3
+     event "i", 368, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17967,7 +20148,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 402, 0.0, 0.25, ir3
+     event "i", 366, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -17994,7 +20175,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 400, 0.25, -1.0, ir3
+     event "i", 364, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18021,7 +20202,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 398, 1.25, -1.0, ir3
+     event "i", 362, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18048,7 +20229,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 396, 0.25, -1.0, ir3
+     event "i", 360, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18075,7 +20256,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 394, 0.0, 0.25, ir3
+     event "i", 358, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18102,7 +20283,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 392, 0.0, 0.25, ir3
+     event "i", 356, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18129,7 +20310,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 390, 0.25, -1.0, ir3
+     event "i", 354, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18156,7 +20337,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 388, 1.25, -1.0, ir3
+     event "i", 262, 32.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18179,18 +20360,17 @@ endin
 instr 1043
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 386, 0.25, -1.0, ir3
+     event "i", 259, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -18199,8 +20379,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 1042
@@ -18210,7 +20390,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 384, 0.0, 0.25, ir3
+     event "i", 206, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18237,7 +20417,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 382, 0.0, 0.25, ir3
+     event "i", 180, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18264,7 +20444,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 380, 0.25, -1.0, ir3
+     event "i", 243, 4.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18291,7 +20471,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 378, 1.25, -1.0, ir3
+     event "i", 239, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18318,7 +20498,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 376, 0.25, -1.0, ir3
+     event "i", 235, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18345,7 +20525,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 372, 0.0, 0.25, ir3
+     event "i", 231, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18372,7 +20552,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 370, 0.25, -1.0, ir3
+     event "i", 228, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18399,7 +20579,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 368, 1.25, -1.0, ir3
+     event "i", 226, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18426,7 +20606,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 366, 0.25, -1.0, ir3
+     event "i", 224, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18453,7 +20633,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 364, 0.0, 0.25, ir3
+     event "i", 222, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18480,7 +20660,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 362, 0.0, 0.25, ir3
+     event "i", 220, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18507,7 +20687,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 360, 0.25, -1.0, ir3
+     event "i", 218, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18534,7 +20714,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 358, 1.25, -1.0, ir3
+     event "i", 216, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18561,7 +20741,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 356, 0.25, -1.0, ir3
+     event "i", 214, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18588,7 +20768,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 354, 0.0, 0.25, ir3
+     event "i", 212, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18615,7 +20795,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 358, 1.25, -1.0, ir3
+     event "i", 210, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18642,7 +20822,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 356, 0.25, -1.0, ir3
+     event "i", 208, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18669,7 +20849,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 354, 0.0, 0.25, ir3
+     event "i", 206, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18696,7 +20876,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 352, 0.0, 0.25, ir3
+     event "i", 204, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18723,7 +20903,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 350, 0.25, -1.0, ir3
+     event "i", 182, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18750,7 +20930,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 348, 1.25, -1.0, ir3
+     event "i", 204, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18777,7 +20957,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 346, 0.25, -1.0, ir3
+     event "i", 202, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18804,7 +20984,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 344, 0.0, 0.25, ir3
+     event "i", 200, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18831,7 +21011,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 342, 0.0, 0.25, ir3
+     event "i", 198, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18858,7 +21038,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 250, 32.0, -1.0, ir3
+     event "i", 196, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18881,17 +21061,18 @@ endin
 instr 1017
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 247, 0.0, 8.0, ir3
+     event "i", 194, 0.25, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -18900,8 +21081,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 1016
@@ -18911,7 +21092,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 213, 0.25, -1.0, ir3
+     event "i", 192, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18938,7 +21119,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 180, 0.0, 0.25, ir3
+     event "i", 190, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18965,7 +21146,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 243, 4.0, -1.0, ir3
+     event "i", 188, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -18992,7 +21173,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 241, 0.25, -1.0, ir3
+     event "i", 186, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19019,7 +21200,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 239, 0.25, -1.0, ir3
+     event "i", 184, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19046,7 +21227,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 237, 0.25, -1.0, ir3
+     event "i", 202, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19073,7 +21254,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 235, 0.25, -1.0, ir3
+     event "i", 200, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19100,7 +21281,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 233, 0.25, -1.0, ir3
+     event "i", 198, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19127,7 +21308,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 231, 0.25, -1.0, ir3
+     event "i", 196, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19154,7 +21335,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 229, 0.25, -1.0, ir3
+     event "i", 192, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19181,7 +21362,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 227, 0.0, 0.25, ir3
+     event "i", 190, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19208,7 +21389,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 225, 0.0, 0.25, ir3
+     event "i", 188, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19235,7 +21416,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 223, 0.0, 0.25, ir3
+     event "i", 186, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19262,7 +21443,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 221, 0.0, 0.25, ir3
+     event "i", 184, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19289,7 +21470,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 219, 0.0, 0.25, ir3
+     event "i", 182, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19316,7 +21497,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 217, 0.0, 0.25, ir3
+     event "i", 180, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19343,7 +21524,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 215, 0.0, 0.25, ir3
+     event "i", 178, 16.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19366,18 +21547,17 @@ endin
 instr 999
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 213, 0.25, -1.0, ir3
+     event "i", 176, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -19386,8 +21566,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 998
@@ -19397,7 +21577,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 209, 0.25, -1.0, ir3
+     event "i", 174, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19424,7 +21604,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 182, 0.0, 0.25, ir3
+     event "i", 172, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19451,7 +21631,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 209, 0.25, -1.0, ir3
+     event "i", 170, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19478,7 +21658,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 205, 0.25, -1.0, ir3
+     event "i", 168, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19505,7 +21685,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 184, 0.0, 0.25, ir3
+     event "i", 166, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19532,7 +21712,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 205, 0.25, -1.0, ir3
+     event "i", 164, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19559,7 +21739,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 201, 0.25, -1.0, ir3
+     event "i", 162, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19586,7 +21766,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 186, 0.0, 0.25, ir3
+     event "i", 160, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19613,7 +21793,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 201, 0.25, -1.0, ir3
+     event "i", 158, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19640,7 +21820,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 198, 0.25, -1.0, ir3
+     event "i", 156, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19667,7 +21847,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 188, 0.0, 0.25, ir3
+     event "i", 154, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19694,7 +21874,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 198, 0.25, -1.0, ir3
+     event "i", 152, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19721,7 +21901,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 196, 0.25, -1.0, ir3
+     event "i", 150, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19748,7 +21928,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 190, 0.0, 0.25, ir3
+     event "i", 148, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19775,7 +21955,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 196, 0.25, -1.0, ir3
+     event "i", 146, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19798,18 +21978,17 @@ endin
 instr 983
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 194, 0.25, -1.0, ir3
+     event "i", 144, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -19818,8 +21997,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 982
@@ -19829,7 +22008,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 192, 0.0, 0.25, ir3
+     event "i", 142, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19856,7 +22035,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 194, 0.25, -1.0, ir3
+     event "i", 106, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19883,7 +22062,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 192, 0.0, 0.25, ir3
+     event "i", 104, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19910,7 +22089,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 190, 0.0, 0.25, ir3
+     event "i", 102, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19937,7 +22116,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 188, 0.0, 0.25, ir3
+     event "i", 100, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19964,7 +22143,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 186, 0.0, 0.25, ir3
+     event "i", 98, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -19991,7 +22170,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 184, 0.0, 0.25, ir3
+     event "i", 142, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20018,7 +22197,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 182, 0.0, 0.25, ir3
+     event "i", 140, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20045,7 +22224,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 180, 0.0, 0.25, ir3
+     event "i", 140, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20072,7 +22251,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 178, 16.0, -1.0, ir3
+     event "i", 126, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20095,17 +22274,18 @@ endin
 instr 972
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 176, 0.0, 8.0, ir3
+     event "i", 138, 2.0, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -20114,8 +22294,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 971
@@ -20125,7 +22305,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 174, 2.0, -1.0, ir3
+     event "i", 136, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20152,7 +22332,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 172, 2.0, -1.0, ir3
+     event "i", 134, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20179,7 +22359,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 170, 2.0, -1.0, ir3
+     event "i", 132, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20206,7 +22386,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 168, 1.5, -1.0, ir3
+     event "i", 130, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20233,7 +22413,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 166, 0.25, -1.0, ir3
+     event "i", 128, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20260,7 +22440,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 164, 0.0, 0.25, ir3
+     event "i", 126, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20287,7 +22467,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 162, 1.5, -1.0, ir3
+     event "i", 124, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20314,7 +22494,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 160, 0.25, -1.0, ir3
+     event "i", 118, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20341,7 +22521,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 158, 0.0, 0.25, ir3
+     event "i", 124, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20368,7 +22548,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 156, 1.5, -1.0, ir3
+     event "i", 120, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20395,7 +22575,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 154, 0.25, -1.0, ir3
+     event "i", 122, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20422,7 +22602,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 152, 0.0, 0.25, ir3
+     event "i", 120, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20449,7 +22629,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 150, 1.5, -1.0, ir3
+     event "i", 118, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20476,7 +22656,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 148, 0.25, -1.0, ir3
+     event "i", 116, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20503,7 +22683,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 146, 0.0, 0.25, ir3
+     event "i", 114, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20526,17 +22706,18 @@ endin
 instr 956
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 144, 0.0, 8.0, ir3
+     event "i", 112, 0.25, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -20545,8 +22726,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 955
@@ -20556,7 +22737,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 142, 2.0, -1.0, ir3
+     event "i", 110, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20583,7 +22764,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 142, 2.0, -1.0, ir3
+     event "i", 108, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20610,7 +22791,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 140, 2.0, -1.0, ir3
+     event "i", 106, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20637,7 +22818,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 116, 0.5, -1.0, ir3
+     event "i", 104, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20664,7 +22845,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 114, 0.25, -1.0, ir3
+     event "i", 102, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20691,7 +22872,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 112, 0.25, -1.0, ir3
+     event "i", 100, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20718,7 +22899,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 110, 0.0, 0.25, ir3
+     event "i", 98, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20745,7 +22926,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 108, 0.0, 0.25, ir3
+     event "i", 352, 48.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20768,18 +22949,17 @@ endin
 instr 947
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 140, 2.0, -1.0, ir3
+     event "i", 350, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -20788,25 +22968,24 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 946
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 138, 2.0, -1.0, ir3
+     event "i", 350, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -20815,8 +22994,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 945
@@ -20826,7 +23005,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 126, 0.5, -1.0, ir3
+     event "i", 348, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20853,7 +23032,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 124, 0.25, -1.0, ir3
+     event "i", 346, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20880,7 +23059,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 122, 0.25, -1.0, ir3
+     event "i", 302, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20907,7 +23086,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 120, 0.0, 0.25, ir3
+     event "i", 300, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20934,7 +23113,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 118, 0.0, 0.25, ir3
+     event "i", 298, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20961,7 +23140,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 138, 2.0, -1.0, ir3
+     event "i", 296, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -20988,7 +23167,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 136, 0.5, -1.0, ir3
+     event "i", 294, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21015,7 +23194,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 136, 0.5, -1.0, ir3
+     event "i", 292, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21042,7 +23221,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 134, 0.25, -1.0, ir3
+     event "i", 290, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21069,7 +23248,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 128, 0.0, 0.25, ir3
+     event "i", 288, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21096,7 +23275,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 134, 0.25, -1.0, ir3
+     event "i", 286, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21123,7 +23302,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 130, 0.0, 0.25, ir3
+     event "i", 284, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21150,7 +23329,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 132, 0.25, -1.0, ir3
+     event "i", 346, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21177,7 +23356,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 130, 0.0, 0.25, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21204,7 +23383,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 128, 0.0, 0.25, ir3
+     event "i", 322, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21231,7 +23410,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 126, 0.5, -1.0, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21258,7 +23437,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 124, 0.25, -1.0, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21285,7 +23464,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 122, 0.25, -1.0, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21312,7 +23491,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 120, 0.0, 0.25, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21339,7 +23518,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 118, 0.0, 0.25, ir3
+     event "i", 312, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21366,7 +23545,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 116, 0.5, -1.0, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21393,7 +23572,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 114, 0.25, -1.0, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21420,7 +23599,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 112, 0.25, -1.0, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21447,7 +23626,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 110, 0.0, 0.25, ir3
+     event "i", 304, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21474,7 +23653,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 108, 0.0, 0.25, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21501,7 +23680,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 106, 0.5, -1.0, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21528,7 +23707,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 104, 0.25, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21555,7 +23734,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 102, 0.25, -1.0, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21582,7 +23761,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 100, 0.0, 0.25, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21609,7 +23788,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 98, 0.0, 0.25, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21636,7 +23815,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 340, 48.0, -1.0, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21659,17 +23838,18 @@ endin
 instr 914
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 338, 0.0, 8.0, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -21678,24 +23858,25 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 913
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 338, 0.0, 8.0, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -21704,8 +23885,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 912
@@ -21715,7 +23896,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21742,7 +23923,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21769,7 +23950,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21796,7 +23977,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21823,7 +24004,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21850,7 +24031,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21877,7 +24058,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21904,7 +24085,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21931,7 +24112,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21958,7 +24139,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -21985,7 +24166,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 336, 2.0, -1.0, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22012,7 +24193,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22039,7 +24220,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 322, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22066,7 +24247,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22093,7 +24274,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22120,7 +24301,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22147,7 +24328,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22174,7 +24355,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 312, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22201,7 +24382,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22228,7 +24409,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22255,7 +24436,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22282,7 +24463,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 304, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22309,7 +24490,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 302, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22336,7 +24517,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 300, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22363,7 +24544,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 298, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22390,7 +24571,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 296, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22417,7 +24598,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 328, 0.25, -1.0, ir3
+     event "i", 294, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22444,7 +24625,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 326, 0.25, -1.0, ir3
+     event "i", 292, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22471,7 +24652,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 316, 0.0, 0.25, ir3
+     event "i", 290, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22498,7 +24679,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 324, 0.25, -1.0, ir3
+     event "i", 288, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22525,7 +24706,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 322, 0.5, -1.0, ir3
+     event "i", 286, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22552,7 +24733,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 320, 0.25, -1.0, ir3
+     event "i", 284, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22579,7 +24760,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 318, 0.0, 0.25, ir3
+     event "i", 262, 32.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22602,18 +24783,17 @@ endin
 instr 879
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 316, 0.0, 0.25, ir3
+     event "i", 259, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -22622,25 +24802,24 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 878
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 259, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -22649,8 +24828,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 877
@@ -22660,7 +24839,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 243, 4.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22687,7 +24866,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 206, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22714,7 +24893,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 204, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22741,7 +24920,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 202, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22768,7 +24947,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 200, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22795,7 +24974,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 198, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22822,7 +25001,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 196, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22849,7 +25028,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 194, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22876,7 +25055,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 192, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22903,7 +25082,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 190, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22930,7 +25109,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 188, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22957,7 +25136,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 186, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -22984,7 +25163,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 184, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23011,7 +25190,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 182, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23038,7 +25217,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 180, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23065,7 +25244,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 243, 4.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23092,7 +25271,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 239, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23119,7 +25298,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 208, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23146,7 +25325,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 239, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23173,7 +25352,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 235, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23200,7 +25379,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 210, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23227,7 +25406,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 250, 32.0, -1.0, ir3
+     event "i", 235, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23250,17 +25429,18 @@ endin
 instr 855
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 247, 0.0, 8.0, ir3
+     event "i", 231, 0.25, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -23269,24 +25449,25 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 854
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 247, 0.0, 8.0, ir3
+     event "i", 212, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -23295,8 +25476,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 853
@@ -23306,7 +25487,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 243, 4.0, -1.0, ir3
+     event "i", 231, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23333,7 +25514,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 213, 0.25, -1.0, ir3
+     event "i", 228, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23360,7 +25541,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 209, 0.25, -1.0, ir3
+     event "i", 226, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23387,7 +25568,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 205, 0.25, -1.0, ir3
+     event "i", 224, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23414,7 +25595,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 201, 0.25, -1.0, ir3
+     event "i", 222, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23441,7 +25622,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 198, 0.25, -1.0, ir3
+     event "i", 220, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23468,7 +25649,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 196, 0.25, -1.0, ir3
+     event "i", 218, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23495,7 +25676,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 194, 0.25, -1.0, ir3
+     event "i", 216, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23522,7 +25703,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 192, 0.0, 0.25, ir3
+     event "i", 214, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23549,7 +25730,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 190, 0.0, 0.25, ir3
+     event "i", 228, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23576,7 +25757,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 188, 0.0, 0.25, ir3
+     event "i", 226, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23603,7 +25784,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 186, 0.0, 0.25, ir3
+     event "i", 224, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23630,7 +25811,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 184, 0.0, 0.25, ir3
+     event "i", 222, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23657,7 +25838,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 182, 0.0, 0.25, ir3
+     event "i", 220, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23684,7 +25865,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 180, 0.0, 0.25, ir3
+     event "i", 218, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23711,7 +25892,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 243, 4.0, -1.0, ir3
+     event "i", 216, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23738,7 +25919,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 241, 0.25, -1.0, ir3
+     event "i", 214, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23765,7 +25946,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 215, 0.0, 0.25, ir3
+     event "i", 212, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23792,7 +25973,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 241, 0.25, -1.0, ir3
+     event "i", 210, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23819,7 +26000,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 239, 0.25, -1.0, ir3
+     event "i", 208, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23846,7 +26027,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 217, 0.0, 0.25, ir3
+     event "i", 206, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23873,7 +26054,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 239, 0.25, -1.0, ir3
+     event "i", 204, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23900,7 +26081,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 237, 0.25, -1.0, ir3
+     event "i", 202, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23927,7 +26108,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 219, 0.0, 0.25, ir3
+     event "i", 200, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23954,7 +26135,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 237, 0.25, -1.0, ir3
+     event "i", 198, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -23981,7 +26162,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 235, 0.25, -1.0, ir3
+     event "i", 196, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24008,7 +26189,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 221, 0.0, 0.25, ir3
+     event "i", 194, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24035,7 +26216,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 235, 0.25, -1.0, ir3
+     event "i", 192, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24062,7 +26243,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 233, 0.25, -1.0, ir3
+     event "i", 190, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24089,7 +26270,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 231, 0.25, -1.0, ir3
+     event "i", 188, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24116,7 +26297,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 229, 0.25, -1.0, ir3
+     event "i", 186, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24143,7 +26324,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 227, 0.0, 0.25, ir3
+     event "i", 184, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24170,7 +26351,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 225, 0.0, 0.25, ir3
+     event "i", 182, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24197,7 +26378,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 223, 0.0, 0.25, ir3
+     event "i", 180, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24224,7 +26405,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 233, 0.25, -1.0, ir3
+     event "i", 178, 16.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24247,18 +26428,17 @@ endin
 instr 818
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 231, 0.25, -1.0, ir3
+     event "i", 176, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -24267,8 +26447,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 817
@@ -24278,7 +26458,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 229, 0.25, -1.0, ir3
+     event "i", 174, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24305,7 +26485,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 227, 0.0, 0.25, ir3
+     event "i", 172, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24332,7 +26512,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 225, 0.0, 0.25, ir3
+     event "i", 170, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24359,7 +26539,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 223, 0.0, 0.25, ir3
+     event "i", 168, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24386,7 +26566,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 221, 0.0, 0.25, ir3
+     event "i", 166, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24413,7 +26593,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 219, 0.0, 0.25, ir3
+     event "i", 164, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24440,7 +26620,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 217, 0.0, 0.25, ir3
+     event "i", 162, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24467,7 +26647,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 215, 0.0, 0.25, ir3
+     event "i", 160, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24494,7 +26674,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 213, 0.25, -1.0, ir3
+     event "i", 158, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24521,7 +26701,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 209, 0.25, -1.0, ir3
+     event "i", 156, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24548,7 +26728,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 205, 0.25, -1.0, ir3
+     event "i", 154, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24575,7 +26755,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 201, 0.25, -1.0, ir3
+     event "i", 152, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24602,7 +26782,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 198, 0.25, -1.0, ir3
+     event "i", 150, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24629,7 +26809,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 196, 0.25, -1.0, ir3
+     event "i", 148, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24656,7 +26836,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 194, 0.25, -1.0, ir3
+     event "i", 146, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24679,18 +26859,17 @@ endin
 instr 802
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 192, 0.0, 0.25, ir3
+     event "i", 144, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -24699,8 +26878,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 801
@@ -24710,7 +26889,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 190, 0.0, 0.25, ir3
+     event "i", 142, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24737,7 +26916,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 188, 0.0, 0.25, ir3
+     event "i", 106, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24764,7 +26943,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 186, 0.0, 0.25, ir3
+     event "i", 104, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24791,7 +26970,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 184, 0.0, 0.25, ir3
+     event "i", 102, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24818,7 +26997,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 182, 0.0, 0.25, ir3
+     event "i", 100, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24845,7 +27024,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 180, 0.0, 0.25, ir3
+     event "i", 98, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24872,7 +27051,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 178, 16.0, -1.0, ir3
+     event "i", 142, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24895,17 +27074,18 @@ endin
 instr 794
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 176, 0.0, 8.0, ir3
+     event "i", 140, 2.0, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -24914,8 +27094,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 793
@@ -24925,7 +27105,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 174, 2.0, -1.0, ir3
+     event "i", 116, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24952,7 +27132,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 172, 2.0, -1.0, ir3
+     event "i", 114, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -24979,7 +27159,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 170, 2.0, -1.0, ir3
+     event "i", 112, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25006,7 +27186,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 168, 1.5, -1.0, ir3
+     event "i", 110, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25033,7 +27213,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 166, 0.25, -1.0, ir3
+     event "i", 108, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25060,7 +27240,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 164, 0.0, 0.25, ir3
+     event "i", 140, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25087,7 +27267,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 162, 1.5, -1.0, ir3
+     event "i", 138, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25114,7 +27294,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 160, 0.25, -1.0, ir3
+     event "i", 136, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25141,7 +27321,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 158, 0.0, 0.25, ir3
+     event "i", 134, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25168,7 +27348,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 156, 1.5, -1.0, ir3
+     event "i", 132, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25195,7 +27375,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 154, 0.25, -1.0, ir3
+     event "i", 130, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25222,7 +27402,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 152, 0.0, 0.25, ir3
+     event "i", 128, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25249,7 +27429,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 150, 1.5, -1.0, ir3
+     event "i", 126, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25276,7 +27456,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 148, 0.25, -1.0, ir3
+     event "i", 124, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25303,7 +27483,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 146, 0.0, 0.25, ir3
+     event "i", 122, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25326,17 +27506,18 @@ endin
 instr 778
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 144, 0.0, 8.0, ir3
+     event "i", 120, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -25345,8 +27526,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 777
@@ -25356,7 +27537,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 142, 2.0, -1.0, ir3
+     event "i", 118, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25383,7 +27564,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 106, 0.5, -1.0, ir3
+     event "i", 138, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25410,7 +27591,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 104, 0.25, -1.0, ir3
+     event "i", 136, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25437,7 +27618,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 102, 0.25, -1.0, ir3
+     event "i", 134, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25464,7 +27645,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 100, 0.0, 0.25, ir3
+     event "i", 132, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25491,7 +27672,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 98, 0.0, 0.25, ir3
+     event "i", 130, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25518,7 +27699,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 142, 2.0, -1.0, ir3
+     event "i", 128, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25545,7 +27726,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 140, 2.0, -1.0, ir3
+     event "i", 126, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25572,7 +27753,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 138, 2.0, -1.0, ir3
+     event "i", 124, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25599,7 +27780,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 136, 0.5, -1.0, ir3
+     event "i", 122, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25626,7 +27807,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 134, 0.25, -1.0, ir3
+     event "i", 120, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25653,7 +27834,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 132, 0.25, -1.0, ir3
+     event "i", 118, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25680,7 +27861,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 130, 0.0, 0.25, ir3
+     event "i", 116, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25707,7 +27888,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 128, 0.0, 0.25, ir3
+     event "i", 114, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25734,7 +27915,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 126, 0.5, -1.0, ir3
+     event "i", 112, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25761,7 +27942,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 124, 0.25, -1.0, ir3
+     event "i", 110, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25788,7 +27969,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 122, 0.25, -1.0, ir3
+     event "i", 108, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25815,7 +27996,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 120, 0.0, 0.25, ir3
+     event "i", 106, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25842,7 +28023,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 118, 0.0, 0.25, ir3
+     event "i", 104, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25869,7 +28050,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 116, 0.5, -1.0, ir3
+     event "i", 102, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25896,7 +28077,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 114, 0.25, -1.0, ir3
+     event "i", 100, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25923,7 +28104,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 112, 0.25, -1.0, ir3
+     event "i", 98, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25950,7 +28131,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 110, 0.0, 0.25, ir3
+     event "i", 492, 64.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -25973,18 +28154,17 @@ endin
 instr 754
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 6.25e-2
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 108, 0.0, 0.25, ir3
+     event "i", 489, 0.0, 16.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -25993,25 +28173,24 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 753
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 6.25e-2
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 140, 2.0, -1.0, ir3
+     event "i", 489, 0.0, 16.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -26020,8 +28199,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 752
@@ -26031,7 +28210,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 138, 2.0, -1.0, ir3
+     event "i", 481, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26058,7 +28237,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 136, 0.5, -1.0, ir3
+     event "i", 362, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26085,7 +28264,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 134, 0.25, -1.0, ir3
+     event "i", 360, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26112,7 +28291,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 132, 0.25, -1.0, ir3
+     event "i", 358, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26139,7 +28318,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 130, 0.0, 0.25, ir3
+     event "i", 356, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26166,7 +28345,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 128, 0.0, 0.25, ir3
+     event "i", 354, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26193,7 +28372,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 126, 0.5, -1.0, ir3
+     event "i", 481, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26220,7 +28399,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 124, 0.25, -1.0, ir3
+     event "i", 473, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26247,7 +28426,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 122, 0.25, -1.0, ir3
+     event "i", 372, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26274,7 +28453,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 120, 0.0, 0.25, ir3
+     event "i", 370, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26301,7 +28480,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 118, 0.0, 0.25, ir3
+     event "i", 368, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26328,7 +28507,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 116, 0.5, -1.0, ir3
+     event "i", 366, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26355,7 +28534,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 114, 0.25, -1.0, ir3
+     event "i", 364, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26382,7 +28561,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 112, 0.25, -1.0, ir3
+     event "i", 473, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26409,7 +28588,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 110, 0.0, 0.25, ir3
+     event "i", 465, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26436,7 +28615,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 108, 0.0, 0.25, ir3
+     event "i", 382, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26463,7 +28642,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 106, 0.5, -1.0, ir3
+     event "i", 380, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26490,7 +28669,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 104, 0.25, -1.0, ir3
+     event "i", 378, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26517,7 +28696,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 102, 0.25, -1.0, ir3
+     event "i", 376, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26544,7 +28723,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 100, 0.0, 0.25, ir3
+     event "i", 374, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26571,7 +28750,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 98, 0.0, 0.25, ir3
+     event "i", 465, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26598,7 +28777,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 479, 64.0, -1.0, ir3
+     event "i", 457, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26621,17 +28800,18 @@ endin
 instr 730
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 6.25e-2
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 476, 0.0, 16.0, ir3
+     event "i", 392, 0.25, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -26640,24 +28820,25 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 729
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 6.25e-2
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 476, 0.0, 16.0, ir3
+     event "i", 390, 1.25, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -26666,8 +28847,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 728
@@ -26677,7 +28858,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 468, 2.0, -1.0, ir3
+     event "i", 388, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26704,7 +28885,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 350, 0.25, -1.0, ir3
+     event "i", 386, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26731,7 +28912,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 348, 1.25, -1.0, ir3
+     event "i", 384, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26758,7 +28939,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 346, 0.25, -1.0, ir3
+     event "i", 457, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26785,7 +28966,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 344, 0.0, 0.25, ir3
+     event "i", 449, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26812,7 +28993,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 342, 0.0, 0.25, ir3
+     event "i", 402, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26839,7 +29020,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 468, 2.0, -1.0, ir3
+     event "i", 400, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26866,7 +29047,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 460, 2.0, -1.0, ir3
+     event "i", 398, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26893,7 +29074,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 360, 0.25, -1.0, ir3
+     event "i", 396, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26920,7 +29101,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 358, 1.25, -1.0, ir3
+     event "i", 394, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26947,7 +29128,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 356, 0.25, -1.0, ir3
+     event "i", 449, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -26974,7 +29155,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 354, 0.0, 0.25, ir3
+     event "i", 441, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27001,7 +29182,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 352, 0.0, 0.25, ir3
+     event "i", 441, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27028,7 +29209,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 460, 2.0, -1.0, ir3
+     event "i", 422, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27055,7 +29236,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 452, 2.0, -1.0, ir3
+     event "i", 414, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27082,7 +29263,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 370, 0.25, -1.0, ir3
+     event "i", 434, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27109,7 +29290,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 368, 1.25, -1.0, ir3
+     event "i", 432, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27136,7 +29317,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 366, 0.25, -1.0, ir3
+     event "i", 430, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27163,7 +29344,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 364, 0.0, 0.25, ir3
+     event "i", 428, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27190,7 +29371,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 362, 0.0, 0.25, ir3
+     event "i", 426, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27217,7 +29398,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 452, 2.0, -1.0, ir3
+     event "i", 424, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27244,7 +29425,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 444, 2.0, -1.0, ir3
+     event "i", 422, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27271,7 +29452,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 444, 2.0, -1.0, ir3
+     event "i", 420, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27298,7 +29479,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 390, 0.25, -1.0, ir3
+     event "i", 418, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27325,7 +29506,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 388, 1.25, -1.0, ir3
+     event "i", 416, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27352,7 +29533,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 386, 0.25, -1.0, ir3
+     event "i", 420, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27379,7 +29560,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 384, 0.0, 0.25, ir3
+     event "i", 418, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27406,7 +29587,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 382, 0.0, 0.25, ir3
+     event "i", 416, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27433,7 +29614,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 436, 2.0, -1.0, ir3
+     event "i", 414, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27460,7 +29641,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 428, 2.0, -1.0, ir3
+     event "i", 412, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27487,7 +29668,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 424, 2.0, -1.0, ir3
+     event "i", 410, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27514,7 +29695,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 422, 0.25, -1.0, ir3
+     event "i", 408, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27541,7 +29722,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 420, 1.25, -1.0, ir3
+     event "i", 406, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27568,7 +29749,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 418, 0.25, -1.0, ir3
+     event "i", 404, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27595,7 +29776,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 416, 0.0, 0.25, ir3
+     event "i", 402, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27622,7 +29803,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 414, 0.0, 0.25, ir3
+     event "i", 400, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27649,7 +29830,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 412, 0.25, -1.0, ir3
+     event "i", 398, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27676,7 +29857,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 408, 1.25, -1.0, ir3
+     event "i", 396, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27703,7 +29884,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 406, 0.25, -1.0, ir3
+     event "i", 394, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27730,7 +29911,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 404, 0.0, 0.25, ir3
+     event "i", 392, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27757,7 +29938,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 402, 0.0, 0.25, ir3
+     event "i", 390, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27784,7 +29965,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 400, 0.25, -1.0, ir3
+     event "i", 388, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27811,7 +29992,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 398, 1.25, -1.0, ir3
+     event "i", 386, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27838,7 +30019,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 396, 0.25, -1.0, ir3
+     event "i", 384, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27865,7 +30046,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 394, 0.0, 0.25, ir3
+     event "i", 382, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27892,7 +30073,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 392, 0.0, 0.25, ir3
+     event "i", 380, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27919,7 +30100,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 390, 0.25, -1.0, ir3
+     event "i", 378, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27946,7 +30127,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 388, 1.25, -1.0, ir3
+     event "i", 376, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -27973,7 +30154,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 386, 0.25, -1.0, ir3
+     event "i", 374, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28000,7 +30181,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 384, 0.0, 0.25, ir3
+     event "i", 372, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28027,7 +30208,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 382, 0.0, 0.25, ir3
+     event "i", 370, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28054,7 +30235,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 380, 0.25, -1.0, ir3
+     event "i", 368, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28081,7 +30262,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 378, 1.25, -1.0, ir3
+     event "i", 366, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28108,7 +30289,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 376, 0.25, -1.0, ir3
+     event "i", 364, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28135,7 +30316,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 374, 0.0, 0.25, ir3
+     event "i", 362, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28162,7 +30343,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 372, 0.0, 0.25, ir3
+     event "i", 360, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28189,7 +30370,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 370, 0.25, -1.0, ir3
+     event "i", 358, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28216,7 +30397,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 368, 1.25, -1.0, ir3
+     event "i", 356, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28243,7 +30424,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 366, 0.25, -1.0, ir3
+     event "i", 354, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28270,7 +30451,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 364, 0.0, 0.25, ir3
+     event "i", 352, 48.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28293,18 +30474,17 @@ endin
 instr 668
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 362, 0.0, 0.25, ir3
+     event "i", 350, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -28313,25 +30493,24 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 667
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 360, 0.25, -1.0, ir3
+     event "i", 350, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -28340,8 +30519,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 666
@@ -28351,7 +30530,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 358, 1.25, -1.0, ir3
+     event "i", 348, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28378,7 +30557,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 356, 0.25, -1.0, ir3
+     event "i", 282, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28405,7 +30584,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 354, 0.0, 0.25, ir3
+     event "i", 280, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28432,7 +30611,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 352, 0.0, 0.25, ir3
+     event "i", 278, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28459,7 +30638,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 350, 0.25, -1.0, ir3
+     event "i", 276, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28486,7 +30665,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 348, 1.25, -1.0, ir3
+     event "i", 274, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28513,7 +30692,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 346, 0.25, -1.0, ir3
+     event "i", 272, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28540,7 +30719,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 344, 0.0, 0.25, ir3
+     event "i", 270, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28567,7 +30746,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 342, 0.0, 0.25, ir3
+     event "i", 268, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28594,7 +30773,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 340, 48.0, -1.0, ir3
+     event "i", 266, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28617,17 +30796,18 @@ endin
 instr 656
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 338, 0.0, 8.0, ir3
+     event "i", 264, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -28636,24 +30816,25 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 655
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 338, 0.0, 8.0, ir3
+     event "i", 348, 2.0, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -28662,8 +30843,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 654
@@ -28673,7 +30854,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 336, 2.0, -1.0, ir3
+     event "i", 346, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28700,7 +30881,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28727,7 +30908,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28754,7 +30935,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28781,7 +30962,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28808,7 +30989,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28835,7 +31016,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28862,7 +31043,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28889,7 +31070,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28916,7 +31097,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28943,7 +31124,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28970,7 +31151,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 336, 2.0, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -28997,7 +31178,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 322, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29024,7 +31205,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29051,7 +31232,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29078,7 +31259,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29105,7 +31286,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29132,7 +31313,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 312, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29159,7 +31340,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29186,7 +31367,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29213,7 +31394,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29240,7 +31421,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 304, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29267,7 +31448,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 302, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29294,7 +31475,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 300, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29321,7 +31502,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 298, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29348,7 +31529,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 296, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29375,7 +31556,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 294, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29402,7 +31583,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 292, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29429,7 +31610,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 290, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29456,7 +31637,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 288, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29483,7 +31664,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 286, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29510,7 +31691,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 284, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29537,7 +31718,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 346, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29564,7 +31745,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29591,7 +31772,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29618,7 +31799,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29645,7 +31826,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29672,7 +31853,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29699,7 +31880,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29726,7 +31907,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 328, 0.25, -1.0, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29753,7 +31934,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 328, 0.25, -1.0, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29780,7 +31961,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 326, 0.25, -1.0, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29807,7 +31988,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29834,7 +32015,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 326, 0.25, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29861,7 +32042,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 324, 0.25, -1.0, ir3
+     event "i", 322, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29888,7 +32069,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 316, 0.0, 0.25, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29915,7 +32096,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 324, 0.25, -1.0, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29942,7 +32123,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 322, 0.5, -1.0, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29969,7 +32150,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 322, 0.5, -1.0, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -29996,7 +32177,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 320, 0.25, -1.0, ir3
+     event "i", 312, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30023,7 +32204,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 318, 0.0, 0.25, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30050,7 +32231,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 320, 0.25, -1.0, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30077,7 +32258,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 318, 0.0, 0.25, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30104,7 +32285,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 316, 0.0, 0.25, ir3
+     event "i", 304, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30131,7 +32312,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 302, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30158,7 +32339,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 300, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30185,7 +32366,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 298, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30212,7 +32393,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 296, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30239,7 +32420,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 294, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30266,7 +32447,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 292, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30293,7 +32474,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 290, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30320,7 +32501,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 288, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30347,7 +32528,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 286, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30374,7 +32555,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 284, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30401,7 +32582,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 282, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30428,7 +32609,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 280, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30455,7 +32636,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 278, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30482,7 +32663,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 276, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30509,7 +32690,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 274, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30536,7 +32717,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 272, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30563,7 +32744,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 270, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30590,7 +32771,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 268, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30617,7 +32798,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 266, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30644,7 +32825,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 264, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30671,7 +32852,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 262, 32.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30694,18 +32875,17 @@ endin
 instr 579
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 259, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -30714,8 +32894,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 578
@@ -30725,7 +32905,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 243, 4.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30752,7 +32932,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 239, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30779,7 +32959,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 235, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30806,7 +32986,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 231, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30833,7 +33013,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 228, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30860,7 +33040,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
+     event "i", 226, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30887,7 +33067,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
+     event "i", 224, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30914,7 +33094,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
+     event "i", 222, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30941,7 +33121,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
+     event "i", 220, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30968,7 +33148,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
+     event "i", 218, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -30995,7 +33175,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 250, 32.0, -1.0, ir3
+     event "i", 216, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31018,17 +33198,18 @@ endin
 instr 567
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 247, 0.0, 8.0, ir3
+     event "i", 214, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -31037,8 +33218,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 566
@@ -31048,7 +33229,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 243, 4.0, -1.0, ir3
+     event "i", 212, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31075,7 +33256,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 241, 0.25, -1.0, ir3
+     event "i", 210, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31102,7 +33283,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 239, 0.25, -1.0, ir3
+     event "i", 208, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31129,7 +33310,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 237, 0.25, -1.0, ir3
+     event "i", 206, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31156,7 +33337,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 235, 0.25, -1.0, ir3
+     event "i", 204, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31183,7 +33364,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 233, 0.25, -1.0, ir3
+     event "i", 202, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31210,7 +33391,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 231, 0.25, -1.0, ir3
+     event "i", 200, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31237,7 +33418,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 229, 0.25, -1.0, ir3
+     event "i", 198, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31264,7 +33445,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 227, 0.0, 0.25, ir3
+     event "i", 196, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31291,7 +33472,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 225, 0.0, 0.25, ir3
+     event "i", 194, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31318,7 +33499,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 223, 0.0, 0.25, ir3
+     event "i", 192, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31345,7 +33526,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 221, 0.0, 0.25, ir3
+     event "i", 190, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31372,7 +33553,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 219, 0.0, 0.25, ir3
+     event "i", 188, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31399,7 +33580,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 217, 0.0, 0.25, ir3
+     event "i", 186, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31426,7 +33607,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 215, 0.0, 0.25, ir3
+     event "i", 184, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31453,7 +33634,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 213, 0.25, -1.0, ir3
+     event "i", 182, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31480,7 +33661,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 209, 0.25, -1.0, ir3
+     event "i", 180, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31507,7 +33688,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 205, 0.25, -1.0, ir3
+     event "i", 178, 16.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31530,18 +33711,17 @@ endin
 instr 548
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 201, 0.25, -1.0, ir3
+     event "i", 176, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -31550,8 +33730,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 547
@@ -31561,7 +33741,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 198, 0.25, -1.0, ir3
+     event "i", 174, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31588,7 +33768,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 196, 0.25, -1.0, ir3
+     event "i", 172, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31615,7 +33795,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 194, 0.25, -1.0, ir3
+     event "i", 170, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31642,7 +33822,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 192, 0.0, 0.25, ir3
+     event "i", 168, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31669,7 +33849,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 190, 0.0, 0.25, ir3
+     event "i", 166, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31696,7 +33876,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 188, 0.0, 0.25, ir3
+     event "i", 164, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31723,7 +33903,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 186, 0.0, 0.25, ir3
+     event "i", 162, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31750,7 +33930,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 184, 0.0, 0.25, ir3
+     event "i", 160, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31777,7 +33957,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 182, 0.0, 0.25, ir3
+     event "i", 158, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31804,7 +33984,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 180, 0.0, 0.25, ir3
+     event "i", 156, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31831,7 +34011,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 178, 16.0, -1.0, ir3
+     event "i", 154, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31854,17 +34034,18 @@ endin
 instr 536
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 176, 0.0, 8.0, ir3
+     event "i", 152, 0.0, 0.25, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -31873,24 +34054,25 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 535
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 176, 0.0, 8.0, ir3
+     event "i", 150, 1.5, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -31899,8 +34081,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 534
@@ -31910,7 +34092,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 174, 2.0, -1.0, ir3
+     event "i", 148, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31937,7 +34119,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 150, 1.5, -1.0, ir3
+     event "i", 146, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -31960,18 +34142,17 @@ endin
 instr 532
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 148, 0.25, -1.0, ir3
+     event "i", 176, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -31980,8 +34161,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 531
@@ -31991,7 +34172,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 146, 0.0, 0.25, ir3
+     event "i", 174, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32018,7 +34199,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 174, 2.0, -1.0, ir3
+     event "i", 172, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32045,7 +34226,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 172, 2.0, -1.0, ir3
+     event "i", 170, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32072,7 +34253,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 156, 1.5, -1.0, ir3
+     event "i", 168, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32099,7 +34280,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 154, 0.25, -1.0, ir3
+     event "i", 166, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32126,7 +34307,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 152, 0.0, 0.25, ir3
+     event "i", 164, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32153,7 +34334,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 172, 2.0, -1.0, ir3
+     event "i", 162, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32180,7 +34361,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 170, 2.0, -1.0, ir3
+     event "i", 160, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32207,7 +34388,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 168, 1.5, -1.0, ir3
+     event "i", 158, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32234,7 +34415,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 166, 0.25, -1.0, ir3
+     event "i", 156, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32261,7 +34442,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 164, 0.0, 0.25, ir3
+     event "i", 154, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32288,7 +34469,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 162, 1.5, -1.0, ir3
+     event "i", 152, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32315,7 +34496,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 160, 0.25, -1.0, ir3
+     event "i", 150, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32342,7 +34523,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 158, 0.0, 0.25, ir3
+     event "i", 146, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32365,18 +34546,17 @@ endin
 instr 517
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 170, 2.0, -1.0, ir3
+     event "i", 144, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -32385,8 +34565,8 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 516
@@ -32396,7 +34576,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 168, 1.5, -1.0, ir3
+     event "i", 142, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32423,7 +34603,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 166, 0.25, -1.0, ir3
+     event "i", 140, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32450,7 +34630,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 164, 0.0, 0.25, ir3
+     event "i", 138, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32477,7 +34657,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 162, 1.5, -1.0, ir3
+     event "i", 136, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32504,7 +34684,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 160, 0.25, -1.0, ir3
+     event "i", 134, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32531,7 +34711,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 158, 0.0, 0.25, ir3
+     event "i", 132, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32558,7 +34738,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 156, 1.5, -1.0, ir3
+     event "i", 130, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32585,7 +34765,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 154, 0.25, -1.0, ir3
+     event "i", 128, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32612,7 +34792,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 152, 0.0, 0.25, ir3
+     event "i", 126, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32639,7 +34819,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 150, 1.5, -1.0, ir3
+     event "i", 124, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32666,7 +34846,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 148, 0.25, -1.0, ir3
+     event "i", 122, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -32693,356 +34873,6 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 146, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 504
-krl0 init 10.0
-ir3 FreePort 
-kr0 metro 0.125
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 144, 0.0, 8.0, ir3
-endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
-endin
-
-instr 503
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 142, 2.0, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 502
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 140, 2.0, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 501
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 138, 2.0, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 500
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 136, 0.5, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 499
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 134, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 498
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 132, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 497
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 130, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 496
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 128, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 495
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 126, 0.5, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 494
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 124, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 493
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 122, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 492
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
      event "i", 120, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
@@ -33063,7 +34893,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 491
+instr 504
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -33090,14 +34920,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 490
+instr 503
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 116, 0.5, -1.0, ir3
+     event "i", 116, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33117,14 +34947,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 489
+instr 502
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 114, 0.25, -1.0, ir3
+     event "i", 114, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33144,14 +34974,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 488
+instr 501
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 112, 0.25, -1.0, ir3
+     event "i", 112, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33171,7 +35001,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 487
+instr 500
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -33198,7 +35028,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 486
+instr 499
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -33225,14 +35055,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 485
+instr 498
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 106, 0.5, -1.0, ir3
+     event "i", 106, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33252,14 +35082,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 484
+instr 497
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 104, 0.25, -1.0, ir3
+     event "i", 104, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33279,14 +35109,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 483
+instr 496
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 102, 0.25, -1.0, ir3
+     event "i", 102, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33306,7 +35136,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 482
+instr 495
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -33333,7 +35163,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 481
+instr 494
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -33360,14 +35190,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 480
+instr 493
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 479, 64.0, -1.0, ir3
+     event "i", 492, 64.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33387,16 +35217,16 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 479
+instr 492
 arl0 init 0.0
-ar0, ar1 subinstr 477
+ar0, ar1 subinstr 490
 ar2 = (1.3 * ar0)
 arl0 = ar2
 ar0 = arl0
 S10 sprintf "p1_%d", p4
  chnmix ar0, S10
 arl1 init 0.0
-ar0, ar2 subinstr 478
+ar0, ar2 subinstr 491
 ar3 = (1.3 * ar2)
 arl1 = ar3
 ar2 = arl1
@@ -33404,20 +35234,20 @@ S22 sprintf "p2_%d", p4
  chnmix ar2, S22
 S25 sprintf "alive_%d", p4
 kr0 chnget S25
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
  chnset kr1, S25
 endin
 
-instr 478
+instr 491
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 6.25e-2
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 476, 0.0, 16.0, ir3
+     event "i", 489, 0.0, 16.0, ir3
 endif
 S14 sprintf "p1_%d", ir3
 ar0 chnget S14
@@ -33437,13 +35267,13 @@ S40 sprintf "alive_%d", ir3
  chnset kr0, S40
 endin
 
-instr 477
+instr 490
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 6.25e-2
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 476, 0.0, 16.0, ir3
+     event "i", 489, 0.0, 16.0, ir3
 endif
 S14 sprintf "p1_%d", ir3
 ar0 chnget S14
@@ -33463,22 +35293,22 @@ S40 sprintf "alive_%d", ir3
  chnset kr0, S40
 endin
 
-instr 476
+instr 489
 arl0 init 0.0
-ar0, ar1 subinstr 343
-ar2, ar3 subinstr 351
+ar0, ar1 subinstr 355
+ar2, ar3 subinstr 363
 ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 469
+ar0, ar2 subinstr 482
 ar5 = (ar4 + ar0)
 arl0 = ar5
 ar0 = arl0
 S15 sprintf "p1_%d", p4
  chnmix ar0, S15
 arl1 init 0.0
-ar0, ar4 subinstr 470
-ar5, ar6 subinstr 474
+ar0, ar4 subinstr 483
+ar5, ar6 subinstr 487
 ar7 = (ar4 + ar6)
-ar4, ar6 subinstr 475
+ar4, ar6 subinstr 488
 ar8 = (ar7 + ar6)
 arl1 = ar8
 ar6 = arl1
@@ -33486,21 +35316,21 @@ S32 sprintf "p2_%d", p4
  chnmix ar6, S32
 S35 sprintf "alive_%d", p4
 kr0 chnget S35
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
  chnset kr1, S35
 endin
 
-instr 475
+instr 488
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 468, 2.0, -1.0, ir3
+     event "i", 481, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33520,14 +35350,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 474
+instr 487
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 350, 0.25, -1.0, ir3
+     event "i", 362, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33547,14 +35377,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 473
+instr 486
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 348, 1.25, -1.0, ir3
+     event "i", 360, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33574,14 +35404,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 472
+instr 485
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 346, 0.25, -1.0, ir3
+     event "i", 358, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33601,14 +35431,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 471
+instr 484
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 344, 0.0, 0.25, ir3
+     event "i", 356, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33628,199 +35458,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 470
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 342, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 469
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 468, 2.0, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 468
-arl0 init 0.0
-ar0, ar1 subinstr 353
-ar2, ar3 subinstr 361
-ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 461
-ar5 = (ar4 + ar0)
-arl0 = ar5
-ar0 = arl0
-S15 sprintf "p1_%d", p4
- chnmix ar0, S15
-arl1 init 0.0
-ar0, ar4 subinstr 462
-ar5, ar6 subinstr 466
-ar7 = (ar4 + ar6)
-ar4, ar6 subinstr 467
-ar8 = (ar7 + ar6)
-arl1 = ar8
-ar6 = arl1
-S32 sprintf "p2_%d", p4
- chnmix ar6, S32
-S35 sprintf "alive_%d", p4
-kr0 chnget S35
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S35
-endin
-
-instr 467
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 460, 2.0, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 466
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 360, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 465
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 358, 1.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 464
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 356, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 463
+instr 483
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -33847,14 +35485,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 462
+instr 482
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 352, 0.0, 0.25, ir3
+     event "i", 481, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33874,49 +35512,22 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 461
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 460, 2.0, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 460
+instr 481
 arl0 init 0.0
-ar0, ar1 subinstr 363
-ar2, ar3 subinstr 371
+ar0, ar1 subinstr 365
+ar2, ar3 subinstr 373
 ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 453
+ar0, ar2 subinstr 474
 ar5 = (ar4 + ar0)
 arl0 = ar5
 ar0 = arl0
 S15 sprintf "p1_%d", p4
  chnmix ar0, S15
 arl1 init 0.0
-ar0, ar4 subinstr 454
-ar5, ar6 subinstr 458
+ar0, ar4 subinstr 475
+ar5, ar6 subinstr 479
 ar7 = (ar4 + ar6)
-ar4, ar6 subinstr 459
+ar4, ar6 subinstr 480
 ar8 = (ar7 + ar6)
 arl1 = ar8
 ar6 = arl1
@@ -33924,21 +35535,21 @@ S32 sprintf "p2_%d", p4
  chnmix ar6, S32
 S35 sprintf "alive_%d", p4
 kr0 chnget S35
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
  chnset kr1, S35
 endin
 
-instr 459
+instr 480
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 452, 2.0, -1.0, ir3
+     event "i", 473, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33958,14 +35569,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 458
+instr 479
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 370, 0.25, -1.0, ir3
+     event "i", 372, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -33985,14 +35596,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 457
+instr 478
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 368, 1.25, -1.0, ir3
+     event "i", 370, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34012,14 +35623,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 456
+instr 477
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 366, 0.25, -1.0, ir3
+     event "i", 368, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34039,7 +35650,34 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 455
+instr 476
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 366, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 475
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -34066,14 +35704,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 454
+instr 474
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 362, 0.0, 0.25, ir3
+     event "i", 473, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34093,49 +35731,22 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 453
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 452, 2.0, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 452
+instr 473
 arl0 init 0.0
-ar0, ar1 subinstr 373
-ar2, ar3 subinstr 381
+ar0, ar1 subinstr 375
+ar2, ar3 subinstr 383
 ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 445
+ar0, ar2 subinstr 466
 ar5 = (ar4 + ar0)
 arl0 = ar5
 ar0 = arl0
 S15 sprintf "p1_%d", p4
  chnmix ar0, S15
 arl1 init 0.0
-ar0, ar4 subinstr 446
-ar5, ar6 subinstr 450
+ar0, ar4 subinstr 467
+ar5, ar6 subinstr 471
 ar7 = (ar4 + ar6)
-ar4, ar6 subinstr 451
+ar4, ar6 subinstr 472
 ar8 = (ar7 + ar6)
 arl1 = ar8
 ar6 = arl1
@@ -34143,21 +35754,21 @@ S32 sprintf "p2_%d", p4
  chnmix ar6, S32
 S35 sprintf "alive_%d", p4
 kr0 chnget S35
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
  chnset kr1, S35
 endin
 
-instr 451
+instr 472
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 444, 2.0, -1.0, ir3
+     event "i", 465, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34177,14 +35788,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 450
+instr 471
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 380, 0.25, -1.0, ir3
+     event "i", 382, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34204,14 +35815,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 449
+instr 470
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 378, 1.25, -1.0, ir3
+     event "i", 380, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34231,14 +35842,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 448
+instr 469
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 376, 0.25, -1.0, ir3
+     event "i", 378, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34258,7 +35869,34 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 447
+instr 468
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 376, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 467
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -34285,14 +35923,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 446
+instr 466
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 372, 0.0, 0.25, ir3
+     event "i", 465, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34312,49 +35950,22 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 445
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 444, 2.0, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 444
+instr 465
 arl0 init 0.0
-ar0, ar1 subinstr 383
-ar2, ar3 subinstr 391
+ar0, ar1 subinstr 385
+ar2, ar3 subinstr 393
 ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 437
+ar0, ar2 subinstr 458
 ar5 = (ar4 + ar0)
 arl0 = ar5
 ar0 = arl0
 S15 sprintf "p1_%d", p4
  chnmix ar0, S15
 arl1 init 0.0
-ar0, ar4 subinstr 438
-ar5, ar6 subinstr 442
+ar0, ar4 subinstr 459
+ar5, ar6 subinstr 463
 ar7 = (ar4 + ar6)
-ar4, ar6 subinstr 443
+ar4, ar6 subinstr 464
 ar8 = (ar7 + ar6)
 arl1 = ar8
 ar6 = arl1
@@ -34362,21 +35973,21 @@ S32 sprintf "p2_%d", p4
  chnmix ar6, S32
 S35 sprintf "alive_%d", p4
 kr0 chnget S35
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
  chnset kr1, S35
 endin
 
-instr 443
+instr 464
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 436, 2.0, -1.0, ir3
+     event "i", 457, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34396,14 +36007,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 442
+instr 463
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 390, 0.25, -1.0, ir3
+     event "i", 392, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34423,14 +36034,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 441
+instr 462
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 388, 1.25, -1.0, ir3
+     event "i", 390, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34450,14 +36061,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 440
+instr 461
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 386, 0.25, -1.0, ir3
+     event "i", 388, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34477,7 +36088,34 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 439
+instr 460
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 386, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 459
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -34504,14 +36142,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 438
+instr 458
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 382, 0.0, 0.25, ir3
+     event "i", 457, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34531,49 +36169,22 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 437
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 436, 2.0, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 436
+instr 457
 arl0 init 0.0
-ar0, ar1 subinstr 393
-ar2, ar3 subinstr 401
+ar0, ar1 subinstr 395
+ar2, ar3 subinstr 403
 ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 429
+ar0, ar2 subinstr 450
 ar5 = (ar4 + ar0)
 arl0 = ar5
 ar0 = arl0
 S15 sprintf "p1_%d", p4
  chnmix ar0, S15
 arl1 init 0.0
-ar0, ar4 subinstr 430
-ar5, ar6 subinstr 434
+ar0, ar4 subinstr 451
+ar5, ar6 subinstr 455
 ar7 = (ar4 + ar6)
-ar4, ar6 subinstr 435
+ar4, ar6 subinstr 456
 ar8 = (ar7 + ar6)
 arl1 = ar8
 ar6 = arl1
@@ -34581,21 +36192,21 @@ S32 sprintf "p2_%d", p4
  chnmix ar6, S32
 S35 sprintf "alive_%d", p4
 kr0 chnget S35
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
  chnset kr1, S35
 endin
 
-instr 435
+instr 456
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 428, 2.0, -1.0, ir3
+     event "i", 449, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34615,14 +36226,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 434
+instr 455
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 400, 0.25, -1.0, ir3
+     event "i", 402, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34642,14 +36253,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 433
+instr 454
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 398, 1.25, -1.0, ir3
+     event "i", 400, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34669,14 +36280,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 432
+instr 453
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 396, 0.25, -1.0, ir3
+     event "i", 398, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34696,7 +36307,34 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 431
+instr 452
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 396, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 451
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -34723,14 +36361,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 430
+instr 450
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 392, 0.0, 0.25, ir3
+     event "i", 449, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34750,6 +36388,539 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
+instr 449
+arl0 init 0.0
+ar0, ar1 subinstr 405
+ar2, ar3 subinstr 413
+ar4 = (ar0 + ar2)
+ar0, ar2 subinstr 442
+ar5 = (ar4 + ar0)
+arl0 = ar5
+ar0 = arl0
+S15 sprintf "p1_%d", p4
+ chnmix ar0, S15
+arl1 init 0.0
+ar0, ar4 subinstr 443
+ar5, ar6 subinstr 447
+ar7 = (ar4 + ar6)
+ar4, ar6 subinstr 448
+ar8 = (ar7 + ar6)
+arl1 = ar8
+ar6 = arl1
+S32 sprintf "p2_%d", p4
+ chnmix ar6, S32
+S35 sprintf "alive_%d", p4
+kr0 chnget S35
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S35
+endin
+
+instr 448
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 441, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 447
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 412, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 446
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 410, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 445
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 408, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 444
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 406, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 443
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 404, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 442
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 441, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 441
+arl0 init 0.0
+ar0, ar1 subinstr 415
+ar2, ar3 subinstr 423
+ar4 = (ar0 + ar2)
+ar0, ar2 subinstr 435
+ar5 = (ar4 + ar0)
+arl0 = ar5
+ar0 = arl0
+S15 sprintf "p1_%d", p4
+ chnmix ar0, S15
+arl1 init 0.0
+ar0, ar4 subinstr 436
+ar5, ar6 subinstr 440
+ar7 = (ar4 + ar6)
+ar4 = (ar7 + ar2)
+arl1 = ar4
+ar2 = arl1
+S31 sprintf "p2_%d", p4
+ chnmix ar2, S31
+S34 sprintf "alive_%d", p4
+kr0 chnget S34
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S34
+endin
+
+instr 440
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 422, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 439
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 420, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 438
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 418, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 437
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 416, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 436
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 414, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 435
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 434, 2.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 434
+arl0 init 0.0
+ar0, ar1 subinstr 425
+ar2, ar3 subinstr 433
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
+ar0 = arl1
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
+endin
+
+instr 433
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 432, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 432
+arl0 init 0.0
+ar0, ar1 subinstr 431
+arl0 = ar0
+ar0 = arl0
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
+arl1 init 0.0
+arl1 = ar1
+ar0 = arl1
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S22
+endin
+
+instr 431
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 430, 1.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 430
+arl0 init 0.0
+ar0, ar1 subinstr 427
+ar2, ar3 subinstr 429
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
+ar0 = arl1
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
+endin
+
 instr 429
 krl0 init 10.0
 ir3 FreePort 
@@ -34757,7 +36928,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 428, 2.0, -1.0, ir3
+     event "i", 428, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34779,31 +36950,22 @@ endin
 
 instr 428
 arl0 init 0.0
-ar0, ar1 subinstr 403
-ar2, ar3 subinstr 413
-ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 425
-ar5 = (ar4 + ar0)
-arl0 = ar5
+arl0 = 0.0
 ar0 = arl0
-S15 sprintf "p1_%d", p4
- chnmix ar0, S15
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-ar0, ar4 subinstr 426
-ar5, ar6 subinstr 427
-ar7 = (ar4 + ar6)
-ar4 = (ar7 + ar2)
-arl1 = ar4
-ar2 = arl1
-S31 sprintf "p2_%d", p4
- chnmix ar2, S31
-S34 sprintf "alive_%d", p4
-kr0 chnget S34
-if (kr0 < 0.0) then
+arl1 = 0.0
+ar0 = arl1
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S34
+ chnset kr1, S19
 endin
 
 instr 427
@@ -34813,7 +36975,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 412, 0.25, -1.0, ir3
+     event "i", 426, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34834,30 +36996,27 @@ S41 sprintf "alive_%d", ir3
 endin
 
 instr 426
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 402, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+arl0 init 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.01)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
+ar0 = arl0
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
+arl1 = ar2
 ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S23
 endin
 
 instr 425
@@ -34867,7 +37026,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 424, 2.0, -1.0, ir3
+     event "i", 424, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34889,26 +37048,26 @@ endin
 
 instr 424
 arl0 init 0.0
-ar0, ar1 subinstr 415
-ar2, ar3 subinstr 423
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.01)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar2
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S23
 endin
 
 instr 423
@@ -34918,7 +37077,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 422, 0.25, -1.0, ir3
+     event "i", 422, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -34952,7 +37111,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -34966,7 +37125,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 420, 1.25, -1.0, ir3
+     event "i", 420, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35003,7 +37162,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -35017,7 +37176,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 418, 0.25, -1.0, ir3
+     event "i", 418, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35050,7 +37209,7 @@ S16 sprintf "p2_%d", p4
  chnmix ar0, S16
 S19 sprintf "alive_%d", p4
 kr0 chnget S19
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -35087,7 +37246,7 @@ endin
 instr 416
 arl0 init 0.0
 ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.01)
+kr0 = cpspch(8.09)
 ar1 oscil3 1.0, kr0, 2
 ar2 = (ar0 * ar1)
 arl0 = ar2
@@ -35101,7 +37260,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -35138,7 +37297,7 @@ endin
 instr 414
 arl0 init 0.0
 ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.01)
+kr0 = cpspch(8.09)
 ar1 oscil3 1.0, kr0, 2
 ar2 = (ar0 * ar1)
 arl0 = ar2
@@ -35152,7 +37311,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -35166,7 +37325,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 412, 0.25, -1.0, ir3
+     event "i", 412, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35188,24 +37347,23 @@ endin
 
 instr 412
 arl0 init 0.0
-ar0, ar1 subinstr 409
+ar0, ar1 subinstr 411
 arl0 = ar0
 ar0 = arl0
 S9 sprintf "p1_%d", p4
  chnmix ar0, S9
 arl1 init 0.0
-ar0, ar2 subinstr 411
-arl1 = ar2
-ar2 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar2, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+arl1 = ar1
+ar0 = arl1
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S22
 endin
 
 instr 411
@@ -35215,7 +37373,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 408, 1.25, -1.0, ir3
+     event "i", 410, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35236,30 +37394,27 @@ S41 sprintf "alive_%d", ir3
 endin
 
 instr 410
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 406, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+arl0 init 0.0
+ar0, ar1 subinstr 407
+ar2, ar3 subinstr 409
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl2 init 0.0
+ar0 = (ar1 + ar3)
 arl1 = ar0
-arl2 = ar1
 ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
 endin
 
 instr 409
@@ -35269,7 +37424,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 408, 1.25, -1.0, ir3
+     event "i", 408, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35291,26 +37446,22 @@ endin
 
 instr 408
 arl0 init 0.0
-ar0, ar1 subinstr 405
-ar2, ar3 subinstr 407
-ar4 = (ar0 + ar2)
-arl0 = ar4
+arl0 = 0.0
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = 0.0
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S19
 endin
 
 instr 407
@@ -35320,7 +37471,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 406, 0.25, -1.0, ir3
+     event "i", 406, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35342,22 +37493,26 @@ endin
 
 instr 406
 arl0 init 0.0
-arl0 = 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.08)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = 0.0
+arl1 = ar2
 ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S19
+ chnset kr1, S23
 endin
 
 instr 405
@@ -35390,7 +37545,7 @@ endin
 instr 404
 arl0 init 0.0
 ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.09)
+kr0 = cpspch(8.08)
 ar1 oscil3 1.0, kr0, 2
 ar2 = (ar0 * ar1)
 arl0 = ar2
@@ -35404,7 +37559,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -35418,7 +37573,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 402, 0.0, 0.25, ir3
+     event "i", 402, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35440,26 +37595,23 @@ endin
 
 instr 402
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.09)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 401
+arl0 = ar0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-arl1 = ar2
+arl1 = ar1
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S22
 endin
 
 instr 401
@@ -35469,7 +37621,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 400, 0.25, -1.0, ir3
+     event "i", 400, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35491,23 +37643,26 @@ endin
 
 instr 400
 arl0 init 0.0
-ar0, ar1 subinstr 399
-arl0 = ar0
+ar0, ar1 subinstr 397
+ar2, ar3 subinstr 399
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar1
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S27
 endin
 
 instr 399
@@ -35517,7 +37672,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 398, 1.25, -1.0, ir3
+     event "i", 398, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35539,26 +37694,22 @@ endin
 
 instr 398
 arl0 init 0.0
-ar0, ar1 subinstr 395
-ar2, ar3 subinstr 397
-ar4 = (ar0 + ar2)
-arl0 = ar4
+arl0 = 0.0
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = 0.0
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S19
 endin
 
 instr 397
@@ -35568,7 +37719,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 396, 0.25, -1.0, ir3
+     event "i", 396, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35590,22 +37741,26 @@ endin
 
 instr 396
 arl0 init 0.0
-arl0 = 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.01)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = 0.0
+arl1 = ar2
 ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S19
+ chnset kr1, S23
 endin
 
 instr 395
@@ -35638,7 +37793,7 @@ endin
 instr 394
 arl0 init 0.0
 ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.08)
+kr0 = cpspch(8.01)
 ar1 oscil3 1.0, kr0, 2
 ar2 = (ar0 * ar1)
 arl0 = ar2
@@ -35652,7 +37807,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -35666,7 +37821,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 392, 0.0, 0.25, ir3
+     event "i", 392, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35688,26 +37843,23 @@ endin
 
 instr 392
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.08)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 391
+arl0 = ar0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-arl1 = ar2
+arl1 = ar1
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S22
 endin
 
 instr 391
@@ -35717,7 +37869,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 390, 0.25, -1.0, ir3
+     event "i", 390, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35739,23 +37891,26 @@ endin
 
 instr 390
 arl0 init 0.0
-ar0, ar1 subinstr 389
-arl0 = ar0
+ar0, ar1 subinstr 387
+ar2, ar3 subinstr 389
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar1
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S27
 endin
 
 instr 389
@@ -35765,7 +37920,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 388, 1.25, -1.0, ir3
+     event "i", 388, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35787,26 +37942,22 @@ endin
 
 instr 388
 arl0 init 0.0
-ar0, ar1 subinstr 385
-ar2, ar3 subinstr 387
-ar4 = (ar0 + ar2)
-arl0 = ar4
+arl0 = 0.0
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = 0.0
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S19
 endin
 
 instr 387
@@ -35816,7 +37967,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 386, 0.25, -1.0, ir3
+     event "i", 386, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35838,22 +37989,26 @@ endin
 
 instr 386
 arl0 init 0.0
-arl0 = 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.04)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = 0.0
+arl1 = ar2
 ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S19
+ chnset kr1, S23
 endin
 
 instr 385
@@ -35886,7 +38041,7 @@ endin
 instr 384
 arl0 init 0.0
 ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.01)
+kr0 = cpspch(8.04)
 ar1 oscil3 1.0, kr0, 2
 ar2 = (ar0 * ar1)
 arl0 = ar2
@@ -35900,7 +38055,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -35914,7 +38069,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 382, 0.0, 0.25, ir3
+     event "i", 382, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35936,26 +38091,23 @@ endin
 
 instr 382
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.01)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 381
+arl0 = ar0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-arl1 = ar2
+arl1 = ar1
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S22
 endin
 
 instr 381
@@ -35965,7 +38117,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 380, 0.25, -1.0, ir3
+     event "i", 380, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -35987,23 +38139,26 @@ endin
 
 instr 380
 arl0 init 0.0
-ar0, ar1 subinstr 379
-arl0 = ar0
+ar0, ar1 subinstr 377
+ar2, ar3 subinstr 379
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar1
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S27
 endin
 
 instr 379
@@ -36013,7 +38168,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 378, 1.25, -1.0, ir3
+     event "i", 378, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36035,26 +38190,22 @@ endin
 
 instr 378
 arl0 init 0.0
-ar0, ar1 subinstr 375
-ar2, ar3 subinstr 377
-ar4 = (ar0 + ar2)
-arl0 = ar4
+arl0 = 0.0
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = 0.0
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S19
 endin
 
 instr 377
@@ -36064,7 +38215,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 376, 0.25, -1.0, ir3
+     event "i", 376, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36086,22 +38237,26 @@ endin
 
 instr 376
 arl0 init 0.0
-arl0 = 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.06)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = 0.0
+arl1 = ar2
 ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S19
+ chnset kr1, S23
 endin
 
 instr 375
@@ -36134,7 +38289,7 @@ endin
 instr 374
 arl0 init 0.0
 ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.04)
+kr0 = cpspch(8.06)
 ar1 oscil3 1.0, kr0, 2
 ar2 = (ar0 * ar1)
 arl0 = ar2
@@ -36148,7 +38303,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -36162,7 +38317,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 372, 0.0, 0.25, ir3
+     event "i", 372, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36184,26 +38339,23 @@ endin
 
 instr 372
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.04)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 371
+arl0 = ar0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-arl1 = ar2
+arl1 = ar1
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S22
 endin
 
 instr 371
@@ -36213,7 +38365,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 370, 0.25, -1.0, ir3
+     event "i", 370, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36235,23 +38387,26 @@ endin
 
 instr 370
 arl0 init 0.0
-ar0, ar1 subinstr 369
-arl0 = ar0
+ar0, ar1 subinstr 367
+ar2, ar3 subinstr 369
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar1
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S27
 endin
 
 instr 369
@@ -36261,7 +38416,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 368, 1.25, -1.0, ir3
+     event "i", 368, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36283,26 +38438,22 @@ endin
 
 instr 368
 arl0 init 0.0
-ar0, ar1 subinstr 365
-ar2, ar3 subinstr 367
-ar4 = (ar0 + ar2)
-arl0 = ar4
+arl0 = 0.0
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = 0.0
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S19
 endin
 
 instr 367
@@ -36312,7 +38463,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 366, 0.25, -1.0, ir3
+     event "i", 366, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36334,22 +38485,26 @@ endin
 
 instr 366
 arl0 init 0.0
-arl0 = 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.08)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = 0.0
+arl1 = ar2
 ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S19
+ chnset kr1, S23
 endin
 
 instr 365
@@ -36382,7 +38537,7 @@ endin
 instr 364
 arl0 init 0.0
 ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.06)
+kr0 = cpspch(8.08)
 ar1 oscil3 1.0, kr0, 2
 ar2 = (ar0 * ar1)
 arl0 = ar2
@@ -36396,7 +38551,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -36410,7 +38565,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 362, 0.0, 0.25, ir3
+     event "i", 362, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36432,26 +38587,23 @@ endin
 
 instr 362
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.06)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 361
+arl0 = ar0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-arl1 = ar2
+arl1 = ar1
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S22
 endin
 
 instr 361
@@ -36461,7 +38613,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 360, 0.25, -1.0, ir3
+     event "i", 360, 1.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36483,23 +38635,26 @@ endin
 
 instr 360
 arl0 init 0.0
-ar0, ar1 subinstr 359
-arl0 = ar0
+ar0, ar1 subinstr 357
+ar2, ar3 subinstr 359
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar1
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S27
 endin
 
 instr 359
@@ -36509,7 +38664,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 358, 1.25, -1.0, ir3
+     event "i", 358, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36531,26 +38686,22 @@ endin
 
 instr 358
 arl0 init 0.0
-ar0, ar1 subinstr 355
-ar2, ar3 subinstr 357
-ar4 = (ar0 + ar2)
-arl0 = ar4
+arl0 = 0.0
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = 0.0
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S19
 endin
 
 instr 357
@@ -36560,7 +38711,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 356, 0.25, -1.0, ir3
+     event "i", 356, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36582,22 +38733,26 @@ endin
 
 instr 356
 arl0 init 0.0
-arl0 = 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.01)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = 0.0
+arl1 = ar2
 ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S19
+ chnset kr1, S23
 endin
 
 instr 355
@@ -36630,7 +38785,7 @@ endin
 instr 354
 arl0 init 0.0
 ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.08)
+kr0 = cpspch(8.01)
 ar1 oscil3 1.0, kr0, 2
 ar2 = (ar0 * ar1)
 arl0 = ar2
@@ -36644,7 +38799,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -36658,7 +38813,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 352, 0.0, 0.25, ir3
+     event "i", 352, 48.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36680,43 +38835,45 @@ endin
 
 instr 352
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.08)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
+ar0, ar1 subinstr 351
+ar2 = (ar0 + ar1)
+ar0 = (ar2 / 2.0)
+ar1 oscil3 1.0, 0.2, 1
+ar2 = (0.5 * ar1)
+ar1 = (0.5 + ar2)
+ar2, ar3 pan2 ar0, ar1
 arl0 = ar2
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S17 sprintf "p1_%d", p4
+ chnmix ar0, S17
 arl1 init 0.0
-arl1 = ar2
+arl1 = ar3
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S27 sprintf "p2_%d", p4
+ chnmix ar0, S27
+S30 sprintf "alive_%d", p4
+kr0 chnget S30
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S30
 endin
 
 instr 351
 krl0 init 10.0
 ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
+kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 350, 0.25, -1.0, ir3
+     event "i", 350, 0.0, 8.0, ir3
 endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
+S14 sprintf "p1_%d", ir3
+ar0 chnget S14
+S17 sprintf "p2_%d", ir3
+ar1 chnget S17
+ chnclear S14
+ chnclear S17
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -36725,29 +38882,35 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
+S40 sprintf "alive_%d", ir3
+ chnset kr0, S40
 endin
 
 instr 350
 arl0 init 0.0
-ar0, ar1 subinstr 349
-arl0 = ar0
+ar0, ar1 subinstr 265
+ar2, ar3 subinstr 283
+ar4 = (ar0 + ar2)
+ar0, ar2 subinstr 349
+ar5 = (ar4 + ar0)
+arl0 = ar5
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S15 sprintf "p1_%d", p4
+ chnmix ar0, S15
 arl1 init 0.0
+ar0 = (ar1 + ar3)
+ar1 = (ar0 + ar2)
 arl1 = ar1
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S29 sprintf "p2_%d", p4
+ chnmix ar0, S29
+S32 sprintf "alive_%d", p4
+kr0 chnget S32
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S32
 endin
 
 instr 349
@@ -36757,7 +38920,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 348, 1.25, -1.0, ir3
+     event "i", 348, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36779,26 +38942,29 @@ endin
 
 instr 348
 arl0 init 0.0
-ar0, ar1 subinstr 345
-ar2, ar3 subinstr 347
+ar0, ar1 subinstr 285
+ar2, ar3 subinstr 303
 ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0, ar2 subinstr 347
+ar5 = (ar4 + ar0)
+arl0 = ar5
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S15 sprintf "p1_%d", p4
+ chnmix ar0, S15
 arl1 init 0.0
 ar0 = (ar1 + ar3)
-arl1 = ar0
+ar1 = (ar0 + ar2)
+arl1 = ar1
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S29 sprintf "p2_%d", p4
+ chnmix ar0, S29
+S32 sprintf "alive_%d", p4
+kr0 chnget S32
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S32
 endin
 
 instr 347
@@ -36808,7 +38974,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 346, 0.25, -1.0, ir3
+     event "i", 346, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36830,22 +38996,29 @@ endin
 
 instr 346
 arl0 init 0.0
-arl0 = 0.0
+ar0, ar1 subinstr 305
+ar2, ar3 subinstr 323
+ar4 = (ar0 + ar2)
+ar0, ar2 subinstr 345
+ar5 = (ar4 + ar0)
+arl0 = ar5
 ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
+S15 sprintf "p1_%d", p4
+ chnmix ar0, S15
 arl1 init 0.0
-arl1 = 0.0
+ar0 = (ar1 + ar3)
+ar1 = (ar0 + ar2)
+arl1 = ar1
 ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
+S29 sprintf "p2_%d", p4
+ chnmix ar0, S29
+S32 sprintf "alive_%d", p4
+kr0 chnget S32
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S19
+ chnset kr1, S32
 endin
 
 instr 345
@@ -36855,7 +39028,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 344, 0.0, 0.25, ir3
+     event "i", 344, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36877,26 +39050,26 @@ endin
 
 instr 344
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.01)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 325
+ar2, ar3 subinstr 343
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar2
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S27
 endin
 
 instr 343
@@ -36906,7 +39079,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 342, 0.0, 0.25, ir3
+     event "i", 342, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36928,26 +39101,23 @@ endin
 
 instr 342
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.01)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 341
+arl0 = ar0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-arl1 = ar2
+arl1 = ar1
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S22
 endin
 
 instr 341
@@ -36957,7 +39127,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 340, 48.0, -1.0, ir3
+     event "i", 340, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -36979,45 +39149,43 @@ endin
 
 instr 340
 arl0 init 0.0
-ar0, ar1 subinstr 339
-ar2 = (ar0 + ar1)
-ar0 = (ar2 / 2.0)
-ar1 oscil3 1.0, 0.2, 1
-ar2 = (0.5 * ar1)
-ar1 = (0.5 + ar2)
-ar2, ar3 pan2 ar0, ar1
-arl0 = ar2
+ar0, ar1 subinstr 327
+ar2, ar3 subinstr 339
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S17 sprintf "p1_%d", p4
- chnmix ar0, S17
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar3
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S27 sprintf "p2_%d", p4
- chnmix ar0, S27
-S30 sprintf "alive_%d", p4
-kr0 chnget S30
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S30
+ chnset kr1, S27
 endin
 
 instr 339
 krl0 init 10.0
 ir3 FreePort 
-kr0 metro 0.125
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 338, 0.0, 8.0, ir3
+     event "i", 338, 0.25, 604800.0, ir3
 endif
-S14 sprintf "p1_%d", ir3
-ar0 chnget S14
-S17 sprintf "p2_%d", ir3
-ar1 chnget S17
- chnclear S14
- chnclear S17
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
 arl1 init 0.0
 arl2 init 0.0
 arl1 = ar0
@@ -37026,35 +39194,32 @@ ar0 = arl1
 ar1 = arl2
  outs ar0, ar1
 kr0 = krl0
-S40 sprintf "alive_%d", ir3
- chnset kr0, S40
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
 endin
 
 instr 338
 arl0 init 0.0
-ar0, ar1 subinstr 253
-ar2, ar3 subinstr 271
+ar0, ar1 subinstr 329
+ar2, ar3 subinstr 337
 ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 337
-ar5 = (ar4 + ar0)
-arl0 = ar5
+arl0 = ar4
 ar0 = arl0
-S15 sprintf "p1_%d", p4
- chnmix ar0, S15
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
 ar0 = (ar1 + ar3)
-ar1 = (ar0 + ar2)
-arl1 = ar1
+arl1 = ar0
 ar0 = arl1
-S29 sprintf "p2_%d", p4
- chnmix ar0, S29
-S32 sprintf "alive_%d", p4
-kr0 chnget S32
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S32
+ chnset kr1, S27
 endin
 
 instr 337
@@ -37064,7 +39229,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 336, 2.0, -1.0, ir3
+     event "i", 336, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37086,29 +39251,23 @@ endin
 
 instr 336
 arl0 init 0.0
-ar0, ar1 subinstr 273
-ar2, ar3 subinstr 291
-ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 335
-ar5 = (ar4 + ar0)
-arl0 = ar5
+ar0, ar1 subinstr 335
+arl0 = ar0
 ar0 = arl0
-S15 sprintf "p1_%d", p4
- chnmix ar0, S15
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-ar1 = (ar0 + ar2)
 arl1 = ar1
 ar0 = arl1
-S29 sprintf "p2_%d", p4
- chnmix ar0, S29
-S32 sprintf "alive_%d", p4
-kr0 chnget S32
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S32
+ chnset kr1, S22
 endin
 
 instr 335
@@ -37118,7 +39277,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 334, 2.0, -1.0, ir3
+     event "i", 334, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37140,29 +39299,26 @@ endin
 
 instr 334
 arl0 init 0.0
-ar0, ar1 subinstr 293
-ar2, ar3 subinstr 311
+ar0, ar1 subinstr 331
+ar2, ar3 subinstr 333
 ar4 = (ar0 + ar2)
-ar0, ar2 subinstr 333
-ar5 = (ar4 + ar0)
-arl0 = ar5
+arl0 = ar4
 ar0 = arl0
-S15 sprintf "p1_%d", p4
- chnmix ar0, S15
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
 ar0 = (ar1 + ar3)
-ar1 = (ar0 + ar2)
-arl1 = ar1
+arl1 = ar0
 ar0 = arl1
-S29 sprintf "p2_%d", p4
- chnmix ar0, S29
-S32 sprintf "alive_%d", p4
-kr0 chnget S32
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S32
+ chnset kr1, S27
 endin
 
 instr 333
@@ -37172,7 +39328,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 332, 2.0, -1.0, ir3
+     event "i", 332, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37194,26 +39350,22 @@ endin
 
 instr 332
 arl0 init 0.0
-ar0, ar1 subinstr 313
-ar2, ar3 subinstr 331
-ar4 = (ar0 + ar2)
-arl0 = ar4
+arl0 = 0.0
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = 0.0
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S19
 endin
 
 instr 331
@@ -37223,7 +39375,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 330, 0.25, -1.0, ir3
+     event "i", 330, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37245,23 +39397,26 @@ endin
 
 instr 330
 arl0 init 0.0
-ar0, ar1 subinstr 329
-arl0 = ar0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.09)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = ar1
+arl1 = ar2
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S23
 endin
 
 instr 329
@@ -37271,7 +39426,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 328, 0.25, -1.0, ir3
+     event "i", 328, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37293,26 +39448,26 @@ endin
 
 instr 328
 arl0 init 0.0
-ar0, ar1 subinstr 315
-ar2, ar3 subinstr 327
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.09)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar2
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S23
 endin
 
 instr 327
@@ -37322,7 +39477,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 326, 0.25, -1.0, ir3
+     event "i", 326, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37344,26 +39499,26 @@ endin
 
 instr 326
 arl0 init 0.0
-ar0, ar1 subinstr 317
-ar2, ar3 subinstr 325
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.09)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar2
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S23
 endin
 
 instr 325
@@ -37373,7 +39528,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 324, 0.25, -1.0, ir3
+     event "i", 324, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37395,23 +39550,26 @@ endin
 
 instr 324
 arl0 init 0.0
-ar0, ar1 subinstr 323
-arl0 = ar0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.09)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = ar1
+arl1 = ar2
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S23
 endin
 
 instr 323
@@ -37421,7 +39579,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 322, 0.5, -1.0, ir3
+     event "i", 322, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37443,26 +39601,23 @@ endin
 
 instr 322
 arl0 init 0.0
-ar0, ar1 subinstr 319
-ar2, ar3 subinstr 321
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0, ar1 subinstr 321
+arl0 = ar0
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar1
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S22
 endin
 
 instr 321
@@ -37472,7 +39627,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 320, 0.25, -1.0, ir3
+     event "i", 320, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37494,22 +39649,26 @@ endin
 
 instr 320
 arl0 init 0.0
-arl0 = 0.0
+ar0, ar1 subinstr 307
+ar2, ar3 subinstr 319
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S19
+ chnset kr1, S27
 endin
 
 instr 319
@@ -37519,7 +39678,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 318, 0.0, 0.25, ir3
+     event "i", 318, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37541,26 +39700,26 @@ endin
 
 instr 318
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.09)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 309
+ar2, ar3 subinstr 317
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar2
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S27
 endin
 
 instr 317
@@ -37570,7 +39729,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 316, 0.0, 0.25, ir3
+     event "i", 316, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37592,26 +39751,23 @@ endin
 
 instr 316
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.09)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 315
+arl0 = ar0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-arl1 = ar2
+arl1 = ar1
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S22
 endin
 
 instr 315
@@ -37621,7 +39777,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 314, 0.0, 0.25, ir3
+     event "i", 314, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37643,26 +39799,26 @@ endin
 
 instr 314
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.09)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 311
+ar2, ar3 subinstr 313
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar2
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S27
 endin
 
 instr 313
@@ -37672,7 +39828,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 312, 0.0, 0.25, ir3
+     event "i", 312, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37694,26 +39850,22 @@ endin
 
 instr 312
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.09)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+arl0 = 0.0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-arl1 = ar2
+arl1 = 0.0
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S19
 endin
 
 instr 311
@@ -37723,7 +39875,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 310, 0.25, -1.0, ir3
+     event "i", 310, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37745,23 +39897,26 @@ endin
 
 instr 310
 arl0 init 0.0
-ar0, ar1 subinstr 309
-arl0 = ar0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.03)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = ar1
+arl1 = ar2
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S23
 endin
 
 instr 309
@@ -37771,7 +39926,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 308, 0.25, -1.0, ir3
+     event "i", 308, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37793,26 +39948,26 @@ endin
 
 instr 308
 arl0 init 0.0
-ar0, ar1 subinstr 295
-ar2, ar3 subinstr 307
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.03)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar2
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S23
 endin
 
 instr 307
@@ -37822,7 +39977,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 306, 0.25, -1.0, ir3
+     event "i", 306, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37844,26 +39999,26 @@ endin
 
 instr 306
 arl0 init 0.0
-ar0, ar1 subinstr 297
-ar2, ar3 subinstr 305
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.03)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar2
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S23
 endin
 
 instr 305
@@ -37873,7 +40028,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 304, 0.25, -1.0, ir3
+     event "i", 304, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37895,23 +40050,26 @@ endin
 
 instr 304
 arl0 init 0.0
-ar0, ar1 subinstr 303
-arl0 = ar0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.03)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = ar1
+arl1 = ar2
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S23
 endin
 
 instr 303
@@ -37921,7 +40079,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 302, 0.5, -1.0, ir3
+     event "i", 302, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37943,26 +40101,23 @@ endin
 
 instr 302
 arl0 init 0.0
-ar0, ar1 subinstr 299
-ar2, ar3 subinstr 301
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0, ar1 subinstr 301
+arl0 = ar0
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar1
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S22
 endin
 
 instr 301
@@ -37972,7 +40127,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 300, 0.25, -1.0, ir3
+     event "i", 300, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -37994,22 +40149,26 @@ endin
 
 instr 300
 arl0 init 0.0
-arl0 = 0.0
+ar0, ar1 subinstr 287
+ar2, ar3 subinstr 299
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S19
+ chnset kr1, S27
 endin
 
 instr 299
@@ -38019,7 +40178,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 298, 0.0, 0.25, ir3
+     event "i", 298, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38041,26 +40200,26 @@ endin
 
 instr 298
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.03)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 289
+ar2, ar3 subinstr 297
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar2
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S27
 endin
 
 instr 297
@@ -38070,7 +40229,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 296, 0.0, 0.25, ir3
+     event "i", 296, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38092,26 +40251,23 @@ endin
 
 instr 296
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.03)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 295
+arl0 = ar0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-arl1 = ar2
+arl1 = ar1
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S22
 endin
 
 instr 295
@@ -38121,7 +40277,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 294, 0.0, 0.25, ir3
+     event "i", 294, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38143,26 +40299,26 @@ endin
 
 instr 294
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.03)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 291
+ar2, ar3 subinstr 293
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar2
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S27
 endin
 
 instr 293
@@ -38172,7 +40328,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 292, 0.0, 0.25, ir3
+     event "i", 292, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38194,26 +40350,22 @@ endin
 
 instr 292
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.03)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+arl0 = 0.0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-arl1 = ar2
+arl1 = 0.0
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S19
 endin
 
 instr 291
@@ -38223,7 +40375,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 290, 0.25, -1.0, ir3
+     event "i", 290, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38245,23 +40397,26 @@ endin
 
 instr 290
 arl0 init 0.0
-ar0, ar1 subinstr 289
-arl0 = ar0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.04)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = ar1
+arl1 = ar2
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S23
 endin
 
 instr 289
@@ -38271,7 +40426,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 288, 0.25, -1.0, ir3
+     event "i", 288, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38293,26 +40448,26 @@ endin
 
 instr 288
 arl0 init 0.0
-ar0, ar1 subinstr 275
-ar2, ar3 subinstr 287
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.04)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar2
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S23
 endin
 
 instr 287
@@ -38322,7 +40477,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 286, 0.25, -1.0, ir3
+     event "i", 286, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38344,26 +40499,26 @@ endin
 
 instr 286
 arl0 init 0.0
-ar0, ar1 subinstr 277
-ar2, ar3 subinstr 285
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.04)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar2
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S23
 endin
 
 instr 285
@@ -38373,7 +40528,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 284, 0.25, -1.0, ir3
+     event "i", 284, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38395,23 +40550,26 @@ endin
 
 instr 284
 arl0 init 0.0
-ar0, ar1 subinstr 283
-arl0 = ar0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.04)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = ar1
+arl1 = ar2
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S23
 endin
 
 instr 283
@@ -38421,7 +40579,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 282, 0.5, -1.0, ir3
+     event "i", 282, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38443,26 +40601,23 @@ endin
 
 instr 282
 arl0 init 0.0
-ar0, ar1 subinstr 279
-ar2, ar3 subinstr 281
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0, ar1 subinstr 281
+arl0 = ar0
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar1
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S22
 endin
 
 instr 281
@@ -38472,7 +40627,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 280, 0.25, -1.0, ir3
+     event "i", 280, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38494,22 +40649,26 @@ endin
 
 instr 280
 arl0 init 0.0
-arl0 = 0.0
+ar0, ar1 subinstr 267
+ar2, ar3 subinstr 279
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S19
+ chnset kr1, S27
 endin
 
 instr 279
@@ -38519,7 +40678,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 278, 0.0, 0.25, ir3
+     event "i", 278, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38541,26 +40700,26 @@ endin
 
 instr 278
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.04)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 269
+ar2, ar3 subinstr 277
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar2
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S27
 endin
 
 instr 277
@@ -38570,7 +40729,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 276, 0.0, 0.25, ir3
+     event "i", 276, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38592,26 +40751,23 @@ endin
 
 instr 276
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.04)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 275
+arl0 = ar0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S9 sprintf "p1_%d", p4
+ chnmix ar0, S9
 arl1 init 0.0
-arl1 = ar2
+arl1 = ar1
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S19 sprintf "p2_%d", p4
+ chnmix ar0, S19
+S22 sprintf "alive_%d", p4
+kr0 chnget S22
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S22
 endin
 
 instr 275
@@ -38621,7 +40777,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 274, 0.0, 0.25, ir3
+     event "i", 274, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38643,26 +40799,26 @@ endin
 
 instr 274
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.04)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+ar0, ar1 subinstr 271
+ar2, ar3 subinstr 273
+ar4 = (ar0 + ar2)
+arl0 = ar4
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
 arl1 init 0.0
-arl1 = ar2
+ar0 = (ar1 + ar3)
+arl1 = ar0
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S27
 endin
 
 instr 273
@@ -38672,7 +40828,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 272, 0.0, 0.25, ir3
+     event "i", 272, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38694,26 +40850,22 @@ endin
 
 instr 272
 arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.04)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
+arl0 = 0.0
 ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
 arl1 init 0.0
-arl1 = ar2
+arl1 = 0.0
 ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S23
+ chnset kr1, S19
 endin
 
 instr 271
@@ -38723,7 +40875,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 270, 0.25, -1.0, ir3
+     event "i", 270, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38745,23 +40897,26 @@ endin
 
 instr 270
 arl0 init 0.0
-ar0, ar1 subinstr 269
-arl0 = ar0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.04)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = ar1
+arl1 = ar2
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S23
 endin
 
 instr 269
@@ -38771,7 +40926,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 268, 0.25, -1.0, ir3
+     event "i", 268, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38793,26 +40948,26 @@ endin
 
 instr 268
 arl0 init 0.0
-ar0, ar1 subinstr 255
-ar2, ar3 subinstr 267
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.04)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar2
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S23
 endin
 
 instr 267
@@ -38822,7 +40977,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 266, 0.25, -1.0, ir3
+     event "i", 266, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38844,26 +40999,26 @@ endin
 
 instr 266
 arl0 init 0.0
-ar0, ar1 subinstr 257
-ar2, ar3 subinstr 265
-ar4 = (ar0 + ar2)
-arl0 = ar4
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.04)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
+arl1 = ar2
 ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S27
+ chnset kr1, S23
 endin
 
 instr 265
@@ -38873,7 +41028,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 264, 0.25, -1.0, ir3
+     event "i", 264, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38895,23 +41050,26 @@ endin
 
 instr 264
 arl0 init 0.0
-ar0, ar1 subinstr 263
-arl0 = ar0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(9.04)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
 ar0 = arl0
-S9 sprintf "p1_%d", p4
- chnmix ar0, S9
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
 arl1 init 0.0
-arl1 = ar1
+arl1 = ar2
 ar0 = arl1
-S19 sprintf "p2_%d", p4
- chnmix ar0, S19
-S22 sprintf "alive_%d", p4
-kr0 chnget S22
-if (kr0 < 0.0) then
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
- chnset kr1, S22
+ chnset kr1, S23
 endin
 
 instr 263
@@ -38921,7 +41079,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 262, 0.5, -1.0, ir3
+     event "i", 262, 32.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -38943,310 +41101,8 @@ endin
 
 instr 262
 arl0 init 0.0
-ar0, ar1 subinstr 259
+ar0, ar1 subinstr 260
 ar2, ar3 subinstr 261
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
-ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S27
-endin
-
-instr 261
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 260, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 260
-arl0 init 0.0
-arl0 = 0.0
-ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
-arl1 init 0.0
-arl1 = 0.0
-ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S19
-endin
-
-instr 259
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 258, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 258
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.04)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 257
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 256, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 256
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.04)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 255
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 254, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 254
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.04)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 253
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 252, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 252
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(9.04)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 251
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 250, 32.0, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 250
-arl0 init 0.0
-ar0, ar1 subinstr 248
-ar2, ar3 subinstr 249
 ar4 = (ar0 + ar3)
 ar0 = (ar4 / 2.0)
 ar4 oscil3 1.0, 0.3, 1
@@ -39269,20 +41125,20 @@ S34 sprintf "p2_%d", p4
  chnmix ar2, S34
 S37 sprintf "alive_%d", p4
 kr0 chnget S37
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
  chnset kr1, S37
 endin
 
-instr 249
+instr 261
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 247, 0.0, 8.0, ir3
+     event "i", 259, 0.0, 8.0, ir3
 endif
 S14 sprintf "p1_%d", ir3
 ar0 chnget S14
@@ -39302,13 +41158,13 @@ S40 sprintf "alive_%d", ir3
  chnset kr0, S40
 endin
 
-instr 248
+instr 260
 krl0 init 10.0
 ir3 FreePort 
 kr0 metro 0.125
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 247, 0.0, 8.0, ir3
+     event "i", 259, 0.0, 8.0, ir3
 endif
 S14 sprintf "p1_%d", ir3
 ar0 chnget S14
@@ -39328,10 +41184,10 @@ S40 sprintf "alive_%d", ir3
  chnset kr0, S40
 endin
 
-instr 247
+instr 259
 arl0 init 0.0
 ar0, ar1 subinstr 181
-ar2, ar3 subinstr 214
+ar2, ar3 subinstr 207
 ar4 = (ar0 + ar2)
 ar0, ar2 subinstr 244
 ar5 = (ar4 + ar0)
@@ -39340,31 +41196,31 @@ ar0 = arl0
 S15 sprintf "p1_%d", p4
  chnmix ar0, S15
 arl1 init 0.0
-ar0, ar4 subinstr 245
-ar5, ar6 subinstr 246
-ar7 = (ar4 + ar6)
-ar4 = (ar7 + ar2)
-arl1 = ar4
-ar2 = arl1
+ar0, ar4 subinstr 257
+ar5 = (ar1 + ar4)
+ar1, ar4 subinstr 258
+ar6 = (ar5 + ar4)
+arl1 = ar6
+ar4 = arl1
 S31 sprintf "p2_%d", p4
- chnmix ar2, S31
+ chnmix ar4, S31
 S34 sprintf "alive_%d", p4
 kr0 chnget S34
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
  chnset kr1, S34
 endin
 
-instr 246
+instr 258
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 213, 0.25, -1.0, ir3
+     event "i", 243, 4.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -39384,14 +41240,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 245
+instr 257
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 180, 0.0, 0.25, ir3
+     event "i", 206, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -39411,14 +41267,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 244
+instr 256
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 243, 4.0, -1.0, ir3
+     event "i", 204, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -39438,38 +41294,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 243
-arl0 init 0.0
-ar0, ar1 subinstr 216
-ar2, ar3 subinstr 242
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
-ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S27
-endin
-
-instr 242
+instr 255
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 241, 0.25, -1.0, ir3
+     event "i", 202, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -39489,38 +41321,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 241
-arl0 init 0.0
-ar0, ar1 subinstr 218
-ar2, ar3 subinstr 240
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
-ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S27
-endin
-
-instr 240
+instr 254
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 239, 0.25, -1.0, ir3
+     event "i", 200, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -39540,38 +41348,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 239
-arl0 init 0.0
-ar0, ar1 subinstr 220
-ar2, ar3 subinstr 238
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
-ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S27
-endin
-
-instr 238
+instr 253
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 237, 0.25, -1.0, ir3
+     event "i", 198, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -39591,38 +41375,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 237
-arl0 init 0.0
-ar0, ar1 subinstr 222
-ar2, ar3 subinstr 236
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
-ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S27
-endin
-
-instr 236
+instr 252
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 235, 0.25, -1.0, ir3
+     event "i", 196, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -39642,38 +41402,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 235
-arl0 init 0.0
-ar0, ar1 subinstr 224
-ar2, ar3 subinstr 234
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
-ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S27
-endin
-
-instr 234
+instr 251
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 233, 0.25, -1.0, ir3
+     event "i", 194, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -39693,38 +41429,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 233
-arl0 init 0.0
-ar0, ar1 subinstr 226
-ar2, ar3 subinstr 232
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
-ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S27
-endin
-
-instr 232
+instr 250
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 231, 0.25, -1.0, ir3
+     event "i", 192, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -39744,38 +41456,14 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 231
-arl0 init 0.0
-ar0, ar1 subinstr 228
-ar2, ar3 subinstr 230
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0 = (ar1 + ar3)
-arl1 = ar0
-ar0 = arl1
-S24 sprintf "p2_%d", p4
- chnmix ar0, S24
-S27 sprintf "alive_%d", p4
-kr0 chnget S27
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S27
-endin
-
-instr 230
+instr 249
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 229, 0.25, -1.0, ir3
+     event "i", 190, 0.0, 0.25, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -39795,757 +41483,7 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
-instr 229
-arl0 init 0.0
-arl0 = 0.0
-ar0 = arl0
-S7 sprintf "p1_%d", p4
- chnmix ar0, S7
-arl1 init 0.0
-arl1 = 0.0
-ar0 = arl1
-S16 sprintf "p2_%d", p4
- chnmix ar0, S16
-S19 sprintf "alive_%d", p4
-kr0 chnget S19
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S19
-endin
-
-instr 228
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 227, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 227
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.11)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 226
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 225, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 225
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.08)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 224
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 223, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 223
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.09)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 222
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 221, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 221
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.11)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 220
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 219, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 219
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.08)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 218
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 217, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 217
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.09)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 216
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 215, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 215
-arl0 init 0.0
-ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
-kr0 = cpspch(8.11)
-ar1 oscil3 1.0, kr0, 2
-ar2 = (ar0 * ar1)
-arl0 = ar2
-ar0 = arl0
-S11 sprintf "p1_%d", p4
- chnmix ar0, S11
-arl1 init 0.0
-arl1 = ar2
-ar0 = arl1
-S20 sprintf "p2_%d", p4
- chnmix ar0, S20
-S23 sprintf "alive_%d", p4
-kr0 chnget S23
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S23
-endin
-
-instr 214
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 213, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 213
-arl0 init 0.0
-ar0, ar1 subinstr 183
-ar2, ar3 subinstr 210
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0, ar2 subinstr 211
-ar4, ar5 subinstr 212
-ar6 = (ar2 + ar5)
-arl1 = ar6
-ar2 = arl1
-S26 sprintf "p2_%d", p4
- chnmix ar2, S26
-S29 sprintf "alive_%d", p4
-kr0 chnget S29
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S29
-endin
-
-instr 212
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 209, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 211
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 182, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 210
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 209, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 209
-arl0 init 0.0
-ar0, ar1 subinstr 185
-ar2, ar3 subinstr 206
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0, ar2 subinstr 207
-ar4, ar5 subinstr 208
-ar6 = (ar2 + ar5)
-arl1 = ar6
-ar2 = arl1
-S26 sprintf "p2_%d", p4
- chnmix ar2, S26
-S29 sprintf "alive_%d", p4
-kr0 chnget S29
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S29
-endin
-
-instr 208
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 205, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 207
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 184, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 206
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 205, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 205
-arl0 init 0.0
-ar0, ar1 subinstr 187
-ar2, ar3 subinstr 202
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0, ar2 subinstr 203
-ar4, ar5 subinstr 204
-ar6 = (ar2 + ar5)
-arl1 = ar6
-ar2 = arl1
-S26 sprintf "p2_%d", p4
- chnmix ar2, S26
-S29 sprintf "alive_%d", p4
-kr0 chnget S29
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S29
-endin
-
-instr 204
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 201, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 203
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 186, 0.0, 0.25, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 202
-krl0 init 10.0
-ir3 FreePort 
-ar0 mpulse k(ksmps), 0.0, 0.0
-kr0 downsamp ar0, ksmps
-if (kr0 == 1.0) then
-    krl0 = 2
-     event "i", 201, 0.25, -1.0, ir3
-endif
-S15 sprintf "p1_%d", ir3
-ar0 chnget S15
-S18 sprintf "p2_%d", ir3
-ar1 chnget S18
- chnclear S15
- chnclear S18
-arl1 init 0.0
-arl2 init 0.0
-arl1 = ar0
-arl2 = ar1
-ar0 = arl1
-ar1 = arl2
- outs ar0, ar1
-kr0 = krl0
-S41 sprintf "alive_%d", ir3
- chnset kr0, S41
-endin
-
-instr 201
-arl0 init 0.0
-ar0, ar1 subinstr 189
-ar2, ar3 subinstr 199
-ar4 = (ar0 + ar2)
-arl0 = ar4
-ar0 = arl0
-S12 sprintf "p1_%d", p4
- chnmix ar0, S12
-arl1 init 0.0
-ar0, ar2 subinstr 200
-ar4 = (ar2 + ar3)
-arl1 = ar4
-ar2 = arl1
-S25 sprintf "p2_%d", p4
- chnmix ar2, S25
-S28 sprintf "alive_%d", p4
-kr0 chnget S28
-if (kr0 < 0.0) then
-     turnoff 
-endif
-kr1 = (kr0 - 1.0)
- chnset kr1, S28
-endin
-
-instr 200
+instr 248
 krl0 init 10.0
 ir3 FreePort 
 ar0 mpulse k(ksmps), 0.0, 0.0
@@ -40572,6 +41510,1248 @@ S41 sprintf "alive_%d", ir3
  chnset kr0, S41
 endin
 
+instr 247
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 186, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 246
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 184, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 245
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 182, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 244
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 243, 4.0, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 243
+arl0 init 0.0
+ar0, ar1 subinstr 209
+ar2, ar3 subinstr 240
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0, ar2 subinstr 241
+ar4, ar5 subinstr 242
+ar6 = (ar2 + ar5)
+arl1 = ar6
+ar2 = arl1
+S26 sprintf "p2_%d", p4
+ chnmix ar2, S26
+S29 sprintf "alive_%d", p4
+kr0 chnget S29
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S29
+endin
+
+instr 242
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 239, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 241
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 208, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 240
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 239, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 239
+arl0 init 0.0
+ar0, ar1 subinstr 211
+ar2, ar3 subinstr 236
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0, ar2 subinstr 237
+ar4, ar5 subinstr 238
+ar6 = (ar2 + ar5)
+arl1 = ar6
+ar2 = arl1
+S26 sprintf "p2_%d", p4
+ chnmix ar2, S26
+S29 sprintf "alive_%d", p4
+kr0 chnget S29
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S29
+endin
+
+instr 238
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 235, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 237
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 210, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 236
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 235, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 235
+arl0 init 0.0
+ar0, ar1 subinstr 213
+ar2, ar3 subinstr 232
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0, ar2 subinstr 233
+ar4, ar5 subinstr 234
+ar6 = (ar2 + ar5)
+arl1 = ar6
+ar2 = arl1
+S26 sprintf "p2_%d", p4
+ chnmix ar2, S26
+S29 sprintf "alive_%d", p4
+kr0 chnget S29
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S29
+endin
+
+instr 234
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 231, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 233
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 212, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 232
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 231, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 231
+arl0 init 0.0
+ar0, ar1 subinstr 215
+ar2, ar3 subinstr 229
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0, ar2 subinstr 230
+ar4 = (ar2 + ar3)
+arl1 = ar4
+ar2 = arl1
+S25 sprintf "p2_%d", p4
+ chnmix ar2, S25
+S28 sprintf "alive_%d", p4
+kr0 chnget S28
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S28
+endin
+
+instr 230
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 214, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 229
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 228, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 228
+arl0 init 0.0
+ar0, ar1 subinstr 217
+ar2, ar3 subinstr 227
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
+ar0 = arl1
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
+endin
+
+instr 227
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 226, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 226
+arl0 init 0.0
+ar0, ar1 subinstr 219
+ar2, ar3 subinstr 225
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
+ar0 = arl1
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
+endin
+
+instr 225
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 224, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 224
+arl0 init 0.0
+ar0, ar1 subinstr 221
+ar2, ar3 subinstr 223
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
+ar0 = arl1
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
+endin
+
+instr 223
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 222, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 222
+arl0 init 0.0
+arl0 = 0.0
+ar0 = arl0
+S7 sprintf "p1_%d", p4
+ chnmix ar0, S7
+arl1 init 0.0
+arl1 = 0.0
+ar0 = arl1
+S16 sprintf "p2_%d", p4
+ chnmix ar0, S16
+S19 sprintf "alive_%d", p4
+kr0 chnget S19
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S19
+endin
+
+instr 221
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 220, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 220
+arl0 init 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.11)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
+ar0 = arl0
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
+arl1 init 0.0
+arl1 = ar2
+ar0 = arl1
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S23
+endin
+
+instr 219
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 218, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 218
+arl0 init 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.08)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
+ar0 = arl0
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
+arl1 init 0.0
+arl1 = ar2
+ar0 = arl1
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S23
+endin
+
+instr 217
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 216, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 216
+arl0 init 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.09)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
+ar0 = arl0
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
+arl1 init 0.0
+arl1 = ar2
+ar0 = arl1
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S23
+endin
+
+instr 215
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 214, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 214
+arl0 init 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.11)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
+ar0 = arl0
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
+arl1 init 0.0
+arl1 = ar2
+ar0 = arl1
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S23
+endin
+
+instr 213
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 212, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 212
+arl0 init 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.08)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
+ar0 = arl0
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
+arl1 init 0.0
+arl1 = ar2
+ar0 = arl1
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S23
+endin
+
+instr 211
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 210, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 210
+arl0 init 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.09)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
+ar0 = arl0
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
+arl1 init 0.0
+arl1 = ar2
+ar0 = arl1
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S23
+endin
+
+instr 209
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 208, 0.0, 0.25, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 208
+arl0 init 0.0
+ar0 madsr 1.0e-2, 0.35, 0.0, 0.0
+kr0 = cpspch(8.11)
+ar1 oscil3 1.0, kr0, 2
+ar2 = (ar0 * ar1)
+arl0 = ar2
+ar0 = arl0
+S11 sprintf "p1_%d", p4
+ chnmix ar0, S11
+arl1 init 0.0
+arl1 = ar2
+ar0 = arl1
+S20 sprintf "p2_%d", p4
+ chnmix ar0, S20
+S23 sprintf "alive_%d", p4
+kr0 chnget S23
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S23
+endin
+
+instr 207
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 206, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 206
+arl0 init 0.0
+ar0, ar1 subinstr 183
+ar2, ar3 subinstr 205
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
+ar0 = arl1
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
+endin
+
+instr 205
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 204, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 204
+arl0 init 0.0
+ar0, ar1 subinstr 185
+ar2, ar3 subinstr 203
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
+ar0 = arl1
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
+endin
+
+instr 203
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 202, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 202
+arl0 init 0.0
+ar0, ar1 subinstr 187
+ar2, ar3 subinstr 201
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
+ar0 = arl1
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
+endin
+
+instr 201
+krl0 init 10.0
+ir3 FreePort 
+ar0 mpulse k(ksmps), 0.0, 0.0
+kr0 downsamp ar0, ksmps
+if (kr0 == 1.0) then
+    krl0 = 2
+     event "i", 200, 0.25, 604800.0, ir3
+endif
+S15 sprintf "p1_%d", ir3
+ar0 chnget S15
+S18 sprintf "p2_%d", ir3
+ar1 chnget S18
+ chnclear S15
+ chnclear S18
+arl1 init 0.0
+arl2 init 0.0
+arl1 = ar0
+arl2 = ar1
+ar0 = arl1
+ar1 = arl2
+ outs ar0, ar1
+kr0 = krl0
+S41 sprintf "alive_%d", ir3
+ chnset kr0, S41
+endin
+
+instr 200
+arl0 init 0.0
+ar0, ar1 subinstr 189
+ar2, ar3 subinstr 199
+ar4 = (ar0 + ar2)
+arl0 = ar4
+ar0 = arl0
+S12 sprintf "p1_%d", p4
+ chnmix ar0, S12
+arl1 init 0.0
+ar0 = (ar1 + ar3)
+arl1 = ar0
+ar0 = arl1
+S24 sprintf "p2_%d", p4
+ chnmix ar0, S24
+S27 sprintf "alive_%d", p4
+kr0 chnget S27
+if (kr0 < -10.0) then
+     turnoff 
+endif
+kr1 = (kr0 - 1.0)
+ chnset kr1, S27
+endin
+
 instr 199
 krl0 init 10.0
 ir3 FreePort 
@@ -40579,7 +42759,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 198, 0.25, -1.0, ir3
+     event "i", 198, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -40616,7 +42796,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -40630,7 +42810,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 196, 0.25, -1.0, ir3
+     event "i", 196, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -40667,7 +42847,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -40681,7 +42861,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 194, 0.25, -1.0, ir3
+     event "i", 194, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -40714,7 +42894,7 @@ S16 sprintf "p2_%d", p4
  chnmix ar0, S16
 S19 sprintf "alive_%d", p4
 kr0 chnget S19
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -40765,7 +42945,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -40816,7 +42996,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -40867,7 +43047,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -40918,7 +43098,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -40969,7 +43149,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41020,7 +43200,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41071,7 +43251,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41085,7 +43265,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 178, 16.0, -1.0, ir3
+     event "i", 178, 16.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41127,7 +43307,7 @@ S29 sprintf "p2_%d", p4
  chnmix ar0, S29
 S32 sprintf "alive_%d", p4
 kr0 chnget S32
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41177,7 +43357,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41191,7 +43371,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 174, 2.0, -1.0, ir3
+     event "i", 174, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41228,7 +43408,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41242,7 +43422,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 172, 2.0, -1.0, ir3
+     event "i", 172, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41279,7 +43459,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41293,7 +43473,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 170, 2.0, -1.0, ir3
+     event "i", 170, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41327,7 +43507,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41341,7 +43521,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 168, 1.5, -1.0, ir3
+     event "i", 168, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41378,7 +43558,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41392,7 +43572,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 166, 0.25, -1.0, ir3
+     event "i", 166, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41425,7 +43605,7 @@ S16 sprintf "p2_%d", p4
  chnmix ar0, S16
 S19 sprintf "alive_%d", p4
 kr0 chnget S19
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41476,7 +43656,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41490,7 +43670,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 162, 1.5, -1.0, ir3
+     event "i", 162, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41527,7 +43707,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41541,7 +43721,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 160, 0.25, -1.0, ir3
+     event "i", 160, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41574,7 +43754,7 @@ S16 sprintf "p2_%d", p4
  chnmix ar0, S16
 S19 sprintf "alive_%d", p4
 kr0 chnget S19
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41625,7 +43805,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41639,7 +43819,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 156, 1.5, -1.0, ir3
+     event "i", 156, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41676,7 +43856,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41690,7 +43870,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 154, 0.25, -1.0, ir3
+     event "i", 154, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41723,7 +43903,7 @@ S16 sprintf "p2_%d", p4
  chnmix ar0, S16
 S19 sprintf "alive_%d", p4
 kr0 chnget S19
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41774,7 +43954,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41788,7 +43968,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 150, 1.5, -1.0, ir3
+     event "i", 150, 1.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41825,7 +44005,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41839,7 +44019,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 148, 0.25, -1.0, ir3
+     event "i", 148, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -41872,7 +44052,7 @@ S16 sprintf "p2_%d", p4
  chnmix ar0, S16
 S19 sprintf "alive_%d", p4
 kr0 chnget S19
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41923,7 +44103,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41973,7 +44153,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -41987,7 +44167,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 142, 2.0, -1.0, ir3
+     event "i", 142, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42024,7 +44204,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42038,7 +44218,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 140, 2.0, -1.0, ir3
+     event "i", 140, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42075,7 +44255,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42089,7 +44269,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 138, 2.0, -1.0, ir3
+     event "i", 138, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42123,7 +44303,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42137,7 +44317,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 136, 0.5, -1.0, ir3
+     event "i", 136, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42174,7 +44354,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42188,7 +44368,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 134, 0.25, -1.0, ir3
+     event "i", 134, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42225,7 +44405,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42239,7 +44419,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 132, 0.25, -1.0, ir3
+     event "i", 132, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42272,7 +44452,7 @@ S16 sprintf "p2_%d", p4
  chnmix ar0, S16
 S19 sprintf "alive_%d", p4
 kr0 chnget S19
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42323,7 +44503,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42374,7 +44554,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42388,7 +44568,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 126, 0.5, -1.0, ir3
+     event "i", 126, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42425,7 +44605,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42439,7 +44619,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 124, 0.25, -1.0, ir3
+     event "i", 124, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42476,7 +44656,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42490,7 +44670,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 122, 0.25, -1.0, ir3
+     event "i", 122, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42523,7 +44703,7 @@ S16 sprintf "p2_%d", p4
  chnmix ar0, S16
 S19 sprintf "alive_%d", p4
 kr0 chnget S19
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42574,7 +44754,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42625,7 +44805,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42639,7 +44819,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 116, 0.5, -1.0, ir3
+     event "i", 116, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42676,7 +44856,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42690,7 +44870,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 114, 0.25, -1.0, ir3
+     event "i", 114, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42727,7 +44907,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42741,7 +44921,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 112, 0.25, -1.0, ir3
+     event "i", 112, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42774,7 +44954,7 @@ S16 sprintf "p2_%d", p4
  chnmix ar0, S16
 S19 sprintf "alive_%d", p4
 kr0 chnget S19
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42825,7 +45005,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42876,7 +45056,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42890,7 +45070,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 106, 0.5, -1.0, ir3
+     event "i", 106, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42927,7 +45107,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42941,7 +45121,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 104, 0.25, -1.0, ir3
+     event "i", 104, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -42978,7 +45158,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -42992,7 +45172,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 102, 0.25, -1.0, ir3
+     event "i", 102, 0.25, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -43025,7 +45205,7 @@ S16 sprintf "p2_%d", p4
  chnmix ar0, S16
 S19 sprintf "alive_%d", p4
 kr0 chnget S19
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43076,7 +45256,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43127,7 +45307,7 @@ S20 sprintf "p2_%d", p4
  chnmix ar0, S20
 S23 sprintf "alive_%d", p4
 kr0 chnget S23
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43141,7 +45321,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 96, 48.0, -1.0, ir3
+     event "i", 96, 48.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -43184,7 +45364,7 @@ S23 sprintf "p2_%d", p4
  chnmix ar0, S23
 S26 sprintf "alive_%d", p4
 kr0 chnget S26
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43243,7 +45423,7 @@ S29 sprintf "p2_%d", p4
  chnmix ar0, S29
 S32 sprintf "alive_%d", p4
 kr0 chnget S32
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43292,7 +45472,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43306,7 +45486,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 90, 16.0, -1.0, ir3
+     event "i", 90, 16.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -43343,7 +45523,7 @@ S24 sprintf "p2_%d", p4
  chnmix ar0, S24
 S27 sprintf "alive_%d", p4
 kr0 chnget S27
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43357,7 +45537,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 88, 32.0, -1.0, ir3
+     event "i", 88, 32.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -43391,7 +45571,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43405,7 +45585,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 86, 52.0, -1.0, ir3
+     event "i", 86, 52.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -43448,7 +45628,7 @@ S23 sprintf "p2_%d", p4
  chnmix ar0, S23
 S26 sprintf "alive_%d", p4
 kr0 chnget S26
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43512,7 +45692,7 @@ S43 sprintf "p2_%d", p4
  chnmix ar0, S43
 S46 sprintf "alive_%d", p4
 kr0 chnget S46
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43568,7 +45748,7 @@ S23 sprintf "p2_%d", p4
  chnmix ar0, S23
 S26 sprintf "alive_%d", p4
 kr0 chnget S26
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43616,7 +45796,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43630,7 +45810,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 78, 0.5, -1.0, ir3
+     event "i", 78, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -43664,7 +45844,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43711,7 +45891,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43771,7 +45951,7 @@ S33 sprintf "p2_%d", p4
  chnmix ar0, S33
 S36 sprintf "alive_%d", p4
 kr0 chnget S36
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43822,7 +46002,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43870,7 +46050,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43934,7 +46114,7 @@ S43 sprintf "p2_%d", p4
  chnmix ar0, S43
 S46 sprintf "alive_%d", p4
 kr0 chnget S46
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -43990,7 +46170,7 @@ S23 sprintf "p2_%d", p4
  chnmix ar0, S23
 S26 sprintf "alive_%d", p4
 kr0 chnget S26
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44038,7 +46218,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44052,7 +46232,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 62, 0.5, -1.0, ir3
+     event "i", 62, 0.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -44086,7 +46266,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44133,7 +46313,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44193,7 +46373,7 @@ S33 sprintf "p2_%d", p4
  chnmix ar0, S33
 S36 sprintf "alive_%d", p4
 kr0 chnget S36
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44244,7 +46424,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44292,7 +46472,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44360,7 +46540,7 @@ S49 sprintf "p2_%d", p4
  chnmix ar0, S49
 S52 sprintf "alive_%d", p4
 kr0 chnget S52
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44416,7 +46596,7 @@ S23 sprintf "p2_%d", p4
  chnmix ar0, S23
 S26 sprintf "alive_%d", p4
 kr0 chnget S26
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44464,7 +46644,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44478,7 +46658,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 46, 2.0, -1.0, ir3
+     event "i", 46, 2.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -44517,7 +46697,7 @@ S26 sprintf "p2_%d", p4
  chnmix ar0, S26
 S29 sprintf "alive_%d", p4
 kr0 chnget S29
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44574,7 +46754,7 @@ S23 sprintf "p2_%d", p4
  chnmix ar0, S23
 S26 sprintf "alive_%d", p4
 kr0 chnget S26
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44622,7 +46802,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44636,7 +46816,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 40, 2.5, -1.0, ir3
+     event "i", 40, 2.5, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -44670,7 +46850,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44726,7 +46906,7 @@ S23 sprintf "p2_%d", p4
  chnmix ar0, S23
 S26 sprintf "alive_%d", p4
 kr0 chnget S26
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44774,7 +46954,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44832,7 +47012,7 @@ S23 sprintf "p2_%d", p4
  chnmix ar0, S23
 S26 sprintf "alive_%d", p4
 kr0 chnget S26
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44880,7 +47060,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44894,7 +47074,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 30, 4.0, -1.0, ir3
+     event "i", 30, 4.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -44945,7 +47125,7 @@ S42 sprintf "p2_%d", p4
  chnmix ar0, S42
 S45 sprintf "alive_%d", p4
 kr0 chnget S45
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -44959,7 +47139,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 28, 4.0, -1.0, ir3
+     event "i", 28, 4.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -44993,7 +47173,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -45048,7 +47228,7 @@ S26 sprintf "p2_%d", p4
  chnmix ar0, S26
 S29 sprintf "alive_%d", p4
 kr0 chnget S29
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -45062,7 +47242,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 24, 8.0, -1.0, ir3
+     event "i", 24, 8.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -45096,7 +47276,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -45151,7 +47331,7 @@ S26 sprintf "p2_%d", p4
  chnmix ar0, S26
 S29 sprintf "alive_%d", p4
 kr0 chnget S29
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -45165,7 +47345,7 @@ ar0 mpulse k(ksmps), 0.0, 0.0
 kr0 downsamp ar0, ksmps
 if (kr0 == 1.0) then
     krl0 = 2
-     event "i", 20, 0.0, -1.0, ir3
+     event "i", 20, 0.0, 604800.0, ir3
 endif
 S15 sprintf "p1_%d", ir3
 ar0 chnget S15
@@ -45199,7 +47379,7 @@ S19 sprintf "p2_%d", p4
  chnmix ar0, S19
 S22 sprintf "alive_%d", p4
 kr0 chnget S22
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -45254,7 +47434,7 @@ S26 sprintf "p2_%d", p4
  chnmix ar0, S26
 S29 sprintf "alive_%d", p4
 kr0 chnget S29
-if (kr0 < 0.0) then
+if (kr0 < -10.0) then
      turnoff 
 endif
 kr1 = (kr0 - 1.0)
@@ -45270,9 +47450,9 @@ f2 0 8192 10  1.0 0.5 0.0 0.1
 
 f0 604800.0
 
-i 1655 0.0 -1.0 
-i 1654 0.0 -1.0 
-i 1652 0.0 -1.0 
+i 1733 0.0 -1.0 
+i 1732 0.0 -1.0 
+i 1730 0.0 -1.0 
 
 </CsScore>
 

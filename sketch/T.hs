@@ -26,18 +26,27 @@ import Csound.Sam
 -- we can delay the segment or loop over it or limit it with tme interval
 -- or play a sequence of segments. The main feature of the segments is the
 -- ability to schedule the signals with event streams (like pushing the buttons). 
-data Seg a = Seg [(T, a)]
+data Seg a = Seg [Elem a]
+
+data Elem a = Unlim a | Lim { elemLimT :: T, elemLimSig :: a }
 
 instance Functor Seg where
-	fmap f (Seg xs) = Seg $ fmap (second f) xs
+	fmap f (Seg xs) = Seg $ fmap (fmap f) xs
+
+instance Functor Elem where
+	fmap f x = case x of
+		Unlim a -> Unlim $ f a
+		Lim t a -> Lim t $ f a
 
 instance SigSpace a => SigSpace (Seg a) where
 	mapSig f x = fmap (mapSig f) x
 
+{-
 instance BindSig a => BindSig (Seg a) where
 	bindSig f (Seg xs) = fmap Seg $ mapM (\(a, b) -> fmap (a,) $ bindSig f b) xs
+-}
 
-seq1 dt a = Seg [(dt, a)]
+seq1 dt a = Seg [Lim dt a]
 
 -- | A time interval. It can be constant time interval (measured in seconds)
 -- or a promise for the time interval. In the latter case we wait till something
@@ -52,18 +61,28 @@ toT = T
 
 -- | Converts signals to segments.
 toSeg :: a -> Seg a
-toSeg = seq1 (T mempty)
+toSeg a = Seg [Unlim a]
 
 -- | Converts segments to signals.
 runSeg :: (Sigs a, Num a) => Seg a -> a
-runSeg (Seg as) = elim dt res
+runSeg (Seg xs) = case xs of
+	[Unlim a]  -> a
+	[Lim dt a] -> elim dt a
+	as         -> phi as 
 	where 
-		go (da, a) (db, b) = (aftT da db, elim (aftT da db) (elim da a + edel da (elim db b)))
-		(dt, res) = foldr1 go as
+		phi as = res
+			where
+				go xa xb = case (xa, xb) of
+					(Unlim a, _)         -> Unlim a
+					(Lim da a, Unlim b)  -> Unlim $ elim da a + edel da b
+					(Lim da a, Lim db b) -> Lim (aftT da db) (elim (aftT da db) (elim da a + edel da (elim db b)))
+				res = case foldr1 go as of
+					Unlim a -> a
+					Lim t a -> elim t a
 
 -- | The total duration of the signal segment.
 sdur :: Seg a -> T
-sdur (Seg as) = foldr1 aftT $ fmap fst as
+sdur (Seg as) = foldr1 aftT $ fmap elemLimT as
 
 -- | Limits a segment by a given time interval.
 slim :: (Sigs a, Num a) => T -> Seg a -> Seg a
@@ -112,10 +131,10 @@ edel dt asig = case dt of
 	ConstT d -> delaySnd d asig
 	T    evt -> sched (const $ return asig) (fmap (const (infiniteDur, unit)) $ take1 evt)
 
-eloop :: Sigs a => T -> a -> a
+eloop :: (Sigs a, Num a) => T -> a -> a
 eloop dt asig = case dt of
 	ConstT d -> repeatSnd d asig
-	T    evt -> evtLoop (return asig) evt
+	T    evt -> evtLoop Nothing Nothing [return asig] [evt]
 
 alwaysOn :: SE () -> SE ()
 alwaysOn proc = sched_ (const $ proc) $ withDur (infiniteDur) $ loadbang
@@ -156,6 +175,8 @@ instance Fractional T where
 	recip = undefined
 	fromRational = ConstT . fromRational
  
+-----------------------------------------------------------
+					
 -----------------------------------------------------------
 -- Char sampler
 
@@ -200,10 +221,39 @@ evtTrigger x st a = (\x y -> runSeg $ sloop $ slim y $ sdel x $ sloop (slim x $ 
 -- Midi sampler
 
 midiKeyOn :: D -> SE (Evt D)
-midiKeyOn = undefined
+midiKeyOn key = do	
+	chRef  <- newGlobalSERef (0 :: Sig)
+	evtRef <- newGlobalSERef (0 :: Sig)
+	writeSERef chRef =<< midi instr
+
+	alwaysOn $ do
+		a <- readSERef chRef
+		writeSERef evtRef $ diff a
+
+	evtSig <- readSERef evtRef
+	return $ filterE ( >* 0) $ snaps evtSig
+	where
+		instr msg = do
+			print' [notnum msg] 
+			return $ ifB (boolSig $ notnum msg ==* key) (sig $ ampmidi msg 1) 0
+
 
 midiKeyOff :: D -> SE Tick
-midiKeyOff = undefined
+midiKeyOff key = do	
+	chRef  <- newGlobalSERef (0 :: Sig)
+	evtRef <- newGlobalSERef (0 :: Sig)
+	writeSERef chRef =<< midi instr
+
+	alwaysOn $ do
+		a <- readSERef chRef
+		writeSERef evtRef $ diff a
+
+	evtSig <- readSERef evtRef
+	return $ fmap (const unit) $ filterE ( <* 0) $ snaps evtSig
+	where
+		instr msg = do
+			print' [notnum msg] 
+			return $ ifB (boolSig $ notnum msg ==* key) (sig $ ampmidi msg 1) 0
 
 -----------------------------------------
 
@@ -243,20 +293,25 @@ midiEvtTrigger ons offs asig = schedUntil (midiSamInstr asig) ons offs
 
 listenKeys = keyPanel =<< box "hi"
 
+test a = dac $ do
+	keyPanel =<< box "hi"
+	at (smallRoom2) $ S.runSam (120 * 4) $ a
+
+
 main = dac $ do
 	keyPanel =<< box "hi"
 	at (smallRoom2) $ S.runSam (120 * 4) $ sum [
 		 charToggle 'q' f
-		-- , charCycle '5' "" [w, f]
-		,  mul 0.5 $ charTrig "a" "zx" w
+		, charCycle '5' "6" [w, f]
+	{-	,  mul 0.5 $ charTrig "a" "zx" w
 		, charGroup [('1', mul (fades 0.5 0.5) w), ('2', f)] "3x"
 		, charTap "i" 1 t11
 		, charTap "o" 1 t12
 		, charTap "p" 1 t13
-		, charTap "k" 1 t21
+		, charTap "k" 1 t21 -}
 		, charTap "l" 1 t22
 		, charTap "u" 1 t31
-		, charTap "j" 1 t32
+		, charTap "j" 1 t32 
 		, charTap "y" 1 t33
 		]
 
