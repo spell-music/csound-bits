@@ -75,3 +75,4 @@ f t = syncgrain 1 ifreq ipitch igrsize (ips*istr) t iwin iolaps
 		ipitch  = 1   -- /* pitchscale */
 
 		iwin = winBlackman [1]
+		

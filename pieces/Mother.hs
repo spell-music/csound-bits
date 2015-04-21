@@ -95,3 +95,6 @@ arps = run' $ mul 0.5 $ fmap smallHall2 $
 
 aah = mul 1.5 $ fmap magicCave2 $ wide 8 $ genForAirports $ zip3 [0, 10, 15, 24] [17, 11, 29, 31] $ fmap f [0, 2, 3, 4]
 	where f = linEnv 0.2 0.5 . atPanRnd . fromSig1 10 . monoPluck 3 . (* 2) . p 
+
+
+atV = atVolGauss 0.1
