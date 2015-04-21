@@ -12,7 +12,7 @@ t = bpm / 60
 main = run tr1
 
 run = dac . runSam (bpm * 4)
-save n = writeHifi (n * 60) "res.wav" . runSam (bpm * 4)
+save n = writeSnd "res.wav" . fmap (setDur (n * 60)) . runSam (bpm * 4)
 
 sdir = ("samples/" ++ )
 

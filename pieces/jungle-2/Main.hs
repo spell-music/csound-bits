@@ -9,8 +9,10 @@ bpm = 120
 t :: Fractional a => a
 t = bpm / 60
 
+main = run res
+
 run = dac . runSam (bpm)
-save n = writeHifi (n * 60) "res.wav" . runSam (bpm)
+save n = writeSnd "res.wav" . fmap (setDur (n * 60)) . runSam (bpm)
 
 sdir x = "samples/" ++ x
 
@@ -103,8 +105,6 @@ bt13 = sum [
 	, str 2 $ break2 $ mul 0.7 $ arps
 	]
 
-bas = toSam $ at (mlp (500 + 1000 * uosc 0.25) 0.2) $ mul (sqrSeq [1, 0.75, 0.5, 1, 0.75, 0.5, 1, 0.5] (t * 4)) $ (saw (cpspch 5.09))
-
 genBt1 = str 2 $ sum [
 	  break1 $ pat' [1, 0.7, 0.9] [3,1,4] kk
 	, break1 $ del 2 $ pat [4, 4, 3, 1] sn
@@ -143,6 +143,15 @@ bt3 = lim 36 $ sum [
 
 jam t lp w = del t $ pat [lp] w
 
+-----------------------------------------------------------
+-- bass
+
+bas = toSam $ at (mlp (500 + 1000 * uosc 0.25) 0.2) 
+	$ mul (sqrSeq [1, 0.75, 0.5, 1, 0.75, 0.5, 1, 0.5] (t * 4)) 
+	$ (saw (cpspch 5.09))
+
+-----------------------------------------------------------
+-- arpeggios
 
 arps = sum [
 		a1,
@@ -162,5 +171,3 @@ theEnd = sum [
 	  excitingTime	
 	]
 
-
--- 64 + 64 - 4 + 48
