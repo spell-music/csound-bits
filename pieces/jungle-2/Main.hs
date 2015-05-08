@@ -1,3 +1,11 @@
+-- flying lotus beats (howto):
+-- http://www.youtube.com/watch?v=RXExK_SLSow
+
+-- four tet
+-- http://www.youtube.com/watch?v=QEUGilncRJs
+
+-- prod tips
+-- http://modeaudio.com/magazine/category/production-tips
 module Main where
 
 import Csound.Base
@@ -170,4 +178,12 @@ a3 = mul 0.7 $ arFun $ concat $ fmap (\x -> [x, 0, 0, x, 0, 0, x, 0]) $ fmap (* 
 theEnd = sum [
 	  excitingTime	
 	]
+
+
+{-
+-- scary pattern
+
+ dac $ mul (pwSeq 0.95 [1, 0.6, 0.7, 0.1] (0.7) * pwSeq 0.9 [1, 0.5, 0.8] 0.25) $ mul (uosc 8 ** 2) $ loopRam (-2) (constSeq [1, 0.5, -1, 1, 2, 1, 4] 8) 0.7 "house2.wav" 
+
+-}
 
