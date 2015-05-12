@@ -250,6 +250,24 @@ Let's create a slide from 200 Hz to 1200 Hz:
 
 Note that the last value is held. 
 
+### Faders
+
+Very simple but also very useful functions:
+
+~~~
+fadeIn, fadeOut :: D -> Sig
+fades :: D -> D -> Sig
+~~~
+
+The `fadeIn` and `fadeOut` expect a time in seconds for attack or release phase.
+The `fades` is combination of both functions.
+
+Let's open a filter for saw wave:
+
+~~~
+> dac $ mlp (2500 * fadeIn 5) 0.1 $ saw 55
+~~~
+
 ### Random envelopes
 
 There are some useful functions that can make your signals more alive and human
