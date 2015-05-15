@@ -258,6 +258,32 @@ We can play the tune with chords. Let's play it twice:
 > run $ str 0.25 $ loopBy 2 $ har [ch, ph]
 ~~~	
 
+Here it is! But what about clipping? Some signals are above the 1 in amplitude.
+We can easily solve this problem by scaling thae output signal. But here 
+we are going to take another approach. We are going to introduce another parameter
+for the instrument. The instrument was defined for frequencies. Now it's going
+to get in the amplitudes also:
+
+~~~
+> let oscInstr (amp, cps) = 
+	return $ mul (sig amp * linsegr [0, 0.03, 1, 0.2, 0] 0.1 0) $ osc $ sig cps
+~~~
+
+We have to update the `run` function also:
+
+~~~
+> let run = dac . mix . sco oscInstr . fmap (\(a, b) -> (a, cpspch b))
+~~~
+
+We transform not the whole argument with `cpspch` but 
+only the second value in the tuple. We have the scores of frequencies.
+Let's transform them in the scores of pairs! We assume that chords are 
+quieter than the melody:
+
+~~~
+> run $ str 0.25 $ loopBy 2 $ har [fmap (\x -> (0.4, x)) ch,  fmap (\x -> (0.6, x)) ph]
+~~~
+
 Main classes for composition
 ------------------------------------
 
