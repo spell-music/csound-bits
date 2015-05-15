@@ -407,3 +407,15 @@ class Loop a where
   loop :: a -> a
   	-- Defined in ‘Temporal.Class’
 ~~~
+
+### Limit
+
+We can limit the length:
+
+~~~
+:i Limit
+class Limit a where
+  lim :: DurOf a -> a -> a
+~~~
+
+This function is not defined for `Sco`.
