@@ -395,7 +395,7 @@ We can create pauses:
 > :i Rest
 class Compose a => Rest a where
   rest :: DurOf a -> a
-  	-- Defined in ‘Temporal.Class’
+  	-- Defined in ‘Temporal.Class’	
 ~~~
 
 ### Loops
