@@ -6,44 +6,13 @@ import Control.Monad
 
 import Csound.Base 
 
+
+
 tryMidi
   :: (MidiInstr ((D, D) -> SE (CpsInstrOut a)), CpsInstr a,
       Sigs (MidiInstrOut ((D, D) -> SE (CpsInstrOut a)))) =>
      a -> SE (MidiInstrOut ((D, D) -> SE (CpsInstrOut a)))
 tryMidi x = midi $ onMsg $ onCps x
-
-
-detune :: Sig -> (Sig -> a) -> (Sig -> a)
-detune k f cps = f (k * cps) 
-
-
-linRange n amount = fmap (\x -> amount * sig (2 * double x - 1)) [0, (1 / fromIntegral n) .. 1] 
-
-multiHz :: Fractional a => Int -> Sig -> (Sig -> a) -> (Sig -> a) 
-multiHz n amount f cps = mean $ fmap (f . (cps + )) $ linRange n amount
-
-multiCent :: Fractional a => Int -> Sig -> (Sig -> a) -> (Sig -> a) 
-multiCent n amount f cps = mean $ fmap (f . (cps * ) . cent) $ linRange n amount
-	
-multiRnd :: Fractional a => Int -> Sig -> (Sig -> a) -> (Sig -> SE a)
-multiRnd = genMultiRnd (rnd 1)
-
-multiGauss :: Fractional a => Int -> Sig -> (Sig -> a) -> (Sig -> SE a)
-multiGauss = genMultiRnd (fmap ((+ 0.5) . ir) $ gauss 0.5)
-
-genMultiRnd :: Fractional a => (SE D) -> Int -> Sig -> (Sig -> a) -> (Sig -> SE a)
-genMultiRnd gen n amount f cps = fmap mean $ mapM (const go) $ replicate n ()
-	where go = fmap (\dx -> f $ cps + amount * (sig $ 2 * dx - 1)) gen
-
-multiRndSE :: Fractional a => Int -> Sig -> (Sig -> SE a) -> (Sig -> SE a)
-multiRndSE = genMultiRndSE (rnd 1)
-
-multiGaussSE :: Fractional a => Int -> Sig -> (Sig -> SE a) -> (Sig -> SE a)
-multiGaussSE = genMultiRndSE (fmap ((+ 0.5) . ir) $ gauss 0.5)
-
-genMultiRndSE :: Fractional a => (SE D) -> Int -> Sig -> (Sig -> SE a) -> (Sig -> SE a)
-genMultiRndSE gen n amount f cps = fmap mean $ mapM (const go) $ replicate n ()
-	where go = (\dx -> f $ cps * cent (amount * (sig $ 2 * dx - 1))) =<< gen
 
 -- some instruments from the Thor explained series
 --

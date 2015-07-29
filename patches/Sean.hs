@@ -66,7 +66,7 @@ snowCrackle speed = mlp 1200 0.1 $ mouseDrum speed (3 + 2 * uosc 0.1)  (160 + 10
 	where
 		mouseDrum :: Sig -> Sig -> Sig -> Sig
 		mouseDrum freq index cps = 
-			sched instr $ withDur dur $ fmap (\[a, b] -> (a, b)) $ randList 2 $ dustTrig freq
+			sched instr $ withDur dur $ fmap (\[a, b] -> (a, b)) $ randList 2 $ dust freq
 			where 
 				dur = 0.049
 				instr (rndCps, rndIndex) = return $
@@ -82,23 +82,6 @@ snowCrackle speed = mlp 1200 0.1 $ mouseDrum speed (3 + 2 * uosc 0.1)  (160 + 10
 				amod = mul (idev * imodfreq) $ osc imodfreq
 				kenv = expsegr [1, dur, 0.001] dur 0.001
 				aosc = mul kenv $ osc (icarfreq + amod)
-
-
-
-gaussTrig :: Sig -> Sig -> Tick
-gaussTrig afreq adev = Evt $ \bam -> do
-	on <- gausstrig 1 (afreq * sig getBlockSize) adev
-	when1 (on >* 0.5) $ bam unit
-
-dustTrig :: Sig -> Tick
-dustTrig freq = Evt $ \bam -> do
-	on <- dust 1 (freq * sig getBlockSize)
-	when1 (on >* 0.0001) $ bam unit
-
-dustTrig2 :: Sig -> Tick
-dustTrig2 freq = Evt $ \bam -> do
-	on <- dust2 1 (freq * sig getBlockSize)
-	when1 (on >* 0.0001) $ bam unit
 
 ------------------------------------------------------------------------
 

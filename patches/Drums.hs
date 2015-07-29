@@ -28,16 +28,16 @@ bass dur cps = amix
 -- sound consists of two sine tones, an octave apart and a noise signal		
 -- cps = 342
 snare :: D -> D -> D -> SE Sig
-snare dur tune cps = fmap (apitch + ) anoise
+snare dur tune cps = apitch + anoise
 	where		
 		iNseDur = dur * 0.3
 		iPchDur  = dur * 0.1
 
 		-- sine tones component
 		aenv1 	= expsegr [1, iPchDur, 0.0001] iNseDur 0.0001
-		apitch1 = osc (sig cps)
-		apitch2 = osc (0.5 * sig cps)
-		apitch  = 0.75 * aenv1 * (apitch1 + apitch2)
+		apitch1 = rndOsc (sig cps)
+		apitch2 = rndOsc (0.5 * sig cps)
+		apitch  = mul (0.75 * aenv1) (apitch1 + apitch2)
 
 		-- noise component		
 		aenv2	= expon 1 iNseDur 0.0005
@@ -55,14 +55,14 @@ closedHiHat dur = genHiHat (expsega [1, (dur / 2), 0.001]) dur
 -- sound consists of 6 pulse oscillators mixed with a noise component
 -- cps = 296
 genHiHat :: Sig -> D -> D -> D -> SE Sig
-genHiHat pitchedEnv dur tune cps = fmap (amix1 + ) anoise
+genHiHat pitchedEnv dur tune cps = amix1 + anoise
 	where 	
 		halfDur = dur * 0.5
 
 		-- pitched element
 		harmonics = [1.0, 0.962, 1.233, 1.175,1.419, 2.821]		
-		amix 	= mul 0.5 $ sum $ fmap (pw 0.25 . sig . (* (cps * octave tune))) harmonics
-		amix1   = mul pitchedEnv $ bhp 5000 $ bhp 5000 $ reson amix (5000 * octave (sig tune)) 5000 `withD` 1
+		amix 	= mul 0.5 $ fmap sum $ mapM (rndPw 0.25 . sig . (* (cps * octave tune))) harmonics
+		amix1   = mul pitchedEnv $ at (\asig -> bhp 5000 $ bhp 5000 $ reson asig (5000 * octave (sig tune)) 5000 `withD` 1) amix
 
 		-- noise element
 		kcf		= expseg [20000, 0.7, 9000, halfDur-0.1, 9000] 
@@ -83,7 +83,7 @@ lowTom :: D -> D -> D -> SE Sig
 lowTom dur tune cps = genTom 0.6 (40, 100, 600) dur tune cps
 
 genTom :: D -> (Sig, Sig, Sig) -> D -> D -> D -> SE Sig
-genTom durDt (resonCf, hpCf, lpCf) dur tune cps = fmap (asig + ) anoise
+genTom durDt (resonCf, hpCf, lpCf) dur tune cps = asig + anoise
 	where		
 		ifrq 	= cps * octave tune
 		halfDur = durDt * dur
@@ -91,7 +91,7 @@ genTom durDt (resonCf, hpCf, lpCf) dur tune cps = fmap (asig + ) anoise
 		-- sine tone signal
 		aAmpEnv	= transeg [1, halfDur, -10, 0.001]
 		afmod	= expsega  [5, 0.125/ifrq, 1]
-		asig  	= (-aAmpEnv) * osc (sig ifrq * afmod)
+		asig  	= mul (-aAmpEnv) $ rndOsc (sig ifrq * afmod)
 
 		-- noise signal
 		aEnvNse = transeg [1, halfDur, -6 , 0.001]
@@ -121,14 +121,14 @@ cymbal dur tune cps = fmap (amix1 + ) anoise
 			return $ bhp 8000 $ blp kcf x
 
 -- cps = 2500
-claves :: D -> D -> D -> Sig
+claves :: D -> D -> D -> SE Sig
 claves dur tune cps = asig
 	where
 		ifrq = cps * octave tune
 		dt   = 0.045 * dur
 		aenv = expsega	[1, dt, 0.001]
 		afmod = expsega	[3,0.00005,1]
-		asig = - 0.4 * (aenv-0.001) * osc (sig ifrq * afmod)
+		asig = mul (- 0.4 * (aenv-0.001)) $ rndOsc (sig ifrq * afmod)
 
 getAccent :: Int -> [D]
 getAccent n = 1 : replicate (n - 1) 0.5
@@ -151,19 +151,19 @@ ticks n
 genTicks :: (Tick -> Evt D) -> Sig -> Sig
 genTicks f x = mul 3 $ mlp 4000 0.1 $ 
 	sched (\amp -> mul (sig amp) $ rimShot (amp + 1) 0 (1200 * (amp + 0.5))) $ 
-	withDur 0.5 $ f $ metroE (x / 60)
+	withDur 0.5 $ f $ metro (x / 60)
 
 
 -- cps = 1700
 rimShot :: D -> D -> D -> SE Sig
-rimShot dur tune cps = mul 0.8 $ fmap (aring + ) anoise
+rimShot dur tune cps = mul 0.8 $ aring + anoise
 	where
 		fullDur = 0.027 * dur
 
 		-- ring
 		aenv1 =	expsega	[1,fullDur,0.001]
 		ifrq1 =	sig $ cps * octave tune		
-		aring = 0.5 * (aenv1 - 0.001) * (bbp ifrq1 (ifrq1 * 8) $ oscBy tabTR808RimShot ifrq1)
+		aring = mul (0.5 * (aenv1 - 0.001)) $ at (bbp ifrq1 (ifrq1 * 8)) $ rndOscBy tabTR808RimShot ifrq1
 
 		-- noise
 		aenv2 =	expsega	[1, 0.002, 0.8, 0.005, 0.5, fullDur-0.002-0.005, 0.0001]
@@ -173,7 +173,7 @@ rimShot dur tune cps = mul 0.8 $ fmap (aring + ) anoise
 		tabTR808RimShot = setSize 1024 $ sines [0.971,0.269,0.041,0.054,0.011,0.013,0.08,0.0065,0.005,0.004,0.003,0.003,0.002,0.002,0.002,0.002,0.002,0.001,0.001,0.001,0.001,0.001,0.002,0.001,0.001]
 
 -- cps = 562
-cowbell ::  D -> D -> D -> Sig
+cowbell ::  D -> D -> D -> SE Sig
 cowbell dur tune cps = ares
 	where
 		ifrq1 = sig $ cps * octave tune
@@ -184,12 +184,12 @@ cowbell dur tune cps = ares
 		kenv1	= transeg	[1,fullDur*0.3,ishape,0.2, fullDur*0.7,ishape,0.2]
 		kenv2	= expon	1 fullDur 0.0005
 		kenv    = kenv1 * kenv2
-		amix    = mul 0.65 $ pw 0.5 ifrq1 + pw 0.5 ifrq2
-		iLPF2	=	10000
+		amix    = mul 0.65 $ rndPw 0.5 ifrq1 + rndPw 0.5 ifrq2
+		iLPF2	= 10000
 		kcf		= expseg [12000,0.07,iLPF2,1,iLPF2]
-		alpf    = blp kcf amix
-		abpf    = reson amix ifrq2 25
-		ares    = mul (0.08 * kenv) $ dcblock2 $ 0.06 * kenv1 * abpf + 0.5 * alpf + 0.9 * amix 
+		alpf    = at (blp kcf) amix
+		abpf    = at (\x -> reson x ifrq2 25) amix
+		ares    = mul (0.08 * kenv) $ at dcblock2 $ mul (0.06 * kenv1) abpf + mul 0.5 alpf + mul 0.9 amix 
 
 
 {-
@@ -248,22 +248,22 @@ maraca dur tune cps = anoise
 
 -- high conga
 -- cps = 420
-highConga :: D -> D -> D -> Sig
+highConga :: D -> D -> D -> SE Sig
 highConga = genConga 0.22
 
 -- cps = 310
-midConga :: D -> D -> D -> Sig
+midConga :: D -> D -> D -> SE Sig
 midConga = genConga 0.33
 
 -- cps = 227
-lowConga :: D -> D -> D -> Sig
+lowConga :: D -> D -> D -> SE Sig
 lowConga = genConga 0.41
 
-genConga :: D -> D -> D -> D -> Sig
+genConga :: D -> D -> D -> D -> SE Sig
 genConga dt dur tune cps = asig
 	where
 		ifrq = cps * octave tune
 		fullDur = dt * dur
 		aenv = transeg [0.7,1/ifrq,1,1,fullDur,-6,0.001]
 		afmod = expsega [3,0.25/ifrq,1]
-		asig = -0.25 * aenv * osc (sig ifrq * afmod)
+		asig = mul (-0.25 * aenv) $ rndOsc (sig ifrq * afmod)
