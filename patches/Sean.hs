@@ -1,3 +1,4 @@
+{-# Language FlexibleContexts #-}
 module Sean where
 
 import Data.List
@@ -5,6 +6,11 @@ import Control.Monad
 
 import Csound.Base hiding (formant)
 
+tryMidi
+  :: (MidiInstr ((D, D) -> SE (CpsInstrOut a)), CpsInstr a,
+      Sigs (MidiInstrOut ((D, D) -> SE (CpsInstrOut a)))) =>
+     a -> SE (MidiInstrOut ((D, D) -> SE (CpsInstrOut a)))
+tryMidi x = midi $ onMsg $ onCps x
 
 data RissetBellSpec = RissetBellSpec
 	{ rissetBellRands 		:: [D]

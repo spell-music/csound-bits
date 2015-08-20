@@ -45,7 +45,7 @@ hammondOrgan dt x = mul (fades 0.01 0.05) $ fmap mean $ mapM rndOsc
 
 amPiano :: Sig -> SE Sig
 amPiano x = mul env $ at (mlp (env * (3000 + x)) 0.25) $ (rndSaw x * rndSaw (4 * x))
-	where env = leg 0.01 4 0 0.01
+	where env = leg 0.01 4 0 0.02
 
 ------------------------------
 -- 3 pwm
@@ -68,8 +68,23 @@ pwEnsemble x = mul 0.3 $ at (mlp (3500 + x * 2) 0.1) $ mul (leg 0.5 0 1 1) $ sum
 ------------------------------
 -- 4 Multi osc (unision)
 
-epiano = dac $ mul 2 $ mixAt 0.25 smallHall2 $ at fromMono $ tryMidi $ mul (leg 0.001 2 0 0.05) . at (mlp (2500 + 2000 * (leg 0.1 3 0 0.1)) 0.25) . (multiRndSE 4 5 rndOsc + multiRndSE 8 10 (detune (0.51) rndOsc))
+data EpianoOsc = EpianoOsc 
+	{ epianoOscChorusNum :: Int
+	, epianoOscChorusAmt :: Sig
+	, epianoOscNum       :: Sig	
+	, epianoOscWeight    :: Sig
+	}
 
+epiano :: [EpianoOsc] -> (D, D) -> SE Sig
+epiano xs (amp, cps) = mul (sig amp * leg 0.001 sust 0 rel) $ at (mlp (2500 + 4500 * (leg 0.1 3 0 0.1)) 0.25) $
+	fmap sum $ mapM (\x -> mul (epianoOscWeight x) $ multiRndSE (epianoOscChorusNum x) (epianoOscChorusAmt x) (detune (epianoOscNum x) rndOsc) (sig cps)) xs
+ -- (multiRndSE 4 5 rndOsc + multiRndSE 8 10 (detune (2.01) rndOsc))
+ 	where 
+ 		sust = amp + 2 + (0.7 - 3 * k ** 2)
+ 		rel  = (amp / 10) + 0.05 - (k / 10)
+ 		k    = cps / 1000
+
+pianoRelease (amp, cps) rel = amp / 5 + rel - (cps / 10000)
 ------------------------------
 -- 5 noise
 
@@ -107,7 +122,7 @@ windWall cps = mul amEnv $ at (hp1 400) $ at (mlp (filtEnv * cps) 0.2) (mul 20 w
 ------------------------------
 -- 9, 10 fm
 
-razorPad amp speed cps = f cps + 0.75 * f (cps * 0.5)
+razorPad speed amp cps = f cps + 0.75 * f (cps * 0.5)
 	where f cps = mul (leg 0.5 0 1 1) $ genRazor (filt 1 mlp) speed amp cps
 
 razorLead bright speed amp cps = mul (0.5 * leg 0.01 1 0.5 0.5) $ genRazor (filt 2 (lp18 $ 2 * bright)) speed amp cps

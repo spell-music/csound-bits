@@ -36,11 +36,15 @@ fm irel1 ifm cps = aout
 		aout    = kamp * osc (cps * (1 + afrq))
 
 
-simple irel (amp, cps) = do
+simpleSust   = genSimple 0.25  0.1
+simpleFading = genSimple icasi icero
+
+genSimple isust1 isust2 irel (amp, dcps) = do
 	aleft  <- fmap pure $ random 1 (11  * sig amp)
 	aright <- fmap pure $ random 1 (10.5  * sig amp)
 	return (aleft, aright)
 	where
+		cps = sig dcps
 		pure ichr = aout
 			where
 				irel1 = irel * (0.5 + amp)
@@ -48,7 +52,8 @@ simple irel (amp, cps) = do
 				idec    = 1
 				irel2   = 0.75 * irel1
 
-				kamp    = expsegr    [1, idec, 0.7, irel1, icasi, irel2, icero] irel2 icero
+				-- kamp    = expsegr    [1, idec, 0.7, irel1, icasi, irel2, icero] irel2 icero
+				kamp    = expsegr    [1, idec, 0.7, irel1, isust1, irel2, isust2] irel2 icero
 				kcf     = 2 * sig amp * linsegr    [3000, irel1 + 1, 500] irel2 500
 				a3      = kamp * (osc (cps - ichr) + osc (cps - ichr))* 0.5
 
