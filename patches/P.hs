@@ -318,10 +318,20 @@ overtoneLead = Patch
 	, patchMix   = 0.15
 	}
 
-
-
 ------------------------------------
 -- bass
+
+simpleBass = Patch 
+	{ patchInstr = at fromMono . onCps C.simpleBass
+	, patchFx    = return . smallRoom2
+	, patchMix   = 0.25
+	}
+
+pwBass = Patch 
+	{ patchInstr = at fromMono . onCps C.pwBass
+	, patchFx    = return . smallHall2
+	, patchMix   = 0.25
+	}
 
 ------------------------------------
 -- plucked
@@ -985,7 +995,7 @@ blue = Patch
 	}
 
 black = Patch
-	{ patchInstr = at fromMono . mul (3 * fades 0.01 0.5). onCps (C.black 5 250 4500 12)
+	{ patchInstr = at fromMono . mul (3 * fades 0.01 0.5). onCps (\cps -> C.black 3 (cps / 2) (cps * 2) 12 (sig cps))
 	, patchFx    = return . smallHall2
 	, patchMix   = 0.25
 	}
@@ -1046,3 +1056,4 @@ wind = Patch
 
 ------------------------------------
 -- drums
+

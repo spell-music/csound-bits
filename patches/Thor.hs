@@ -54,6 +54,30 @@ pwBass :: Sig -> SE Sig
 pwBass cps = mul (fades 0.005 0.05) $ at (mlp 1500  0.1) $ rndPw (0.25 * (1 + 0.07 * osc (1 + (7 * x / 1000)))) x
 	where x = cps / 2
 
+simpleBass :: (D, D) -> Sig
+simpleBass (amp, cps') = aout
+	where
+		cps = sig cps'
+
+		all = sum 
+			[ 0.4 * oscBy pulse $ cps * 0.998 - 0.12
+			, 0.4 * osc         $ cps * 1.002 - 0.12
+			, 0.4 * oscBy pulse $ cps * 0.998 - 0.12 
+			, 0.7 * osc         $ cps         - 0.24 ]
+
+		aout = mul (kgain * sig amp * linsegr [0, 0.01, 1, (3.5 * amp), 0] 0.35 0)
+			$ blp (700 + (sig amp * 500))
+			$ bhp 65
+			$ bhp 65
+			$ blp ksweep
+			$ blp ksweep all
+
+		ksweep = expsegr [3000, 0.03, 9000] 3 1 - 3000
+
+		pulse = sines [1, 1, 1, 1, 0.7, 0.5, 0.3, 0.1]
+
+		kgain = 2
+
 pwHarpsichord :: Sig -> SE Sig
 pwHarpsichord x = mul 2.5 $ mul (leg 0.005 1.5 0 0.25) $ at (mlp (env * 8000) 0.15) $ at (hp 2500 0.3) $ rndPw 0.4 x
 	where env = leg 0.01 4 0 0.01
@@ -84,7 +108,6 @@ epiano xs (amp, cps) = mul (sig amp * leg 0.001 sust 0 rel) $ at (mlp (2500 + 45
  		rel  = (amp / 10) + 0.05 - (k / 10)
  		k    = cps / 1000
 
-pianoRelease (amp, cps) rel = amp / 5 + rel - (cps / 10000)
 ------------------------------
 -- 5 noise
 

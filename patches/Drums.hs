@@ -8,11 +8,58 @@ data TrSpec = TrSpec {
 	  trDur 	:: D
 	, trTune 	:: D
 	, trCps 	:: D
+	, trRnd     :: Maybe D
 	}
 
-bass :: D -> D -> Sig
-bass dur cps = amix
+cpsSpec cps = TrSpec 
+	{ trDur   = 0.8
+	, trTune  = 0
+	, trCps   = cps 
+	, trRnd   = Just 0.05 }
+
+
+rndVal :: D -> D -> D -> SE D
+rndVal total amount x = do
+	k <- birnd amount 
+	return $ x  + k * total
+
+rndDur amt x = rndVal x amt x
+rndCps amt x = rndVal x (amt / 10) x
+rndTune amt x = rndVal 0.7 amt x
+
+rndSpec ::TrSpec -> SE TrSpec
+rndSpec spec = do
+	dur  <- rndDur'
+	tune <- rndTune'
+	cps  <- rndCps'
+	return $ spec 
+		{ trDur  = dur 
+		, trTune = tune
+		, trCps  = cps }
+	where 
+		rndDur'  = (maybe return rndDur $ (trRnd spec)) $ trDur spec
+		rndTune' = (maybe return rndTune $ (trRnd spec)) $ trTune spec
+		rndCps'  = (maybe return rndCps $ (trRnd spec)) $ trCps spec
+
+bdSpec = TrSpec 
+	{ trDur   = 0.95
+	, trTune  = 1
+	, trCps   = 55 
+	, trRnd   = Just 0.05 }
+
+addDur' dt x = xtratim dt >> return x
+addDur = addDur' 0.1
+
+bass = bass' bdSpec
+
+bass' spec = pureBass' =<< rndSpec spec
+
+pureBass' :: TrSpec -> SE Sig
+pureBass' spec = addDur amix
 	where
+		dur = trDur spec
+		cps = trCps spec
+
 		kmul  = transegr [0.2, dur * 0.5, -15, 0.01, dur * 0.5, 0, 0] dur 0 0
 		kbend = transegr [0.5, 1.2, -4, 0, 1, 0, 0] dur 0 0
 		asig  = gbuzz 0.5 (sig cps * semitone kbend) 20 1 kmul cosine
@@ -25,11 +72,20 @@ bass dur cps = amix
 		aimp  = oscili  aenv1 acps sine
 		amix  = asig1 * 0.7 +  aimp * 0.25
 
+snSpec = cpsSpec 342
+	
+snare = snare' snSpec
+
+snare' spec = pureSnare' =<< rndSpec spec
+
 -- sound consists of two sine tones, an octave apart and a noise signal		
--- cps = 342
-snare :: D -> D -> D -> SE Sig
-snare dur tune cps = apitch + anoise
-	where		
+pureSnare' :: TrSpec -> SE Sig
+pureSnare' spec = addDur =<< (apitch + anoise)
+	where	
+		dur 	= trDur  spec
+		tune    = trTune spec
+		cps     = trCps  spec
+
 		iNseDur = dur * 0.3
 		iPchDur  = dur * 0.1
 
@@ -46,18 +102,30 @@ snare dur tune cps = apitch + anoise
 			x <- noise 0.75 0
 			return $ blp kcf $ bhp 1000 $ bbp (10000 * octave (sig tune)) 10000 x
 
-openHiHat :: D -> D -> D -> SE Sig
-openHiHat dur = genHiHat (linsegr [1, (dur/2) - 0.05, 0.1, 0.05, 0] dur 0) dur
+ohSpec = cpsSpec 296
+chSpec = cpsSpec 296
 
-closedHiHat :: D -> D -> D -> SE Sig
-closedHiHat dur = genHiHat (expsega [1, (dur / 2), 0.001]) dur
+openHiHat = openHiHat' ohSpec
+closedHiHat = closedHiHat' chSpec
+
+openHiHat' :: TrSpec -> SE Sig
+openHiHat' spec = genHiHat (linsegr [1, (dur/2) - 0.05, 0.1, 0.05, 0] dur 0) spec
+	where dur = trDur spec
+
+closedHiHat' :: TrSpec -> SE Sig
+closedHiHat' spec = genHiHat (expsega [1, (dur / 2), 0.001]) spec
+	where dur = trDur spec
 
 -- sound consists of 6 pulse oscillators mixed with a noise component
 -- cps = 296
-genHiHat :: Sig -> D -> D -> D -> SE Sig
-genHiHat pitchedEnv dur tune cps = amix1 + anoise
+genHiHat :: Sig -> TrSpec -> SE Sig
+genHiHat pitchedEnv spec = addDur =<< (amix1 + anoise)
 	where 	
-		halfDur = dur * 0.5
+		dur 	= trDur  spec
+		tune    = trTune spec
+		cps     = trCps  spec
+
+		halfDur = dur * 0.5		
 
 		-- pitched element
 		harmonics = [1.0, 0.962, 1.233, 1.175,1.419, 2.821]		
@@ -70,21 +138,33 @@ genHiHat pitchedEnv dur tune cps = amix1 + anoise
 			x <- noise 0.8 0
 			return $ bhp 8000 $ blp kcf x
 
+htSpec = cpsSpec 200
+mtSpec = cpsSpec 133
+ltSpec = cpsSpec 90
+
+lowTom = lowTom' ltSpec
+midTom = midTom' mtSpec
+highTom = highTom' htSpec 
+
 -- cps = 200
-highTom :: D -> D -> D -> SE Sig
-highTom dur tune cps = genTom 0.5 (400, 100, 1000) dur tune cps
+highTom' :: TrSpec -> SE Sig
+highTom' = genTom 0.5 (400, 100, 1000)
 
 -- cps = 133
-midTom :: D -> D -> D -> SE Sig
-midTom dur tune cps = genTom 0.6 (400, 100, 600) dur tune cps
+midTom' :: TrSpec -> SE Sig
+midTom' = genTom 0.6 (400, 100, 600)
 
 -- cps =  90
-lowTom :: D -> D -> D -> SE Sig
-lowTom dur tune cps = genTom 0.6 (40, 100, 600) dur tune cps
+lowTom' :: TrSpec -> SE Sig
+lowTom' = genTom 0.6 (40, 100, 600)
 
-genTom :: D -> (Sig, Sig, Sig) -> D -> D -> D -> SE Sig
-genTom durDt (resonCf, hpCf, lpCf) dur tune cps = asig + anoise
-	where		
+genTom :: D -> (Sig, Sig, Sig) -> TrSpec -> SE Sig
+genTom durDt (resonCf, hpCf, lpCf) spec = addDur =<< (asig + anoise)
+	where	
+		dur 	= trDur  spec
+		tune    = trTune spec
+		cps     = trCps  spec
+
 		ifrq 	= cps * octave tune
 		halfDur = durDt * dur
 
@@ -100,11 +180,19 @@ genTom durDt (resonCf, hpCf, lpCf) dur tune cps = asig + anoise
 			x <- noise 1 0.4
 			return $ blp (lpCf * otune) $ bhp (hpCf * otune) $ reson x (resonCf * otune) 800 `withD` 1
 
+cymSpec = cpsSpec 296
+
+cymbal = cymbal' cymSpec
+
 -- sound consists of 6 pulse oscillators mixed with a noise component
 -- cps = 296
-cymbal :: D -> D -> D -> SE Sig
-cymbal dur tune cps = fmap (amix1 + ) anoise
-	where 	
+cymbal' :: TrSpec -> SE Sig
+cymbal' spec = addDur =<< (fmap (amix1 + ) anoise)
+	where 
+		dur 	= trDur  spec
+		tune    = trTune spec
+		cps     = trCps  spec
+
 		fullDur = dur * 2
 
 		-- pitched element
@@ -120,10 +208,18 @@ cymbal dur tune cps = fmap (amix1 + ) anoise
 			x <- noise 0.8 0
 			return $ bhp 8000 $ blp kcf x
 
+clSpec = cpsSpec 2500
+
+claves = claves' clSpec
+
 -- cps = 2500
-claves :: D -> D -> D -> SE Sig
-claves dur tune cps = asig
+claves' :: TrSpec -> SE Sig
+claves' spec = addDur =<< asig
 	where
+		dur 	= trDur  spec
+		tune    = trTune spec
+		cps     = trCps  spec
+
 		ifrq = cps * octave tune
 		dt   = 0.045 * dur
 		aenv = expsega	[1, dt, 0.001]
@@ -150,14 +246,23 @@ ticks n
 
 genTicks :: (Tick -> Evt D) -> Sig -> Sig
 genTicks f x = mul 3 $ mlp 4000 0.1 $ 
-	sched (\amp -> mul (sig amp) $ rimShot (amp + 1) 0 (1200 * (amp + 0.5))) $ 
+	sched (\amp -> mul (sig amp) $ rimShot' (TrSpec (amp + 1) 0 (1200 * (amp + 0.5)) (Just 0.05))) $ 
 	withDur 0.5 $ f $ metro (x / 60)
 
+rimSpec = cpsSpec 1700
+
+rimShot = rimShot' rimSpec
+
+rimShot' spec = pureRimShot' =<< rndSpec spec
 
 -- cps = 1700
-rimShot :: D -> D -> D -> SE Sig
-rimShot dur tune cps = mul 0.8 $ aring + anoise
+pureRimShot' :: TrSpec -> SE Sig
+pureRimShot' spec = addDur =<< (mul 0.8 $ aring + anoise)
 	where
+		dur 	= trDur  spec
+		tune    = trTune spec
+		cps     = trCps  spec
+
 		fullDur = 0.027 * dur
 
 		-- ring
@@ -172,10 +277,18 @@ rimShot dur tune cps = mul 0.8 $ aring + anoise
 
 		tabTR808RimShot = setSize 1024 $ sines [0.971,0.269,0.041,0.054,0.011,0.013,0.08,0.0065,0.005,0.004,0.003,0.003,0.002,0.002,0.002,0.002,0.002,0.001,0.001,0.001,0.001,0.001,0.002,0.001,0.001]
 
+cowSpec = cpsSpec 562
+
+cowbell = cowbell' cowSpec
+
 -- cps = 562
-cowbell ::  D -> D -> D -> SE Sig
-cowbell dur tune cps = ares
+cowbell' ::  TrSpec -> SE Sig
+cowbell' spec = addDur =<< ares
 	where
+		dur 	= trDur  spec
+		tune    = trTune spec
+		cps     = trCps  spec
+
 		ifrq1 = sig $ cps * octave tune
 		ifrq2 = 1.5 * ifrq1
 		fullDur = 0.7 * dur
@@ -191,6 +304,7 @@ cowbell dur tune cps = ares
 		abpf    = at (\x -> reson x ifrq2 25) amix
 		ares    = mul (0.08 * kenv) $ at dcblock2 $ mul (0.06 * kenv1) abpf + mul 0.5 alpf + mul 0.9 amix 
 
+-- TODO clap
 
 {-
 instr	112	;CLAP
@@ -235,10 +349,17 @@ clap dur tune cps =
 		iTimGap	=	0.01
 -}
 
+marSpec = cpsSpec 450
 
-maraca ::  D -> D -> D -> SE Sig
-maraca dur tune cps = anoise
+maraca = maraca' marSpec
+
+maraca' ::  TrSpec -> SE Sig
+maraca' spec = addDur =<< anoise
 	where
+		dur 	= trDur  spec
+		tune    = trTune spec
+		cps     = trCps  spec
+
 		fullDur = 0.07* dur
 		otune   = sig $ octave tune
 		iHPF 	= limit	(6000 * otune) 20 (sig getSampleRate / 2)
@@ -246,22 +367,34 @@ maraca dur tune cps = anoise
 		aenv	= expsega [0.4,0.014* dur,1,0.01 * dur, 0.05, 0.05 * dur, 0.001]
 		anoise  = mul aenv $ fmap (blp iLPF . bhp iHPF) $ noise 0.75 0
 
+hcSpec = cpsSpec 420
+mcSpec = cpsSpec 310
+lcSpec = cpsSpec 227
+
+highConga = highConga' hcSpec
+midConga  = midConga'  mcSpec
+lowConga  = lowConga'  lcSpec 
+
 -- high conga
 -- cps = 420
-highConga :: D -> D -> D -> SE Sig
-highConga = genConga 0.22
+highConga' :: TrSpec -> SE Sig
+highConga' = genConga 0.22
 
 -- cps = 310
-midConga :: D -> D -> D -> SE Sig
-midConga = genConga 0.33
+midConga' :: TrSpec -> SE Sig
+midConga' = genConga 0.33
 
 -- cps = 227
-lowConga :: D -> D -> D -> SE Sig
-lowConga = genConga 0.41
+lowConga' :: TrSpec -> SE Sig
+lowConga' = genConga 0.41
 
-genConga :: D -> D -> D -> D -> SE Sig
-genConga dt dur tune cps = asig
+genConga :: D -> TrSpec -> SE Sig
+genConga dt spec = addDur =<< asig
 	where
+		dur 	= trDur  spec
+		tune    = trTune spec
+		cps     = trCps  spec
+
 		ifrq = cps * octave tune
 		fullDur = dt * dur
 		aenv = transeg [0.7,1/ifrq,1,1,fullDur,-6,0.001]
