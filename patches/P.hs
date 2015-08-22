@@ -31,14 +31,14 @@ data Patch a = Patch
 wet :: (SigSpace a, Sigs a) => Sig -> Fx a -> a -> SE a
 wet k fx asig = fmap ((mul (1 - k) asig + ) . mul k) $ fx asig
 
+dryMidi :: (Sigs a) => Patch a -> SE a
+dryMidi a = midi (patchInstr a . ampCps)
+
 atMidi' :: (SigSpace a, Sigs a) => Sig -> Patch a -> SE a
 atMidi' k a = wet k (patchFx a) =<< midi (patchInstr a . ampCps)	
 
 atMidi :: (SigSpace a, Sigs a) => Patch a -> SE a
 atMidi a = atMidi' (patchMix a) a
-
--- pianoRel :: (D, D) -> D -> D
--- pianoSust :: (D, D) -> D -> D
 
 ----------------------------------------------
 -- electric pianos
@@ -94,20 +94,23 @@ epiano2 = Patch
 epianoHeavy = Patch 
 	{ patchInstr = mul 1.5 . at fromMono . (onCps $ C.epiano [C.EpianoOsc 4 5 1 1, C.EpianoOsc 8 10 2.01 1, C.EpianoOsc 8 15 0.5 0.5])
 	, patchFx    = return . smallHall2
-	, patchMix    = 0.25
+	, patchMix    = 0.2
 	}
 
 epianoBright = Patch 
 	{ patchInstr = mul 1.5 . at fromMono . (onCps $ C.epiano [C.EpianoOsc 4 5 1 1, C.EpianoOsc 8 10 3.01 1, C.EpianoOsc 8 15 5 0.5, C.EpianoOsc 8 4 7 0.3])
 	, patchFx    = return . smallHall2
-	, patchMix    = 0.25
+	, patchMix    = 0.2
 	}
+
+vibraphonePiano1 = smallVibraphone1 { patchInstr = mul (1.5 * fadeOut 0.25) . at (mlp 6500 0.1). patchInstr smallVibraphone1 }
+vibraphonePiano2 = smallVibraphone2 { patchInstr = mul (1.5 * fadeOut 0.25) . at (mlp 6500 0.1). patchInstr smallVibraphone2 }
 
 ----------------------------------------------
 -- organs
 
 cathedralOrgan = Patch
-	{ patchInstr = at fromMono . onCps C.cathedralOrgan
+	{ patchInstr = at fromMono . mul 1.2 . onCps C.cathedralOrgan
 	, patchFx    = return . largeHall2
 	, patchMix   = 0.27
 	}
@@ -122,15 +125,27 @@ instance Default HammondOrgan where
 hammondOrgan = hammondOrgan' def
 
 hammondOrgan' (HammondOrgan detune) = Patch
-	{ patchInstr = mul 0.7 . at fromMono . onCps (C.hammondOrgan detune)
+	{ patchInstr = mul 0.8 . at fromMono . onCps (C.hammondOrgan detune)
 	, patchFx    = return . smallRoom2
 	, patchMix   = 0.15
 	}
 
 toneWheel = Patch
-	{ patchInstr = at fromMono . onCps C.toneWheel
+	{ patchInstr = at fromMono  . mul 1.2 . onCps C.toneWheel
 	, patchFx    = return . smallHall2
 	, patchMix   = 0.3
+	}
+
+sawOrgan = waveOrgan rndSaw
+triOrgan = waveOrgan rndTri
+sqrOrgan = waveOrgan rndSqr
+pwOrgan k = waveOrgan (rndPw k)
+
+waveOrgan :: (Sig -> SE Sig) -> Patch2 
+waveOrgan wave = Patch 
+	{ patchInstr = onCps $ at fromMono . mul (fades 0.01 0.01) . at (mlp 3500 0.1) . wave
+	, patchFx    = return . smallHall2
+	, patchMix   = 0.25
 	}
 
 ----------------------------------------------
@@ -145,7 +160,7 @@ accordeonHeavy = accordeon' (C.Accordeon 1 0.501 2 1.005)
 brokenAccordeon = accordeon' (C.Accordeon 1 1.07 2.02 0.5)
 
 accordeon' spec = Patch
-	{ patchInstr = onCps (C.accordeon spec)
+	{ patchInstr = mul 1.2 . onCps (C.accordeon spec)
 	, patchFx    = C.accordeonFx
 	, patchMix   = 0.25
 	}
@@ -179,6 +194,11 @@ choir' filt vib = Patch
 	, patchFx   = return . smallHall2 
 	, patchMix   = 0.25 
 	}
+
+choirA = choirA' def
+choirO = choirO' def
+choirE = choirE' def
+choirU = choirU' def
 
 choirA' = choir' singA
 choirO' = choir' singO
@@ -227,10 +247,12 @@ nightPad = Patch
 	}
 
 overtonePad = Patch
-	{ patchInstr = mul 0.8 . at fromMono . onCps (mul (fades 0.25 1) . C.tibetan 13 0.012)
+	{ patchInstr = mul 1.2 . at fromMono . mixAt 0.25 (mlp 1500 0.1) . onCps (\cps -> mul (fades 0.25 1.2) (C.tibetan 11 0.012 cps) + mul (fades 0.25 1) (C.tibetan 13 0.015 (cps * 0.5)))
 	, patchFx    = return . smallHall2
 	, patchMix   = 0.35
 	}
+
+caveOvertonePad = overtonePad { patchFx    = return . magicCave2 . mul 0.8, patchMix   = 0.2 }
 
 chorusel = Patch
 	{ patchInstr = mul 1.2 . at (mlp (3500 + 2000 * uosc 0.1) 0.1) . onCps (mul (fades 0.65 1) . C.chorusel 13 0.5 10)
@@ -262,6 +284,8 @@ fmDroneFast = Patch
 	, patchMix   = 0.25
 	}
  
+
+vibrophonePad = largeVibraphone1 { patchInstr = mul (2 * fades 0.5 0.25) . at (mlp 2500 0.1). patchInstr largeVibraphone1 }
 
 data RazorPad = RazorPad { razorPadSpeed :: Sig }
 
@@ -392,11 +416,11 @@ prevSize x = case x of
 	Large -> Medium
 	Huge -> Large
 
-toStrikeSpec :: Size -> Strike
-toStrikeSpec a = Strike 
-	{ strikeReverb  = toReverb a
-	, strikeRel = toRel a
-	, strikeHasDelay = toHasDelay a	} 
+toStrikeSpec :: Size -> Size -> Strike
+toStrikeSpec revSpec restSpec = Strike 
+	{ strikeReverb  = toReverb revSpec
+	, strikeRel = toRel restSpec
+	, strikeHasDelay = toHasDelay restSpec } 
 
 toReverb :: Size -> (Sig2  -> Sig2)
 toReverb x = case x of
@@ -417,7 +441,7 @@ toGain x = case x of
 	Small -> 0.85
 	Medium -> 0.75
 	Large -> 0.6
-	Huge -> 0.5
+	Huge -> 0.45
 
 toHasDelay :: Size -> Bool
 toHasDelay x = case x of
@@ -447,17 +471,20 @@ albertClockBellBelfastSize = Large
 woodBlockSize = Small
 
 smallStrike :: Size -> (Sig -> Sig) -> Patch2
-smallStrike size = mediumStrike (prevSize size)
-
-largeStrike :: Size -> (Sig -> Sig) -> Patch2
-largeStrike size = mediumStrike (nextSize size)
-
-magicStrike :: Size -> (Sig -> Sig) -> Patch2
-magicStrike size = mediumStrike (nextSize $ nextSize size)
+smallStrike size = mediumStrike' (prevSize size) size
 
 mediumStrike :: Size -> (Sig -> Sig) -> Patch2
-mediumStrike size f = p { patchInstr = mul (toGain size) . patchInstr p }
-	where p = strike' (toStrikeSpec size) f
+mediumStrike size = mediumStrike' size size
+
+largeStrike :: Size -> (Sig -> Sig) -> Patch2
+largeStrike size = mediumStrike' (nextSize size) size
+
+magicStrike :: Size -> (Sig -> Sig) -> Patch2
+magicStrike size = mediumStrike' (nextSize $ nextSize size) size
+
+mediumStrike' :: Size -> Size -> (Sig -> Sig) -> Patch2
+mediumStrike' revSize size f = p { patchInstr = mul (toGain size) . patchInstr p }
+	where p = strike' (toStrikeSpec revSize size) f
 
 
 smallDahina = smallStrike dahinaSize C.dahina

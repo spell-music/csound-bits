@@ -7,12 +7,8 @@ import Control.Monad
 import Csound.Base 
 
 
-
-tryMidi
-  :: (MidiInstr ((D, D) -> SE (CpsInstrOut a)), CpsInstr a,
-      Sigs (MidiInstrOut ((D, D) -> SE (CpsInstrOut a)))) =>
-     a -> SE (MidiInstrOut ((D, D) -> SE (CpsInstrOut a)))
-tryMidi x = midi $ onMsg $ onCps x
+tryMidi :: (MidiInstr a, Sigs (MidiInstrOut a)) => a -> SE (MidiInstrOut a)
+tryMidi x = midi $ onMsg x
 
 -- some instruments from the Thor explained series
 --
@@ -51,8 +47,7 @@ amPiano x = mul env $ at (mlp (env * (3000 + x)) 0.25) $ (rndSaw x * rndSaw (4 *
 -- 3 pwm
 
 pwBass :: Sig -> SE Sig
-pwBass cps = mul (fades 0.005 0.05) $ at (mlp 1500  0.1) $ rndPw (0.25 * (1 + 0.07 * osc (1 + (7 * x / 1000)))) x
-	where x = cps / 2
+pwBass cps = mul (fades 0.005 0.05) $ at (mlp 1500  0.1) $ rndPw (0.25 * (1 + 0.07 * osc (1 + (7 * cps / 1000)))) cps
 
 simpleBass :: (D, D) -> Sig
 simpleBass (amp, cps') = aout
@@ -100,7 +95,7 @@ data EpianoOsc = EpianoOsc
 	}
 
 epiano :: [EpianoOsc] -> (D, D) -> SE Sig
-epiano xs (amp, cps) = mul (sig amp * leg 0.001 sust 0 rel) $ at (mlp (2500 + 4500 * (leg 0.1 3 0 0.1)) 0.25) $
+epiano xs (amp, cps) = mul (sig amp * leg 0.001 sust 0 rel) $ at (mlp (2500 + 4500 * (leg 0.085 3 0 0.1)) 0.25) $
 	fmap sum $ mapM (\x -> mul (epianoOscWeight x) $ multiRndSE (epianoOscChorusNum x) (epianoOscChorusAmt x) (detune (epianoOscNum x) rndOsc) (sig cps)) xs
  -- (multiRndSE 4 5 rndOsc + multiRndSE 8 10 (detune (2.01) rndOsc))
  	where 
