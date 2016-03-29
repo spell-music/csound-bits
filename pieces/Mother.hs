@@ -6,7 +6,9 @@ import Csound.Catalog
 
 main = dac res
 
-res = mul 0.7 $ mapSig (compress) $ amby + mul (0.8 * linseg [0, 40, 0, 20, 1] * breakBeat) (mapSig (mlp 5000 0.1) hs)
+res = mul 0.7 $ mapSig (compress) $ 
+    amby 
+    + mul (0.8 * linseg [0, 40, 0, 20, 1] * breakBeat) (mapSig (mlp 5000 0.1) hs)
 	where compress x = x -- dam x 0.5 0.5 0.7 0.01 0.1
 
 -------------------------------------------------
@@ -72,7 +74,7 @@ drone = mapSig (mlp 8000 0.1) $
 		ares= mlp ((sig cps + 50) + 270 * utri 0.08) 0.3 $ 
 				sum	[ femaleVowel anO2 (sig cps)
 					, (0.1 + 0.3 * uosc 0.15) * femaleVowel anO2 (sig cps * 3 / 2) 
-					, (0.2 + 0.7 * utri 0.18) * tibetan 7 0.02 (cps * 2) 
+					, (0.2 + 0.7 * utri 0.18) * tibetan 7 0.02 (sig    cps * 2) 
 					]		
 
 -- static chords
