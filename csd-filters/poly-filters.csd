@@ -19,39 +19,40 @@ nchnls = 2
 
 gaOut init 0
 
-; instruments
 
-#define Pad         #1#
-#define Notes       #2#
-#define Main        #3#
-#define Dump        #4#
-#define PlayAll     #5#
-#define DumpAll     #6#
+opcode UniSaw, a, k
+kcps     xin
+
+iPhase1  unirand 1
+asaw1    vco2 1, (kcps / cent(7)), 0 , 0.5, iPhase1      ; sawtooth
+asaw2    vco2 1, kcps,             0 , 0.5, iPhase1      ; sawtooth
+asaw3    vco2 1, (kcps * cent(7)), 0 , 0.5, iPhase1      ; sawtooth
+
+         xout 0.3 * (asaw1 + asaw2 + asaw3)
+endop
 
 opcode Wave, a, k
 kcps    xin
 
-iPhase1 unirand 1
-iPhase2 unirand 1
+asaw1   UniSaw kcps
+asaw2   UniSaw kcps * cent(14)
 
-asqr    vco2 1, kcps, 10, 0.5, iPhase1      ; square
-asaw    vco2 1, kcps, 0 , 0.5, iPhase2      ; wave
+aNoise  noise 0.2, 0.5
+aNoise  butterlp aNoise, 400
 
-klfo    oscil3 0.4, 0.17
-
-ares    ntrpol asqr, asaw, (0.5 + klfo)
+ares    = asaw1 + asaw2 + aNoise
         xout    ares
 endop
 
 opcode Envelope, a, a
 ain     xin
-kenv    linsegr 0, 0.65, 1, 1.2, 0.5, 1, 0.5, 0.5, 0
+kenv    linsegr 0, 0.01, 1, 1, 1, 0.15, 0
         xout  ain * kenv
 endop
 
 opcode ScaleVolume, a, ai
 ain, iAmp     xin
-iNum    active $Pad
+iNum    active "Poly"
 iVolume = iAmp / sqrt(1 + iNum) 
         xout iVolume * ain
 endop
@@ -153,33 +154,11 @@ endif
     xout aout
 endop
 
-#define MOOG_LADDER #1#
-#define MOOG_VCF    #2# 
-#define LPF18       #3#
-#define BQREZ       #4#
-#define CLFILT      #5#
-#define BUTTERLP    #6#
-#define LOWRES      #7#
-#define REZZY       #8#
-#define SVFILTER    #9# 
-#define VLOWRES     #10#
-#define STATEVAR    #11#
-#define MVCLPF1     #12#
-#define MVCLPF2     #13#
-#define MVCLPF3     #14#
-
-
 opcode Filter, a, ai
 ain, iFilterType  xin
 
-kLfo    oscil3 1, 0.13
-kcfq    = 2200 * (1 + 0.05 * kLfo)
-kres    init 0.1
-
-asig1   MultiFilter ain,   kcfq, kres, iFilterType
-asig2   MultiFilter asig1, kcfq, kres, iFilterType
-
-aout    balance asig2, ain
+asig1   MultiFilter ain,  5500, 0.12, iFilterType
+aout    balance asig1, ain
 
         xout aout
 endop
@@ -195,7 +174,7 @@ aoutR  = (1 - imix) * adryR  + imix * awetR
 endop
 
 
-instr $Pad
+instr Poly
     iAmp        = p4
     iCps        = p5
     iFilterType = p6    
@@ -208,45 +187,52 @@ instr $Pad
     gaOut   = gaOut + aOut
 endin
 
-instr $Notes
+opcode Note, 0, iiiii
+iNum, iDur, iAmp, iPch, iFilterType xin
+
+idt = 1
+    event_i "i", "Poly", iNum * idt,   iDur, iAmp, cpspch(iPch), iFilterType
+endop
+
+instr Notes
     iFilterType = p4
     EchoFilterName iFilterType
 
-    event_i "i", $Pad, 0,   6, 1,   cpspch(6.00), iFilterType
-    event_i "i", $Pad, 1,   5, 0.8, cpspch(7.00), iFilterType
-    event_i "i", $Pad, 2,   4, 0.6, cpspch(7.07), iFilterType
-    event_i "i", $Pad, 3,   2, 0.5,   cpspch(7.04), iFilterType
-    event_i "i", $Pad, 3,   2, 0.6,   cpspch(7.07), iFilterType
-    event_i "i", $Pad, 3,   2, 0.5,   cpspch(7.09), iFilterType
+    Note 0,   6, 1,   6.00, iFilterType
+    Note 1,   5, 0.8, 7.00, iFilterType
+    Note 2,   4, 0.6, 7.07, iFilterType
+    Note 3,   2, 0.5, 7.04, iFilterType
+    Note 3,   2, 0.6, 7.07, iFilterType
+    Note 3,   2, 0.5, 7.09, iFilterType
 
     idt = 6
-    event_i "i", $Pad, idt + 0,   6, 1,   cpspch(7.00), iFilterType
-    event_i "i", $Pad, idt + 1,   4, 0.8, cpspch(7.04), iFilterType
-    event_i "i", $Pad, idt + 2,   2, 0.6, cpspch(7.07), iFilterType
-    event_i "i", $Pad, idt + 3,   2, 1,   cpspch(7.11), iFilterType
+    Note idt + 0,   6, 1,   7.00, iFilterType
+    Note idt + 1,   4, 0.8, 7.04, iFilterType
+    Note idt + 2,   2, 0.6, 7.07, iFilterType
+    Note idt + 3,   2, 1,   7.11, iFilterType
 
     idt = 12
-    event_i "i", $Pad, idt,   4, 1,   cpspch(8.00), iFilterType
-    event_i "i", $Pad, idt,   4, 0.8, cpspch(8.04), iFilterType
-    event_i "i", $Pad, idt,   4, 0.6, cpspch(8.07), iFilterType
-    event_i "i", $Pad, idt,   4, 1,   cpspch(8.11), iFilterType
+    Note idt,   4, 1,   8.00, iFilterType
+    Note idt,   4, 0.8, 8.04, iFilterType
+    Note idt,   4, 0.6, 8.07, iFilterType
+    Note idt,   4, 1,   8.11, iFilterType
 
     idt = 18
-    event_i "i", $Pad, idt,   4, 1,   cpspch(9.00), iFilterType
-    event_i "i", $Pad, idt,   4, 0.8, cpspch(9.04), iFilterType
-    event_i "i", $Pad, idt,   4, 0.6, cpspch(9.07), iFilterType
-    event_i "i", $Pad, idt,   4, 1,   cpspch(9.11), iFilterType
+    Note idt,   4, 1,   9.00, iFilterType
+    Note idt,   4, 0.8, 9.04, iFilterType
+    Note idt,   4, 0.6, 9.07, iFilterType
+    Note idt,   4, 1,   9.11, iFilterType
 
     idt = 24
-    event_i "i", $Pad, idt,   4, 0.5,   cpspch(6.00), iFilterType
-    event_i "i", $Pad, idt,   4, 0.8, cpspch(7.00), iFilterType
-    event_i "i", $Pad, idt,   4, 0.6, cpspch(7.07), iFilterType
-    event_i "i", $Pad, idt,   4, 1,   cpspch(8.02), iFilterType
+    Note idt,   4, 0.5, 6.00, iFilterType
+    Note idt,   4, 0.8, 7.00, iFilterType
+    Note idt,   4, 0.6, 7.07, iFilterType
+    Note idt,   4, 1,   8.02, iFilterType
 
-    event_i "i", $Pad, idt,   4, 1,   cpspch(8.09), iFilterType        
-    event_i "i", $Pad, idt,   4, 0.8, cpspch(9.04), iFilterType
-    event_i "i", $Pad, idt,   4, 0.6, cpspch(9.07), iFilterType
-    event_i "i", $Pad, idt,   4, 1,   cpspch(9.11), iFilterType
+    Note idt,   4, 1,   8.09, iFilterType        
+    Note idt,   4, 0.8, 9.04, iFilterType
+    Note idt,   4, 0.6, 9.07, iFilterType
+    Note idt,   4, 1,   9.11, iFilterType
 
     turnoff
 endin
@@ -254,10 +240,12 @@ endin
 opcode TrigNotes, 0, ii
 iNum, iFilterType xin
 idt = 30
-    event_i "i", $Notes, idt * iNum, 0, iFilterType
+    event_i "i", "Notes", idt * iNum, 0, iFilterType
 endop
 
-instr $PlayAll
+instr PlayAll
+iMixLevel = p4
+event_i "i", "Main", 0, (14 * 30), iMixLevel
 
 TrigNotes 0, $MOOG_LADDER
 TrigNotes 1, $MOOG_VCF
@@ -276,38 +264,39 @@ TrigNotes 13, $MVCLPF3
 
 endin
 
-opcode DumpNotes, 0, iiS
-iNum, iFilterType, SFile xin
+opcode DumpNotes, 0, iiSi
+iNum, iFilterType, SFile, iMixLevel xin
 idt = 30   
-Sstr    sprintf {{i %f %f %f "%s"}}, $Dump, idt * iNum, idt, SFile
+Sstr    sprintf {{i "%s" %f %f "%s" %f}}, "Dump", idt * iNum, idt, SFile, iMixLevel
         scoreline_i Sstr
-        event_i "i", $Notes, idt * iNum, 0, iFilterType
+        event_i "i", "Notes", idt * iNum, 0, iFilterType
 endop
 
 
-instr $DumpAll
+instr DumpAll
+iMixLevel = p4
 
-DumpNotes 0, $MOOG_LADDER, "moogladder-pad.wav"
-DumpNotes 1, $MOOG_VCF, "moogvcf-pad.wav"
-DumpNotes 2, $LPF18 , "lpf18-pad.wav"
-DumpNotes 3, $BQREZ, "bqrez-pad.wav"
-DumpNotes 4, $CLFILT, "clfilt-pad.wav"
-DumpNotes 5, $BUTTERLP, "butterlp-pad.wav"
-DumpNotes 6, $LOWRES , "lowres-pad.wav"
-DumpNotes 7, $REZZY  , "rezzy-pad.wav"
-DumpNotes 8, $SVFILTER, "svfilter-pad.wav"
-DumpNotes 9, $VLOWRES , "vlowres-pad.wav"
-DumpNotes 10, $STATEVAR, "statevar-pad.wav"
-DumpNotes 11, $MVCLPF1 , "mvclpf1-pad.wav"
-DumpNotes 12, $MVCLPF2 , "mvclpf2-pad.wav"
-DumpNotes 13, $MVCLPF3 , "mvclpf3-pad.wav"
+DumpNotes 0, $MOOG_LADDER,  "moogladder-poly.wav", iMixLevel
+DumpNotes 1, $MOOG_VCF,     "moogvcf-poly.wav",  iMixLevel
+DumpNotes 2, $LPF18 ,       "lpf18-poly.wav",    iMixLevel
+DumpNotes 3, $BQREZ,        "bqrez-poly.wav",    iMixLevel
+DumpNotes 4, $CLFILT,       "clfilt-poly.wav",   iMixLevel
+DumpNotes 5, $BUTTERLP,     "butterlp-poly.wav", iMixLevel
+DumpNotes 6, $LOWRES,       "lowres-poly.wav",   iMixLevel
+DumpNotes 7, $REZZY,        "rezzy-poly.wav",    iMixLevel
+DumpNotes 8, $SVFILTER,     "svfilter-poly.wav", iMixLevel
+DumpNotes 9, $VLOWRES ,     "vlowres-poly.wav",  iMixLevel
+DumpNotes 10, $STATEVAR,    "statevar-poly.wav", iMixLevel
+DumpNotes 11, $MVCLPF1 ,    "mvclpf1-poly.wav",  iMixLevel
+DumpNotes 12, $MVCLPF2 ,    "mvclpf2-poly.wav",  iMixLevel
+DumpNotes 13, $MVCLPF3 ,    "mvclpf3-poly.wav",  iMixLevel
 
 endin
 
-instr $Main
+instr Main
 iVolume = 0.5
-iReverbFeedback = 0.85
-iMixLevel       = 0.35
+iReverbFeedback = 0.65
+iMixLevel       = p4
 
 aoutL, aoutR Reverb gaOut, gaOut, iReverbFeedback, iMixLevel
 outs (iVolume * aoutL), (iVolume * aoutR)
@@ -315,12 +304,12 @@ outs (iVolume * aoutL), (iVolume * aoutR)
 gaOut = 0
 endin
 
-instr $Dump
-SFile = p4
+instr Dump
+SFile       = p4
+iMixLevel   = p5
 
-iVolume = 0.5
-iReverbFeedback = 0.85
-iMixLevel       = 0.35
+iVolume     = 0.5
+iReverbFeedback = 0.65
 
 aoutL, aoutR Reverb gaOut, gaOut, iReverbFeedback, iMixLevel
 fout SFile, 14, (iVolume * aoutL), (iVolume * aoutR)
@@ -333,22 +322,13 @@ endin
 
 <CsScore>
 
-#define Pad         #1#
-#define Notes       #2#
-#define Main        #3#
-#define Dump        #4#
-#define PlayAll     #5#
-#define DumpAll     #6#
-
 f0 420.0
 
-i $Main 0 -1
-i $PlayAll 0 0
+; the fourth parameter is a reverb mix level
+;i "PlayAll" 0 0 0.35
 
 ; uncomment to save output to wav files
-;i $DumpAll 0 0
-#end
-
+i "DumpAll" 0 0 0.35
 </CsScore>
 
 </CsoundSynthesizer>
