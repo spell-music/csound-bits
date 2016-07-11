@@ -58,7 +58,7 @@ drumSynt
 		slaveEnv = linseg [1, slaveDcy, 0]
 		masterEnv = linseg [1, masterDcy, 0]
 
-		noise = mul bendNoise $ bat ((getFilterFun filtType) (filtRes * sweep) filtRes) white
+		noise = mul (bendNoise * linseg [1, filtDcy, 0]) $ bat ((getFilterFun filtType) (filtRes * sweep) filtRes) white
 		sweep = semitone (linseg [0, filtDcy, filtSweep])
 
 getFilterFun x = case x of
@@ -71,5 +71,11 @@ getFilterFun x = case x of
 
 
 main = vdac $ mul 0.25 $ midi $ onMsg instr
+
+
+-- Vibhu vibes
+--
+-- > let glitchy = mixAt 0.2 smallRoom2 $ mul (sqrSeq [1, 0.5, 0.25] 8) $ sum [loopWav1 (-(constSeq [1, 2, 4, 2] 0.5)) "/home/anton/loop.wav", mul (constSeq [1, 0] 0.5) $ loopWav1 (-0.25) "/home/anton/loop.wav"]
+-- > dac $ (dumpWav "res1.wav" =<<) $ (atMidi $ vibhuAvatara 65 (uosc 0.25)) + (mul (sawSeq [1, 0.5, 0.25, 0.8, 0.4, 0.1, 0.8, 0.5] 8) $ atMidi $ prakriti 34) + (atMidi $ mul (0.5 * uosc 0.25) $ whaleSongPad) + (return $ mul 1.5 glitchy )
 
 
