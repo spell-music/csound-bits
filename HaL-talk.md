@@ -354,38 +354,230 @@ oneOf :: Arg a => [a] -> Evt b -> Evt a
 ~~~
 
 Also event stream is instance of monoid. Empty value is forever silent stream and concatenation
-is a merging of messages from both sources.
+is a merging of messages from both sources. The event streams are also used to read user input
+from UI-widgets. We going to look at how it woks soon.
 
 ### Controlling instruments with UI
 
 Csound has built in support for UI. It uses FLTK library. User can create buttons, sliders, knobs, rollers,
-check boxes to control the audio output in real-time. While comparing to the modern standards
+checkboxes to control the audio output in real-time. While comparing to the modern standards
 the look and feel is very spartan it can be very handy an useful for prototyping a VST, creating
-an interactive perfromance or simply for tuning a parameter of the synthesizer with the virtual knob.
+an interactive performance or simply for tuning a parameter of the synthesizer with the virtual knob.
 
+A UI element consists of two elements the visual representation (or `Gui`) and behavior. 
+The behavior consists of three parts: output producer, value consumer and inner loop or state update:
+
+~~~~haskell
+type Widget a b = SE (Gui, Output a, Input b, Inner)
+
+type Output a = a -> SE ()
+type Input a = a
+type Inner = SE ()
+~~~~
+
+There are special cases:
+
+~~~haskell
+type Sink a = SE (Gui, Output a)
+type Source a = SE (Gui, Input a)
+type Display = SE Gui
+~~~
+
+The widget is not only a single widget it can contain a whole section of sub-widgets.
+We can combine Guis with simple functions:
+
+~~~
+hor, ver :: [Gui] -> Gui
+sca :: Double -> Gui -> Gui
+space :: Gui
+~~~
+
+A visual representation of the widget is some picture that is drawn inside a rectangle. With layout functions
+we can organize the rectangles on the screen. The functions hor and ver stack rectangles
+horizontally or vertically, the `sca` (short for scale) expands or shrinks the relative size by the given ratio.
+The `space` creates an empty space. So user don't have to care for specific sizes all sizes are relative.
+We only need to set up the minimum amount of relative sizes.
+
+We can combine behaviors by ordinary functions. There are constructors that can create widgets:
+
+~~~
+sink    :: SE (Gui, Output a) -> Sink a
+source  :: SE (Gui, Input a) -> Source a
+display :: SE Gui -> Display
+~~~
+
+Here is how we can create the signal that is controlled by two knobs:
+
+~~~
+main = dac $ source $ do
+	(ga, amp) <- uknob 0.5
+	(gb, cps) <- xknob (50, 1000)
+	let g = hor [ga, gb]
+	return (g, amp * osc cps)
+~~~
+
+The `uknob` creates a knob that outputs unipolar linear value that ranges in the interval [0, 1].
+The `xknob` creates an exponential value that ranges within specified interval (exponential scale
+is better suited for frequencies). The function `dac` can render values of many different types. 
+Also it can render the signals that are produced with UI.
+
+The real achievement of this model is that the result of combination is also widget and we can
+use it as a black box and combine it with other widgets. 
+
+#### Applicative style combinators for sources
+
+There are special combinators that combine visuals and behaviors at the same time:
+
+~~~
+lift1 :: (a -> b) -> Source a -> Source b
+
+hlift2, vlift2 :: (a -> b -> c) -> Source a -> Source b -> Source c
+
+hlift3, vlift3 :: (a -> b -> c -> d) -> Source a -> Source b -> Source c -> Source d
+~~~
+
+The hlift2 function applies the function to the outputs of two sources and stacks
+visuals horizontally. The vlift2 function makes the same thing only it stacks visuals vertically. 
+
+There is a function that combines lists of sources:
+
+~~~
+hlifts, vlifts :: ([a] -> b) -> [Source a] -> Source b
+~~~
+
+We can redefine previous example with much more succinct expression:
+
+~~~
+main = dac $ hlift2 (\amp cps -> amp * osc cps) (uknob 0.5) (xknob (100, 1000))
+~~~
+
+#### Events and GUIs
+
+The sliders and knobs produce signals but for discrete widgets like buttons and knobs
+this representation is not so convenient. The discrete output is represented with event streams.
+Here is the signature of the button:
+
+~~~
+button :: String -> Source (Evt Unit)
+~~~
+
+It takes in a label that is going to be written on the button's face.
+It produces the event stream of clicks. and we can use all the library functions
+that are defined for event streams. Here we can play a note when user presses the button:
+
+~~~
+> let f evt = sched instr $ fmap (\x -> str 0.2 $ temp (0.5, 220)) evt
+> dac $ lift1 f (button "play")
+~~~
+
+Also we can merge the event streams from several UI-sources with Monoid instance 
+transform the event streams with library functions, execute procedures. 
+
+### Standard library of functions
+
+Almost all csound audio units are implemented in the library. But some of them tend to induce
+the Csound style of programming. The module `Csound.Air` defined many functions that 
+promote the Haskell way of thinking. They reduce the number of arguments and reverse the order of arguments
+for point-free style. Many units have more intuitive interface. Granular synthesis and hypervectorial
+synthesis were redesigned to provide sensible defaults for many parameters so that user can supply them only 
+when he wishes to do so. For example the function partikkel has more than 20 arguments. It's inevitable in Csound
+since Csound doesn't have any means for grouping data structures. But in Haskell we can group all rarely used
+parameters in the record and provide the default value for the user. The partikkel is a wonderful function
+but the need for specification of all parameters stops many users from unlocking it's real powers.
+The haskell version of it has only 5 parameters and one for record that contains the defaults.
+
+If you don't know were to start to learn the library it's better to start with module `Csound.Air`.
+First check out the waves, filters and envelopes. This  will give you enough tools to delve into subtractive synthesis.
+
+### Standard library of instruments
+
+Almost all VST and hardware synthesizers come with the library of patches. The csound-expression also 
+provides a user many instruments to play out of the box. They are defined in the package csound-catalog.
+The Patch is an instrument and the chain of effects:
+
+~~~
+type CsdNote a = (a, a)
+type Instr a b = CsdNote a -> SE b
+
+data Patch a b = Patch	 
+	{ patchInstr :: Instr a b
+	, patchFx :: [FxSpec b]
+	}
+
+type DryWetRatio = Sig
+type Fx a = a -> SE a
+
+data FxSpec a = FxSpec	 
+	{ fxMix :: DryWetRatio
+	, fxFun :: Fx a
+	}
+~~~
+
+There are functions that can apply patch to midi-device input, event streams, scores.
+The csound-catalog has many beautiful instruments defined by fellow csounders and recoded in the haskell.
+We can find the full list at the module `Csound.Patch`.
 
 # Functional model for composition
 
-### Scores
+The most important concept of the library is modularity. Modularity means that an object 
+can be self contained and used as a black box. There are functions that can combine 
+those boxes together and the result only depends on the arguments. 
 
-### FRP
+For instance the result of application of an instrument to an event stream is just a signal.
+Which we can use almost everywhere in the library. It gives us great flexibility and enhances
+the expressiveness. The modularity also makes things reusable. We can define a module of 
+instruments. And our fellow musicians can use them just by importing. 
 
-## Functional concepts 
+The mere ability to assign the anything to variable and pass it to a function and receive from
+a function empowers csound with expressiveness that's hard to imagine within the scopes of csound.
+To be fair for Csound it excels at audio units. Many units are on par with commercial analogs 
+and sound quality can be supreme. Interesting strength of Csound is ability to work in off-line mode.
+If we have a very complex audio generator we can wait for it to render the sound offline. That's not
+possible in Pure Data or other real-time environments. Csound often doesn't sacrifice the quality for speed.
 
-### Modularity
+The Csound has many global parameters that prevents things from being modular the copy and paste
+approach becomes ubiquitous. But in the library we hide those details behind
+composable APIs. Good example of re-usability is the package `csound-catalog`. It defines
+many standard instruments. That can be used right out of the box. If you need to play an organ emulator
+you can load the module `Csound.Patch` in the ghci and type:
 
-### HOF
+~~~
+> dac $ atMidi tonewheelOrgan
+~~~
 
-### Advanced data structures for composition
-
-### FRP, Events and signals
+and you are ready to perform. You can tweak the defaults if you need but for quick sketches 
+the default behavior should just work.
 
 ## Related work
 
-Overtone, Tidal, Haskore, Euterpea, lllvm-synth, Super Collider
-MaxMSP
+The closest project to csound-expression is Overtone library. The overtone ports the SuperCollider to Clojure
+and adds the ability for live-coding. The csound-expression doesn't provide livecoding. It's write and compile approach.
+But csound-expression provides more audio units, it also provides collection of instruments that are ready to play.
+
+The are Haskell projects to create electronic music. The Tidal provides the user DSL for cration of musical patterns
+and jamming live. The DSL creates a stream o control messages to a sampler Dirt that ships with Tidal. 
+The csound-expression gives the user ability to create the synthesizers and samplers. The focus of tidal
+is creation of performances with the set of samples but csound-expression covers the full stack from sound design
+to creation of music and performances though it doesn't provide livecoding.
+
+Haskore and Euterpea have main focus on score creation. There is support for Csound in them but
+it's not mature and sketches a dozen of functions that can be combined in Csound way. 
+So there is no functional module on top of Csound AST. It feels like building AST with haskell
+but the csound-expression provides it's own functional model for electronic music and sound design.
+
+Haskell package synthesizer focuses on sound design. it implements many audio units with Haskell. 
+It can be used with Haskore to create music. The csound-expression is based on Csound and it
+implements more audio units and various synthesis techniques. This is the strength of the library
+that it's build on top of solid foundation. 
 
 ## Drawbacks and future work
+
+The csound-expression is the big project and so far it has only one developer which is not a good thing.
+Not all modules are properly tested but the functionality is very reliable and stable. 
+The csound-exprression was used in embedded devices, custom synthesizer and even on stage!
+The synthesizers from standard collection were used with midi-keyboard on several festivals of world music and electronic music.
+
+There are some drawbacks that are connected with CSE optimisation
 
 ## Conclusion
 
