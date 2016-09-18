@@ -12,11 +12,11 @@ import Csound.Sam
 
 main = dac $ 	
 	at (smallRoom2) $ S.runSam (120 * 4) $ sum [
-		 samCharToggle 'q' f
-		, samCharCycle '5' "6" [w, f]
-		, samCharTrig "s" "x" (mul 0.3 d)
-		,  mul 0.5 $ samCharTrig "a" "zx" w
-		, samCharGroup [('1', mul (fades 0.5 0.5) w), ('2', f)] "3x"
+		 samCharToggle Nothing 'q' f
+		, samCharCycle Nothing '5' "6" [w, f]
+		, samCharTrig Nothing "s" "x" (mul 0.3 d)
+		,  mul 0.5 $ samCharTrig Nothing "a" "zx" w
+		, samCharGroup Nothing [('1', mul (fades 0.5 0.5) w), ('2', f)] "3x"
 		, samCharTap 1 "i" t11
 		, samCharTap 1 "o" t12
 		, samCharTap 1 "p" t13
@@ -27,9 +27,9 @@ main = dac $
 		, samCharTap 1 "y" t33
 		]
 
-w = S.loop $ S.wav "samples/Java Gourd Fast 01.wav"
+w = loop $ S.wav "samples/Java Gourd Fast 01.wav"
 d = S.wav "samples/Didgeridoo 01.wav"
-f = S.loop $ S.wav "samples/Wind Wand Pulse 01.wav"
+f = loop $ S.wav "samples/Wind Wand Pulse 01.wav"
 g = mul 2.5 $ S.wav "samples/FX Hit 04.wav"
 h = mul 1.5 $ S.wav "samples/Noise Hit 04.wav"
 

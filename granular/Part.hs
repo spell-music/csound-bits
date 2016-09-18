@@ -144,13 +144,50 @@ part spec pwaves cps = do
     		--mapM_  (\(i, amp) -> tabw amp  (2 + sig (int i)) t ) (zip [0 .. ] [a1, a2, a3, a4])
     		return noTab
 
+granInstr :: Sig -> SE Sig2
+granInstr k = do
+    rateStart <- random 20 40
+    rateEnd   <- random 3  12
+    rateSizeCoeff <- random 0.4 1.3
+    isRev <- random (-2.5) (1 :: D)
+    resonance <- random 0.1 0.2
+    cfqCoeff <- random 0.75 1
+
+    startSeg <- random 2 18
+    dist     <- random (-1.2) 1.2
+    let endSeg = startSeg + dist
+        path = (startSeg, endSeg)
+        cfqPeak = 12000 * cfqCoeff
+        filtEnv = expseg [50, 8, cfqPeak, 7, cfqPeak, 8, 50]
+    at (filt 2 mlp (filtEnv) resonance) $ mul (0.3 * env) $ 
+        part (def { partGrainDensity = def { grainRate = linseg [rateStart, 18, rateEnd], grainSize = linseg [ 1200 * rateSizeCoeff, 6, 5700 * rateSizeCoeff, 12, 750 * rateSizeCoeff ], grainSkip = 0.45 * uosc 0.17 }}) 
+        [file path 1, file path 0.5] (mul (sig $ ifB (isRev >=* 0) 1 (-1)) $ semitone k)
+    where
+        file (a, b) x = (wavs "floss/ClassGuit.wav" 0 WavLeft, 1, x, linseg [a, 18, b])
+        env = linseg [0, 10, 1, 3, 1, 10, 0]
+
+
+granFx :: Sig2 -> SE Sig2 
+granFx x = mixAt 0.35 largeHall2 $ mixAt 0.7 (pingPong 0.124 0.4 0.75) x
+
+main = dac $ mul 2 $ lift1 (\x -> mul x $ at granFx $ sched (granInstr . sig) $ 
+        withDur 24 $ randSkip 0.8 $ oneOf bhop $ metro (1/8)) (mul 2 $ uknob 0.15)
+
+
+charuk = spreadScale [0, 2, 4, 5, 6, 8, 10]
+bhop =  spreadScale [0, 2, 4, 7, 9]
+maj7 = spreadScale [0, 4, 7, 9]
+
+spreadScale sc = sc ++ (fmap (\x -> x -12) sc) ++ (fmap (\x -> x + 12) sc) ++ (fmap (\x -> x +24) sc)
+
+
+{-
 main = dac $ mixAt 0.25 largeHall2 $ mixAt 0.6 (pingPong 0.124 0.5 0.7) $
 	at (filt 2 mlp (env * 12000) 0.1) $ mul (0.3 * env) $ 
 	part (def { partGrainDensity = def { grainRate = linseg [36, 18, 4], grainSize = linseg [ 1200, 6, 5700, 12, 750 ], grainSkip = 0.45 * uosc 0.17 }}) 
-		[file 1, file 0.5] (negate $ semitone (-7))
-		where
-			file x = (wavs "floss/ClassGuit.wav" 0 WavLeft, 1, x, linseg [2.5, 18, 3.5])
+		[file 1, file 0.5] (negate $ semitone (7))
+ut			file x = (wavs "floss/ClassGuit.wav" 0 WavLeft, 1, x, linseg [2.5, 18, 3.5])
 			env = linseg [0, 10, 1, 3, 1, 10, 0]
-
+-}
 
 

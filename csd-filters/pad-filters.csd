@@ -321,10 +321,10 @@ endin
 f0 420.0
 
 ; the fourth parameter is a reverb mix level
-i "PlayAll" 0 0 0.35
+;i "PlayAll" 0 0 0.35
 
 ; uncomment to save output to wav files
-;i "DumpAll" 0 0 0.35
+i "DumpAll" 0 0 0.35
 </CsScore>
 
 </CsoundSynthesizer>
