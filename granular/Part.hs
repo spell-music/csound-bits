@@ -1,5 +1,6 @@
 import Csound.Base
 
+{-
 type WaveAmp = Sig
 type WaveKey = Sig
 
@@ -46,7 +47,7 @@ instance Default PartSpec where
 		{ partGrainDensity = def
 		, partGrainEnv     = def
 		}
-
+-}
 part :: PartSpec -> [PartikkelWave] -> Sig -> SE Sig2
 part spec pwaves cps = do
 	iwaveamptab <- makeMorphTable amp1 amp2 amp3 amp4

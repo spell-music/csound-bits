@@ -10,9 +10,9 @@ main = dac $ lift1 (\p -> mixAt 0.25 largeHall2 $ mixAt 0.6 (pingPong 0.124 0.5 
 			tabs (x, y) = [file a1 1, file a2 0.5, file2 a3 1, file3 a4 1]
 				where (a1, a2, a3, a4) = pairToSquare (x, y)
 
-			file a x = (wavl "floss/ClassGuit.wav", a, x, linseg [2.5, 18, 3.5])
-			file2 a x = (wavl "floss/hd.wav", a, x, linseg [0.2, 18, 0.6])
-			file3 a x = (wavl "floss/hd.wav", a, x, linseg [0.02, 18, 0.5])
+			file a x = (wavLeft "floss/ClassGuit.wav", a, x, linseg [2.5, 18, 3.5])
+			file2 a x = (wavLeft "floss/hd.wav", a, x, linseg [0.2, 18, 0.6])
+			file3 a x = (wavLeft "floss/hd.wav", a, x, linseg [0.02, 18, 0.5])
 
 			env = linseg [0, 1, 1, 3, 1] -- 10, 0]
 
